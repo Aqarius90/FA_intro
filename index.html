@@ -54,6 +54,7 @@
     .nav-tabs> li > a:hover{    
         background-color: #444;
     }
+        
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -68,21 +69,23 @@
 <body>
     <div class="container-fluid">
         <div class="row"  style="padding-top: 200px; display: table; ">
-            <div class="col-md-1" style="background-color: #f5f5f5; float: none; display: table-cell; vertical-align: top;">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-lg-1" style="background-color: #f5f5f5; float: none; display: table-cell; vertical-align: top;">
                 <img src="FA.png" style="padding-left: 10px; padding-top: 2px;">
-                <ul class="nav nav-pills nav-stacked padding-top: 20px;">
+                <ul class="nav nav-pills nav-stacked" style="padding-top: 20px;">
                     <li class="active"><a data-toggle="pill" href="#Intro">Introduction</a></li>
-                    <li><a data-toggle="pill" href="#Basics">The Basics</a></li>
-                    <li><a data-toggle="pill" href="#Joining"   ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Showing up</a></li>
-                    <li><a data-toggle="pill" href="#Etiquette" ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Etiquette</a></li>
-                    <li><a data-toggle="pill" href="#Platoon"   ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>FA Platoon</a></li>
-                    <li><a data-toggle="pill" href="#Teamspeak" ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Teamspeak</a></li>
-                    <li><a data-toggle="pill" href="#Leadership"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Leadership</a></li>
-                    <li><a data-toggle="pill" href="#mods">Optional mods and addons</a></li>
+                    <li><a data-toggle="pill" style="padding-left: 20px;" href="#Basics"    ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>The Basics</a></li>
+                    <li><a data-toggle="pill" style="padding-left: 20px;" href="#Joining"   ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Showing up</a></li>
+                    <li><a data-toggle="pill" style="padding-left: 20px;" href="#Etiquette" ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Etiquette</a></li>
+                    <li><a data-toggle="pill" style="padding-left: 20px;" href="#Platoon"   ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>FA Platoon</a></li>
+                    <li><a data-toggle="pill" style="padding-left: 20px;" href="#Teamspeak" ><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Teamspeak</a></li>
+                    <li><a data-toggle="pill" style="padding-left: 20px;" href="#Leadership"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Leadership</a></li>
+                    <li><a data-toggle="pill" href="#mods">Optional mods</a></li>
                     <li><a data-toggle="pill" href="#Cheatsheet">Cheatsheet</a></li>
+                    <li><p data-toggle="pill">  </p></li>
+                    <li><a data-toggle="pill" href="#FAtemplate">Mission Making</a></li>
                 </ul>
             </div>
-            <div class="col-md-5 .body npads float: none; display: table-cell; vertical-align: top;">
+            <div class="col-xs-12 col-sm-9 col-md-10 col-lg-5 .body npads float: none; display: table-cell; vertical-align: top;">
                     <div class="panel paper">
                         <div class="text-center" style="border-left: 25px solid #222;
                                                         border-right: 25px solid #222;
@@ -417,21 +420,38 @@
                                             <dt>Steam group</dt>
                                             <dd><a href="http://steamcommunity.com/groups/folkarps">LINK</a></dd>
                                         </ul>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                            </div>
-                                            <div class="col-md-4">
-                                            </div>
-                                            <div class="col-md-4">
-                                            </div>
-                                        </div>
+                                    </ul>
+                                    <ul id="FAtemplate" class="tab-pane fade">
+                                        <h3 class="text-center" style=" border-bottom: 5px double #222">Creating ArmA 3 missions for Folk ARPS</h3>
+                                        <img src="FA-Template.jpg" class="col-md-offset-2">
+                                        <p><b>...I gather I'm supposed to So, I've got this mission idea I would like to make for us to play. How would I do that?</b></p>
+                                        <p>Simple: You use the convenient, streamlined, hassle free system of the FA Template!</p>
+                                        <p><b>The FA Template?</b></p>
+                                        <p>Comrade, I am glad you asked!</p>
+                                        <p>Well, that's a pretty complicated process, comrade. But don't worry, the Party's got your back! All you have to do to make a basic mission is follow the mission making checklist:</p>
+                                        <ul>
+                                            <li>-Download the latest FA Template</li>
+                                            <li>-Set the file- and mission- name. </li>
+                                            <li>-Configure the mission info and parameters</li>
+                                            <li>-Place units and objects</li>
+                                            <li>-Place markers</li>
+                                            <li>-Set triggers</li>
+                                            <li>-Write the briefings</li>
+                                            <li>-Test the mission</li>
+                                        </ul>
+                                        <p><b>The FA Template?</b></p>
+                                        
+                                        
+                                        <blockquote class="blockquote col-md-offset-2" >
+                                            <p class="mb-0">[...] i tried to keep it to the "we all die" standard [...]</p>
+                                            <footer class="blockquote-footer">Housemaster</footer>
+                                        </blockquote>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                 </div>
             </div>
-            <div class="col-md-6"></div>
         </div>
     </div>
     <!-- /.container -->
