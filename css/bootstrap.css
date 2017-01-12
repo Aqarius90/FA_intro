@@ -4084,10 +4084,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-bottom-color: #fff;
   }
 }
-.nav-pills{    
-  color: #000;
-  background-color: #f5f5f5;
-}
 
 .nav-pills > li {
   float: left;
