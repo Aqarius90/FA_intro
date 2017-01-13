@@ -45,7 +45,22 @@
         width: 80%;
         height="auto" 
     }
-    @media (max-width: 767px) {
+    @media (max-width: 480px) {
+        .main-row{
+            padding-top: 0;
+        }
+        .sidebar{
+            background-color: #f5f5f5;
+            width: 100px;
+        }
+        .infopanel{
+            width: 90%;
+        }
+        .col-xx-12{            
+            width: 100%;
+        }
+    }
+    @media (min-width: 480px) and(max-width: 767px) {
         .main-row{
             padding-top: 0;
         }
