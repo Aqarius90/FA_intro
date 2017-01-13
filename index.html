@@ -13,67 +13,19 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-        background-color: black;
-        background: url(bg2-short.png) no-repeat top center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    .paper {
-        background-color: black;
-        background: url(bgd.jpg) no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    
-    .shadow{        
-        -webkit-box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
-        box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
-        border:0
-    }
-        
-    .nav-pills{    
-        color: #000;
-        background-color: #f5f5f5;
-    }
-        
-    .affix {
-        top: 0;
-        width: 130px;
-    }        
-    
-    .panel-default > .panel-heading {
-        padding: 6px 3px;
-        background-color: #d5d5d5;
-    }
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link href="custom.css" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="favicon.ico">
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="0">
     <div class="container-fluid">
-        <div class="row"  style="padding-top: 50px;">
-            <div class="col-lg-1 shadow" style="background-color: #f5f5f5; width: 140px;" id="myScrollspy" data-clampedwidth=".myParent" >
+        <div class="row main-row">
+            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 shadow sidebar" id="myScrollspy" data-clampedwidth=".myParent" >
                 <img src="FA.png" style="padding-left: 10px; padding-top: 2px;">
                 <ul class="nav nav-pills nav-stacked shadow" style="padding-top: 20px; width: 125px;" data-spy="affix" data-offset-top="230" id="myScroll">
                     <li class="bntstyle"><p data-toggle="pill">  </p></li>
-                <!--    <li><a data-toggle="pill" href="#FAtemplate">Mission Making Tutorial</a></li> -->
-                <!--    <li><a data-toggle="pill" href="#FAMM">Mission Making Resources</a></li> -->
+                    <button type="button" class="btn btn-block btnhide" data-target="Cheatsheet"><h5>Cheatsheet</h5></button>
+                    <button class="btn btn-block" ><h5></h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="Intro"     ><h5>Introduction</h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="Basics"    ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>The Basics</h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="Joining"   ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Showing up</h5></button>
@@ -82,10 +34,9 @@
                     <button type="button" class="btn btn-block btnhide" data-target="Teamspeak" ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Teamspeak</h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="Leadership"><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Leadership</h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="mods"      ><h5>Optional mods</h5></button>
-                    <button type="button" class="btn btn-block btnhide" data-target="Cheatsheet"><h5>Cheatsheet</h5></button>
                 </ul>
             </div>
-            <div class="col-lg-7 .body ">
+            <div class="col-xs-9 col-sm-9 col-md-10 col-lg-7 .body ">
                     <div class="panel paper shadow">
                         <div class="text-center" style="border-left: 25px solid #222;
                                                         border-right: 25px solid #222;
@@ -101,15 +52,15 @@
                                     <div class="tohide" id="Intro">
                                         <ul>
                                             <h3 class="text-center" style=" border-bottom: 5px double #222">Welcome</h3>
-                                            <p>The Arma series aren't just amazing games, they're platforms for a huge variety of experiences: ArmA 2™ gave us realism, WWII and DayZ, to name just a few (even before you open up the editor and make your own). Now, ArmA 3™ is taking us to the future. We believe all the best experiences begin with a great community. Our regular sessions feature tactical gameplay with consistent in-game organisation, multi-layered comms and a mix of coop and adversarial missions created by members of our community. However, we're not MilSim: there are no ranks or mandatory training - just friendly people.
+                                            <p>The Arma series aren't just amazing games, they're platforms for a huge variety of experiences: ArmA 2™ gave us realism, WWII and DayZ, to name just a few (even before you open up the editor and make your own). Now, ArmA 3™ is taking us to the future. We believe all the best experiences begin with a great community. Our regular sessions feature tactical gameplay with consistent in-game organisation, multi-layered comms and a mix of coop and adversarial missions created by members of our community. However, we're not MilSim: there are no ranks or mandatory training - just friendly people.</p>
                                             <h4>Everyone is welcome</h4>
-                                            <p>You won't need any mods, just the latest non-dev version of ArmA 3 (including the APEX expansion) and TeamSpeak 3. There are no applications or tests. We only ask that you read through our introductory information:</p>
-                                            <p>To get in touch, register on our forums or join our Discord (chat) server (no installation required). Wherever you end up playing, we hope you'll enjoy playing ArmA games as much as we do.</p>
-                                            <p>Visit our forums for 5+ years of 'after action reviews', watch one of our YouTube channels or play these 2015 highlights:</p>
+                                            <p>You won't need any mods, just the latest non-dev version of ArmA 3 (including the APEX expansion) and TeamSpeak 3. There are no applications or tests. We only ask that you read through our <a class="btnhide" data-target="Basics">introductory information.</a></p>
+                                            <p>To get in touch, register on our <a href="http://www.folkarps.com/forum/">forum</a> or join our <a href="http://www.discord.gg/0Z8wIyiaekveqtZ4">Discord</a> (chat) server (no installation required). Wherever you end up playing, we hope you'll enjoy playing ArmA games as much as we do.</p>
+                                            <p>Visit our <a href="http://www.folkarps.com/forum/">forum</a> for 5+ years of 'after action reviews', watch one of our YouTube channels or play these highlights:</p>
                                             <div class="row">
                                                 <div class="col-md-6" style="min-width: 410px ">
                                                     <ul class="nav nav-tabs" style="background-color: #d5d5d5; width: 420px">
-                                                        <li><button type="button" class="btn btn-block"><a href="#2012" data-toggle="tab">2012</a></button></li>                                                        
+                                                        <li><button type="button" class="btn btn-block"><a href="#2012" data-toggle="tab">2012</a></button></li>
                                                         <li><button type="button" class="btn btn-block"><a href="#2013" data-toggle="tab">2013</a></button></li>
                                                         <li><button type="button" class="btn btn-block"><a href="#2014" data-toggle="tab">2014</a></button></li>
                                                         <li class="active"><button type="button" class="btn btn-block"><a href="#2015" data-toggle="tab">2015</a></button></li>
@@ -121,13 +72,13 @@
                                                         <div id="2015" class="tab-pane active"><iframe id="15" width="420" height="315" src="https://www.youtube.com/embed/_Y8o98biQRc"></iframe></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6" style="padding-top: 0; padding-left: 0;">   
+                                                <div class="infopanel" style="padding-top: 0; padding-left: 0;">   
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">PARTY DISPATCHES</div>
                                                         <div class="panel-body" style="background-color: rgba(245, 245, 245, 0.01);">
                                                             <ul>
-                                                                <li><b>2017-01-12: Call for entries - YIR 2016 contest:</b>  The Party calls for all video-editing savvy comrades to freely submit their proposal for a YIR video for the calendar year of 2016. Winner of the contest gets extra vodka rations</li>
-                                                                <li><b>2016-12-24: 2016 Patch orders open:</b>  The 2016 Folk-ARPS morale patch is now <a href="http://www.folkarps.com/Patches.html">up for order!</a></li>
+                                                                <li><a href="http://www.folkarps.com/YIR.html"><b>2017-01-12: Call for entries - YIR 2016 contest:</b></a></li>
+                                                                <li><a href="http://www.folkarps.com/Patches.html"><b>2016-12-24: 2016 Patch orders open</b></a></li>
                                                             </ul>                                                        
                                                         </div>
                                                     </div>
@@ -138,7 +89,7 @@
                                     <div class="tohide" id="Basics">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">The Basics</h3>
@@ -147,7 +98,7 @@
                                             <p><b>The what now?</b></p>
                                             <p>The sessions, of course! Twice a week, we will embark on a mix of Coop and PvP missions. Generally, they are affairs of 20-50 organized, focused individuals, who can be relied on to bring them to a close within 40 min, without resorting to revive or third person.</p>
                                             <p><b>Oh, yeah, the sessions. That's what i came here for. What are the requirements for joining up?</b></p>
-                                            <p> You will need the latest (official, stable, non beta version of) Arma 3, and (the latest stable, non beta version of) TeamSpeak 3. The Arma 3 DLC is not strictly required, but players who don't have the APEX expansion will not be able to participate in missions set on Tanoa. There are also no required addons. There is a small list of optional addons, but they are, as the name says, optional.</p>
+                                            <p> To attend, you will need the latest (official, stable, non beta version of) Arma 3, and (the latest stable, non beta version of) TeamSpeak 3. The Arma 3 DLC is not strictly required, but players who don't have the APEX expansion will not be able to participate in missions set on Tanoa. There are also no required addons. There is a small list of optional addons, but they are, as the name says, optional.</p>
                                             <p><b> So that's for "attending". What if I want to <em>join</em>?</b></p>
                                             <p>There is no "joining" process in FA. Everyone is welcome to hop on and play. There is also no saluting, no ranks, and the slots are handed out on a 'first come-first served' basis, and you can take any slot the host calls out, be it commander, tanker, pilot, or the common grunt.</p>
                                             <p><b>That's cool!</b></p>
@@ -166,7 +117,7 @@
                                     <div class="tohide" id="Joining">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">Showing up</h3>
@@ -193,7 +144,7 @@
                                     <div class="tohide" id="Etiquette">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">Etiquette</h3>
@@ -229,7 +180,7 @@
                                     <div class="tohide" id="Platoon">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">FA Platoon</h3>
@@ -265,8 +216,6 @@
                                             <p>Attachments are typically 2-man elements (spotter and gunner) that can be used to add a specific type of special weapon to the platoon. For example, the Heavy AntiTank (HAT) team adds, as the name suggests, a heavy AT weapon. An MMG team adds a medium machinegun, which is bigger than what the automatic riflemen have. A mortar team, well, you get the picture.</p>
                                             <p><b>So, where do they fit on the diagram?</b></p>
                                             <p>Wherever the CO wants them. When attached to a squad, the Attachment lead (the 'spotter') talks on TS. When attached directly to CO, they speak on Chanel commander.</p>
-                                            <p><b>Wait, what are 'attachments'?</b></p>
-                                            <p>Attachments are typically 2-man elements (spotter and gunner) that can be used to add a specific type of special weapon to the platoon. For example, the Heavy AntiTank (HAT) team adds, as the name suggests, a heavy AT weapon. An MMG team adds a medium machinegun, which is bigger than what the automatic riflemen have. A mortar team, well, you get the picture.</p>
                                             <p><b>Wait, wait, back up: what's "Channel Commander"?</b></p>
                                             <p>Oh, right, that thing. Well, CC is a TeamSpeak feature that lets you talk to people outside of your channel. We use it for comms 'one level up' from TS. You can more or less ignore it unless you slot as an element lead. or your lead gets shot and you have to take over.</p>
                                             <p><b>And if that happens?</b></p>
@@ -279,7 +228,7 @@
                                     <div class="tohide" id="Teamspeak">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">Teamspeak</h3>
@@ -294,10 +243,10 @@
                                             <p><b>I'm connected. Which channel should I go to?</b></p>
                                             <p>For the session, you're going to start with "Limbo (Slotting/Dead)". When you've just arrived, hang out there. When the mission starts, everyone will move to the appropriate side channel family (BLUFOR/OPFOR/INDFOR). Further channel split will be handled by the CO. When the mission ends (either for everyone or just for you) return to limbo, and wait for the next mission.</p>
                                             <p><b>What about Channel Commander?</b></p>
-                                            <p>CC is a TeamSpeak feature that lets you talk to people "over the fence" of your channel. We use it for comms 'one level up' from TS. The setup we use is pretty straightforward:</p>
+                                            <p>CC is a TeamSpeak feature that lets you talk to people "over the fence" of your channel. The setup we use is pretty straightforward:</p>
                                             <div class="panel">
                                                 <ul>
-                                                    <li>In TS3 go to Tools > Whisper Lists (Ctrl+Shift+W)</li>
+                                                    <li>In TS3 go to Tools &#62 Whisper Lists (Ctrl+Shift+W)</li>
                                                     <li>Click on New (in the bottom-left of the dialog)</li>
                                                     <li>Set a Hotkey (the suggestion is: H)</li>
                                                     <li>Set Whisper to: to Groups</li>
@@ -307,7 +256,7 @@
                                                 </ul>
                                                 <p>And you're set. To turn CC on/off, either right-click your name in the playerlist and select Channel Commander, or set-up a hotkey (or combination, such as Shift+H):</p>
                                                 <ul>
-                                                    <li>TS3 > Settings > Options (Alt+P) > Hotkeys >Add</li>
+                                                    <li>TS3 &#62 Settings &#62 Options (Alt+P) &#62 Hotkeys &#62 Add</li>
                                                     <li>In the dialog that pops-up click on Show Advanced Options</li>
                                                     <li>Under the action Channel Commander select Toggle Channel Commander</li>
                                                     <li>Set a hotkey or hotkey combination (the suggestion is Shift+H)</li>
@@ -326,7 +275,7 @@
                                     <div class="tohide" id="Leadership">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">Leadership</h3>
@@ -356,7 +305,7 @@
                                     <div class="tohide" id="Deployment">
                                         <ul>
                                             <div class="text-center">
-                                                <h4>***DECLASSIFIED***</h4>
+                                                <h4><b>***DECLASSIFIED***</b></h4>
                                                 <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
                                             </div>
                                             <h3 class="text-center">Deployment</h3>
@@ -368,9 +317,6 @@
                                             <p>Of course. And your trusty AK is waiting inside!</p>
                                             <p><b>...You know what, maybe I 'll come round some other time...</b></p>
                                             <p>HA HA HA! You are a witty one, comrade! Now, really, and before I draw my Makarov ... <em><u>Get. On. The. Troop. Transport.</u></em></p>
-                                            <ul>
-                                                <li><b>Within a fireteam, be ready to step up if your FTL dies!</b> Seniority within the fireteam follows the order of slotting: automatic rifleman #1 is 2IC, then automatic rifleman #2, then the assaultman (AT) ... and then your fireteam pretty much ceases to exist.</li>
-                                            </ul>
                                         </ul>
                                     </div>
                                     <div class="tohide" id="mods">
@@ -432,15 +378,13 @@
                                                 <dd>improves TS3 CC by putting it on one ear and adding (optional) mic clicks</dd>
                                             </ul>
                                             <p><b><br>Automated Folk ARPS mod repository</b></p>
-                                            <p>Folk ARPS does maintain a repository for <a href=http://www.folkarps.com/forum/viewtopic.php?f=45&t=1703&p=11663#p11663>Swifty</a>, a highly recommended and very lightweight tool to keep mods up to date and in synchronization with our server.</p>
+                                            <p>Folk ARPS does maintain a repository for <a href="http://www.folkarps.com/forum/viewtopic.php?f=45&t=1703&p=11663#p11663">Swifty</a>, a highly recommended and very lightweight tool to keep mods up to date and in synchronization with our server.</p>
                                         </ul>
                                     </div>
                                     <div class="tohide" id="Cheatsheet">
                                         <ul>
                                             <h3 class="text-center" style=" border-bottom: 5px double #222">Quick reference</h3>
                                             <ul>
-                                                <dt>DISCORD</dt>
-                                                <dd><a href="http://www.discord.gg/0Z8wIyiaekveqtZ4">http://www.discord.gg/0Z8wIyiaekveqtZ4</a></dd>
                                                 <dt>TIME</dt>
                                                 <dd>SUN/TUE 1920 UK time.</dd>
                                                 <dt>TEAMSPEAK</dt>
@@ -449,8 +393,12 @@
                                                 <dd>Folk ARPS, server.folkarps.com:2702</dd>
                                                 <dt>PASSWORD</dt>
                                                 <dd>freedom</dd>
+                                                <dt>DISCORD</dt>
+                                                <dd><a href="http://www.discord.gg/0Z8wIyiaekveqtZ4">http://www.discord.gg/0Z8wIyiaekveqtZ4</a></dd>
+                                                <dt>Forum</dt>
+                                                <dd><a href="http://www.folkarps.com/forum/">http://www.folkarps.com/forum/</a></dd>
                                                 <dt>Steam group</dt>
-                                                <dd><a href="http://steamcommunity.com/groups/folkarps">LINK</a></dd>
+                                                <dd><a href="http://steamcommunity.com/groups/folkarps">http://steamcommunity.com/groups/folkarps</a></dd>
                                             </ul>
                                         </ul>
                                     </div>

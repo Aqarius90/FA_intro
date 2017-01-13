@@ -1,0 +1,110 @@
+
+    body {
+        background-color: black;
+        background: url(PNG/bg2-short.png) no-repeat top center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .paper {
+        background-color: black;
+        background: url(PNG/bgd.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    .shadow{        
+        -webkit-box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
+        box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
+        border:0
+    }
+        
+    .nav-pills{    
+        color: #000;
+        background-color: #f5f5f5;
+    }
+        
+    .affix {
+        top: 0;
+        width: 130px;
+    }        
+    
+    .panel-default > .panel-heading {
+        padding: 6px 3px;
+        background-color: #d5d5d5;
+    }
+    .btn{
+        background-color: #d5d5d5;
+        color: #000;
+    }
+    .img-thumbnail{
+        width: 80%;
+        height="auto" 
+    }
+    @media (max-width: 767px) {
+        .main-row{
+            padding-top: 0;
+        }
+        .sidebar{
+            background-color: #f5f5f5;
+            width: 140px;
+        }
+        .infopanel{
+            width: 90%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        .main-row{
+            padding-top: 10px;
+        }
+        .sidebar{
+            background-color: #f5f5f5;
+            width: 140px;
+        }
+        .infopanel{
+            width: 90%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .main-row{
+            padding-top: 25px;
+        }
+        .sidebar{
+            background-color: #f5f5f5;
+            width: 140px;
+        }
+        .infopanel{
+            margin-left: 60%;
+            width: 40%;
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        .main-row{
+            padding-top: 50px;
+        }
+        .sidebar{
+            background-color: #f5f5f5;
+            width: 140px;
+        }
+        .infopanel{
+            margin-left: 70%;
+            width: 30%;
+        }
+    }
+    @media (min-width: 1600px) {
+        .main-row{
+            padding-top: 70px;
+        }
+        .sidebar{
+            background-color: #f5f5f5;
+            width: 140px;
+        }
+        .infopanel{
+            margin-left: 50%;
+            width: 50%;
+        }
+    }
