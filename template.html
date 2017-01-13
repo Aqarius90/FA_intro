@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FolkARPS</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        background-color: black;
+        background: url(bg2-short.png) no-repeat top center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .paper {
+        background-color: black;
+        background: url(bgd.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    .shadow{        
+        -webkit-box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
+        box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.75);
+        border:0
+    }
+        
+    .nav-pills{    
+        color: #000;
+        background-color: #f5f5f5;
+    }
+        
+    .affix {
+        top: 0;
+        width: 130px;
+    }        
+    
+    .panel-default > .panel-heading {
+        padding: 6px 3px;
+        background-color: #d5d5d5;
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="0">
+    <div class="container-fluid">
+        <div class="row"  style="padding-top: 50px;">
+            <div class="col-lg-1 shadow" style="background-color: #f5f5f5; width: 140px;" id="myScrollspy" data-clampedwidth=".myParent" >
+                <img src="FA.png" style="padding-left: 10px; padding-top: 2px;">
+                <ul class="nav nav-pills nav-stacked shadow" style="padding-top: 20px; width: 125px;" data-spy="affix" data-offset-top="230" id="myScroll">
+                    <li class="bntstyle"><p data-toggle="pill">  </p></li>
+                    <button type="button" class="btn btn-block btnhide" data-target="Cheatsheet"><h5>Cheatsheet</h5></button>
+                </ul>
+            </div>
+            <div class="col-lg-7 .body ">
+                    <div class="panel paper shadow">
+                        <div class="text-center" style="border-left: 25px solid #222;
+                                                        border-right: 25px solid #222;
+                                                        border-top: 5px solid #222;
+                                                        border-bottom: 5px solid #222;
+                                                        padding-top: 0px;"
+                             >
+                            <h2><b>Folk ARPS bulletin board</b></h2>
+                            <p>Your ultimate all-in-one guide to dying gloriously with your fellow comrades!</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11" >
+                                <div class="tohide" id="Cheatsheet">
+                                    <ul>
+                                        <h3 class="text-center" style=" border-bottom: 5px double #222">Quick reference</h3>
+                                        <ul>
+                                            <dt>DISCORD</dt>
+                                            <dd><a href="http://www.discord.gg/0Z8wIyiaekveqtZ4">http://www.discord.gg/0Z8wIyiaekveqtZ4</a></dd>
+                                            <dt>TIME</dt>
+                                            <dd>SUN/TUE 1920 UK time.</dd>
+                                            <dt>TEAMSPEAK</dt>
+                                            <dd>server.folkarps.com:9988</dd>
+                                            <dt>SERVER</dt>
+                                            <dd>Folk ARPS, server.folkarps.com:2702</dd>
+                                            <dt>PASSWORD</dt>
+                                            <dd>freedom</dd>
+                                            <dt>Steam group</dt>
+                                            <dd><a href="http://steamcommunity.com/groups/folkarps">LINK</a></dd>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn btn-block"><a href="http://www.folkarps.com">Back to main</a></button>
+                            </div>
+                            <div class="col-md-1" ></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+
+</body>
+
+</html>
