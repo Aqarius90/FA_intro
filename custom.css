@@ -58,8 +58,21 @@
         .img-FA{
             padding-left: 0;
             padding-top: 2px;
-        }
-        .btn-hide{
+        }        
+        .btn{
+            padding: 1px 1px !important;
+            margin-bottom: 0;
+            font-size: 8px;
+            font-weight: normal;
+            line-height: 1;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
             width: 25%;
         }
     }
