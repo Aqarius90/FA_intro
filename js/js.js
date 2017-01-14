@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() {  //main nav functions
 
     $('.tohide').hide();
     $('.btnhide').click(function(){

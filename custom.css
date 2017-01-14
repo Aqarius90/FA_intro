@@ -36,6 +36,22 @@
         background-color: #d5d5d5;
         color: #000;
     }
+    .YT{        
+        padding: 1px 1px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.4;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        width: 25%;
+        color: #d5d5d5;
+        background-color: #d5d5d5;
+        border-color: #d5d5d5;
+    }
+    .compact {
+        padding: 4px 5px !important;
+    }
     @media (max-width: 767px) {
         .main-row{
             padding-top: 0;
