@@ -20,9 +20,9 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="0">
     <div class="container-fluid">
         <div class="row main-row">
-            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 shadow sidebar" id="myScrollspy" data-clampedwidth=".myParent" >
-                <img src="FA.png" style="padding-left: 10px; padding-top: 2px;">
-                <ul class="nav nav-pills nav-stacked shadow" style="padding-top: 20px; width: 125px;" data-spy="affix" data-offset-top="230" id="myScroll">
+            <div class="col-xx-12 col-xs-3 col-sm-2 col-md-2 col-lg-1 sidebar" id="myScrollspy">
+                <img src="FA.png" class="img-FA">
+                <ul class="nav nav-pills nav-stacked quickNavBar hidden-xs" data-spy="affix" data-offset-top="230">
                     <li class="bntstyle"><p data-toggle="pill">  </p></li>
                     <button type="button" class="btn btn-block btnhide" data-target="Cheatsheet"><h5>Cheatsheet</h5></button>
                     <button class="btn btn-block" ><h5></h5></button>
@@ -34,6 +34,19 @@
                     <button type="button" class="btn btn-block btnhide" data-target="Teamspeak" ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Teamspeak</h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="Leadership"><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Leadership</h5></button>
                     <button type="button" class="btn btn-block btnhide" data-target="mods"      ><h5>Optional mods</h5></button>
+                </ul>
+                <ul class="nav nav-tabs quickNavBar visible-xs-inline" data-spy="affix" data-offset-top="230">
+                    <li class="bntstyle"><p data-toggle="pill">  </p></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Cheatsheet"><h5>Cheatsheet</h5></li>
+                    <li class="btn btn-block" ><h5></h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Intro"     ><h5>Introduction</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Basics"    ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>The Basics</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Joining"   ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Showing up</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Etiquette" ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Etiquette</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Platoon"   ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>FA Platoon</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Teamspeak" ><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Teamspeak</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="Leadership"><h5><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>Leadership</h5></li>
+                    <li type="button" class="btn btn-block btnhide" data-target="mods"      ><h5>Optional mods</h5></li>
                 </ul>
             </div>
             <div class="col-xx-12 col-xs-9 col-sm-9 col-md-10 col-lg-7 .body ">
