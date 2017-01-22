@@ -1,0 +1,14 @@
+/**
+ * HOMER - Short for homerun, 'knocked outta the park!'
+ * Alternative to display:none, visibility:hidden.
+ * Use when content needs to be picked up by screen readers but not
+ * displayed on regular screens.
+ * Does not affect flow of page.
+ * Minimum of 1px height/width required or ignored by screen reader.
+ */
+@mixin homer {
+    height:1px;
+    overflow:hidden;
+    width:1px;
+    @include position(absolute, auto null null -10000px);
+}

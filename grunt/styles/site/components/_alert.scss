@@ -1,0 +1,53 @@
+/**
+ * ALERT
+ * --
+ * Contains all the styling specific to the alert.
+ * Alerts show above forms to to highlight errors in the form.
+ */
+
+
+.alert {
+    background-color:$color-bkg;
+    border:1px solid $color-blue-denim;
+    border-radius:3px;
+    color:$font-color-body;
+    font-style:italic;
+    margin:20px 0;
+    padding:15px 20px;
+    text-align:center;
+
+    @include media-tablet-min {
+        margin:30px 0;
+    }
+
+    &:first-child { margin-top:0; }
+    &:last-child { margin-bottom:0; }
+
+    &--warning {
+        background-color:#f9ecdb;
+        border:1px solid #bd7a23;
+        color:#bd7a23;
+
+        * { color:#bd7a23; }
+    }
+
+    &--error {
+        background-color:#fcedee;
+        border:1px solid #c04848;
+        color:#c04848;
+
+        * { color:#c04848; }
+    }
+
+    &--success {
+        background-color:#ccf5cb;
+        border:1px solid #1a9b10;
+        color:#1a9b10;
+
+        * { color:#1a9b10; }
+    }
+
+    &--warning, &--error, &--success {
+        a { text-decoration:underline; }
+    }
+}

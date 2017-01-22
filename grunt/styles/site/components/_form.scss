@@ -1,0 +1,900 @@
+/**
+ * Styles for the layout and appearance of forms.
+ */
+
+.form {
+    display:block;
+
+    &--bkg {
+        padding:20px;
+        background-color:$color-bkg-2;
+    }
+
+    &--wide {
+        .field {
+            
+            @include media-mobile-min {
+                &__label {
+                    @include span-columns(3 of 6);
+                }
+
+                &__input {
+                    @include span-columns(3 of 6);   
+                }
+            }
+            
+        }
+    }
+
+    &__fields {
+        &:first-child {
+            margin-top:0px !important;     
+        }
+
+        margin-top:20px;     
+    }    
+
+    &__field-wrap {
+        margin:0;
+
+        &--borderd {
+            @include media-desktop-min { 
+                border-bottom:1px solid $color-iron;
+            }
+        }
+
+        .field {
+            margin-top:0;
+        }
+    }
+
+    &__fieldset {
+        display:block;
+
+        &:not(:first-child) {
+            margin-top:20px;
+        }
+    }
+
+    &__legend {
+        @include type-h2;
+        border-bottom: 1px solid $font-color-body;
+        color: $font-color-body;      
+        display:block;
+        padding-bottom:10px;
+        width:100%;
+
+        @include media-tablet-min {
+            border-bottom: 1px solid $font-color-body;
+            color: $font-color-body;
+            font-weight: normal;
+            padding-bottom:10px;
+        }
+    }
+
+    &__buttons {
+        margin-top:10px;
+
+        @include media-desktop-min {
+            margin-top:20px;
+        }
+    }
+
+    &__note {
+        // An informative note within the form
+        color: $font-color-body;
+        margin: v(1) 0 0 h(10);
+
+        @include media-desktop-min {
+            margin-left: h(15);
+        }
+
+        // We define a number of styles for common elements within notes
+        p {
+            margin-top: v(0.5);
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/**
+ * Forms are made up of a series of fields, each field in turn is constructed
+ * from a label and at least one related input type element.
+ */
+.field {
+    @include clearfix;
+
+    margin-top:10px;
+
+    @include media-desktop-min {
+        margin-top:20px;
+    }
+    
+
+    &--has-error {
+        .field__label {
+            color: $color-warning;
+        }
+    }
+
+    &--required {
+        .field__label {
+            font-style: normal;
+        }
+    }
+
+    &:not(.field--required) {
+        .field__label {
+            color:#aaa;
+        }        
+    }
+
+    &--short {
+        @include media-desktop-min {
+            max-width:33%;
+        }
+    }
+
+    &--medium {
+        @include media-desktop-min {
+            max-width:50%;
+        }
+    }
+
+    &--no-label {
+        .field__label {
+            @include homer;
+        }
+
+        .field__input {
+            width:100%;
+        }
+    }
+
+    &--split {
+        @include media-desktop-min {
+            @include layout-6-6;
+
+            > :nth-child(2) {
+                float:right !important;
+                text-align:right;
+                margin-right:0 !important;
+
+                ul {
+                    display:inline-block;
+                }
+            }
+
+            .field__error {
+                clear:left;
+                float:right;
+                text-align:right;
+            }
+        }
+    }
+
+    &--divide {
+        border-bottom:1px solid $color-blue-denim;
+        margin-bottom:10px;
+        padding-bottom:10px;
+        
+        @include media-desktop-min {        
+            margin-bottom:20px;
+            padding-bottom:20px;
+        }
+    }
+
+    &--btn-radio {
+        .field__input {
+            min-width:145px;
+            height:50px;
+
+            li {
+                float:left;
+
+                &:not(:last-child) {
+                    margin-right:10px;
+                }
+
+                input {
+                    @include homer;
+
+                    &:checked + label {
+                        @include btn;
+                        color:$color-white!important;
+                        box-shadow:none;
+                    }                    
+                }
+
+                label {
+                    @include btn;
+                    background-color:$color-white;
+                    color:$color-oslo-gray !important;
+                    box-shadow:1px 0px 0px 0px $color-oslo-gray, -1px 0px 0px 0px $color-oslo-gray, 0px 1px 0px 0px $color-oslo-gray, 0px -1px 0px 0px $color-oslo-gray;
+                    width:67.2px;
+                    padding:0px 18px !important; /* slight hack to ensure helvetica fits */
+
+                    &:hover {
+                        color:$color-white !important;
+                    }
+                }
+
+            } 
+        }        
+    }
+
+    &--listwidget {
+        &:not(:first-of-type) {
+            margin-top:0;        
+        }
+
+        /* escaping other sytles of checkboxes */
+        &:not(.field--checkbox):not(.field--btn-radio) {
+            position:relative;
+
+            > .field__label {
+                @include media-tablet-max {
+                    width:100%;
+                    white-space:normal;
+                }
+                
+                > label {
+                }
+            }
+
+            .field__input {
+
+                > ul {
+                    padding:12px 0px;
+                    overflow:hidden;
+                    @include media-desktop-min {
+                        float:right;
+                    }
+
+                }
+
+                li {
+                    height:25px;
+                    width:25px;
+                    position:relative;
+                    margin-right:5px;
+                    float:left;
+
+                    input {
+                        display: none;
+
+                        &:checked + label {
+                            background: $color-yellow-custard;
+                            border:none;
+                            color:$font-color-body;                            
+
+                            &:after {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    label {
+                        @include position(absolute, 0px 0px null null);
+                        @include transition(background-color 0.1s ease-in-out);     
+                        background-color:transparent;
+                        border-radius:3px;
+                        box-shadow: inset 0px 0px 0px 1px $color-oslo-gray;
+                        cursor:pointer;
+                        height:25px;
+                        line-height:25px;
+                        text-align:center;
+                        width:25px;                         
+
+                        &:hover {                        
+                            background: rgba($color-yellow-custard, 0.2);
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    &__label {
+        color: $font-color-body;
+        float: left;
+        font-style: italic;
+        line-height: 28px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom:5px;
+
+        @include media-desktop-min {
+            padding:12px;
+            padding-left:0;
+            text-align:left;
+            margin-bottom:0;
+            @include span-columns(2 of 7);
+        }
+    }
+
+    &__input {
+        float: left;
+        width:100%;
+
+        @include media-desktop-min {
+            @include span-columns(5 of 7);
+            margin-right:0;            
+        }
+
+        input[type="date"],
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            @include appearance(none);
+            background: $color-bkg;
+            border:none;
+            box-shadow: inset 0px 0px 0px 1px $color-iron;
+            border-radius: 3px;
+            color: $font-color-body;
+            font-family:inherit;
+            height: 50px;
+
+            @include type-standard;
+            line-height: 50px - 2px;
+
+            padding:0 10px;
+            width: 100%;
+
+            @include placeholder {
+                color: $font-color-placeholder;
+            }
+
+            @include media-desktop-min {
+                background: #fff;
+            }
+
+            &:focus {
+                background-color:$color-white !important;
+                color:$font-color-body !important;
+                box-shadow: inset 0px 0px 0px 1px $color-border-2;
+            }
+        }
+
+        select {
+            @include appearance(none);
+            background-color:$color-outer-space;
+            border-radius:5px;
+            border:0px;
+            color:$font-color-body-2 !important;
+            display:block;
+            font-family:inherit;
+            font-size:16px;
+            height:50px;
+            line-height:50px;
+            padding:0 10px;
+            width:100%;
+            @include transition(background-color 0.1s ease-in-out);            
+
+            &:focus {
+                background-color:$color-white !important;
+                color:$font-color-body !important;
+                box-shadow: inset 0px 0px 0px 1px $color-border-2;
+            }
+        }
+
+        option {
+            @include appearance(none);
+            @include type-standard;
+            background-color:$color-white !important;
+            color:$font-color-body !important;
+            display:block;      
+            font-family:inherit;
+            line-height:50px;
+            padding:10px;
+            position:relative;
+            text-indent:10px;
+            width:100%;
+
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+
+        textarea {
+            height: auto;
+            line-height: 130%;
+            min-height:200px;
+            padding:14px 10px;
+
+            @include media-desktop-min {
+                max-width: 100%;
+            }
+        }
+
+        &--short {
+            textarea {
+                min-height: 100px;
+            }
+        }
+    }
+
+    &__standard-value {
+        padding:12px 0;
+    }
+
+    &__error {
+        clear: both;
+        color: $color-warning;
+        padding-top:5px;
+        @include type-standard;
+
+        @include media-desktop-min {
+            @include shift(2);
+            @include span-columns(6 of 8);
+        }
+    }
+
+    // Special field modifiers
+    &--checkbox {
+        &.split {
+            
+            @include row();
+
+            li {
+                margin:20px 0 0;
+
+                @include media-desktop-min() {
+                    @include column(6, 12);
+                    @include omega(2n);
+
+                    &:nth-child(1), &:nth-child(2) {
+                        margin-top:0;
+                    }
+                }
+            }        
+        }
+
+        &.center {
+            text-align:center;
+        }
+
+        line-height: v(2);
+
+        input + label {
+            color: $font-color-body;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            padding-right: 20px;
+            width: 100%;
+            text-align:left;
+
+            @include media-desktop-min {
+                color: $font-color-body;
+                max-width:300px;
+
+            }
+
+            &:before {
+                background: $color-gloom-gray;
+                border-radius: 3px;
+                content: '';
+                display: block;
+                height: 19px;
+                right:0;
+                position: absolute;
+                top: 2px;
+                vertical-align: middle;
+                width: 19px;              
+
+            }
+
+            &:after {
+                border: 3px solid $color-white;
+                border-left: none;
+                border-top: none;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+                content: '';
+                display: block;
+                height: 12px;
+                margin-right:5px;
+                position: absolute;
+                right:0;
+                top: 4px;
+                width: 7px;
+                @include transform(rotate(45deg));
+            }
+        }
+
+        input {
+            display: none;
+
+            &:checked + label {
+                &:before {
+                    background: $color-yellow-custard;
+                }
+
+                &:after {
+                    border: 3px solid #fff;
+                    border-top: none;
+                    border-left: none;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &--checkbox-reversed {
+
+        input + label {
+            margin-left: 20px;
+            max-width: 100%;
+            padding-left: 20px;
+            padding-right: 0;
+            width: auto;
+
+            @include media-desktop-min {
+                margin-left: h(15);
+                max-width: calc(100% - #{h(15)});
+                padding-right: 0;
+                width: auto;
+            }
+
+            &:before {
+                left: 0;
+
+                @include media-desktop-min {
+                    left: 0;
+                }
+            }
+
+            &:after {
+                left: 6px;
+
+                @include media-desktop-min {
+                    left: 6px;
+                }
+            }
+        }
+    }
+
+    &--file {
+        .field__input {
+            box-shadow: inset 0px 0px 0px 1px $color-iron;
+            border-radius: 3px;
+            cursor: pointer;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+
+            &:before {
+                content: 'Select a file...';
+                left: 0;
+                line-height: 50px;
+                position: absolute;
+                text-align: center;
+                top: 0;
+                width: 100%;
+                z-index: 0;
+            }
+
+            &--file-added{
+                background: red;
+                border-color: red;
+
+                @include transition(
+                    background 0.5s linear,
+                    border-color 0.5s linear
+                    );
+
+                &:before {
+                    border: 3px solid #fff;
+                    border-top: none;
+                    border-left: none;
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+                    content: '';
+                    display: block;
+                    height: 14px;
+                    left: calc(50% - 4px);
+                    line-height: 0;
+                    top: 8px;
+                    @include transform(rotate(45deg));
+                    width: 8px;
+                }
+            }
+
+            input {
+                cursor: pointer;
+                display: block !important;
+                width: 100% !important;
+                height: 50px !important;
+                opacity: 0.0 !important;
+                overflow: hidden !important;
+                z-index: 1;
+            }
+        }
+    }
+
+    &--select {  
+        overflow:hidden;    
+        margin-top:20px;
+
+        .field__input {
+            position:relative;  
+            &:after {
+                content:'';
+                display:block;
+                margin-right:-px;
+                margin-top:-6px;
+                pointer-events: none;
+                @include position(absolute, 50% 20px null null);
+                @include triangle(12px 12px, $color-yellow-custard, down);
+            }      
+        }
+    }
+}
+
+
+/**
+ * The buttons area is typically used to contain buttons within a form, however
+ * it can be used for the greater good (well it can be used elsewhere too).
+ */
+.buttons {
+    margin-top: 20px;
+
+    @include media-desktop-min {
+        .btn, button {
+            float:right !important;
+            @include clearfix;
+            @include span-columns(5 of 7);
+        }
+    }
+
+    &--wide {
+        @include media-desktop-min {
+            .btn, button {
+                @include span-columns(3 of 6);
+            }    
+        }   
+    }
+
+    &--paired {
+        .btn {
+            float: left;
+
+            @include media-mobile-min {
+                width: calc(50% - #{h(1)});
+                &:last-child {
+                    float: right;
+                }
+            }
+
+            @include media-desktop-min {
+                margin-left: h(1);
+            }
+
+            &:first-child {
+                @include media-desktop-min {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Typically a form will be completed with one or more buttons of which at least
+ * one submits the forms content to the server. Other buttons may perform other
+ * tasks most commonly allowing a user to easily cancel their action (e.g back).
+ */
+.btn {
+    border:none;
+    @include btn;
+
+    &--subdued {
+        // The subdued style is used to indicate that the button will cancel
+        // the proposed form action (e.g don't delete this division).
+        @include btn();
+    }
+}
+
+
+/**
+ * The `datetime` block is used to wrap 2 inputs (date and time) so they appear
+ * to present a composite input.
+ */
+.datetime {
+
+    // HACK Specified like this to ensure it has highest specificity
+
+    input.datetime__date {
+        float: left;
+        width: calc(100% - #{h(1) + h(8)});
+    }
+
+    input.datetime__time, select.datetime__time {
+        float: right;
+        width: h(8);
+    }
+}
+
+
+/**
+ * Repeaters are used on fields which allow a list of values to be specified.
+ */
+.repeater {
+
+    &__item {
+        margin-top: v(0.5);
+        position: relative;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &--add {
+            .repeater__action {
+                background: red;
+
+                &:after {
+                    background: #fff;
+                    content: '';
+                    display: block;
+                    height: 16px;
+                    left: 14px;
+                    position: absolute;
+                    top: 7px;
+                    width: 2px;
+                }
+            }
+        }
+    }
+
+    &__action {
+        background: $color-iron;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 3px;
+        width: 30px;
+
+        &:before {
+            background: #fff;
+            content: '';
+            display: block;
+            height: 2px;
+            left: 7px;
+            position: absolute;
+            top: 14px;
+            width: 16px;
+        }
+    }
+
+    // HACK Specified like this to ensure it has highest specificity
+    input.repeater__input {
+        width: calc(100% - #{h(1) + 30});
+    }
+}
+
+/**
+ * Tokens are used on fields where an typeahead allows a user to build a list of
+ * values, for example a list of users to send a message to.
+ */
+.tokens {
+    margin-top: v(1);
+}
+
+.token {
+    background: red;
+    border-radius: 3px;
+    color: #fff;
+    margin-top: v(0.5);
+    padding: 5px h(1);
+    position: relative;
+
+    &__remove-btn {
+        cursor: pointer;
+        display: block;
+        height: 18px;
+        position: absolute;
+        right: h(1);
+        top: 5px;
+        width: 18px;
+
+        &:before, &:after {
+            background: #fff;
+            content: '';
+            display: block;
+            height: 3px;
+            left: 2px;
+            position: absolute;
+            @include transform(rotate(45deg));
+            top: 7px;
+            width: 14px;
+        }
+
+        &:after {
+            @include transform(rotate(-45deg));
+        }
+    }
+}
+
+.check-box {   
+
+    &--center {
+        text-align:center;
+    }
+
+    input + label {
+        color: $font-color-body;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        padding-right: 20px;
+        text-align:left;
+        width:20px;
+        height:20px;
+
+        @include media-desktop-min {
+            color: $font-color-body;
+            max-width:300px;
+
+        }
+
+        &:before {
+            background: $color-iron;
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 19px;
+            right:0;
+            position: absolute;
+            top: 2px;
+            vertical-align: middle;
+            width: 19px;              
+
+        }
+
+        &:after {
+            border: 3px solid $color-white;
+            border-top: none;
+            border-left: none;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            content: '';
+            display: block;
+            height: 12px;
+            right:0;
+            position: absolute;
+            top: 4px;
+            margin-right:5px;
+            @include transform(rotate(45deg));
+            width: 7px;
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + label {
+            &:before {
+                background: $color-yellow-custard;
+            }
+
+            &:after {
+                border: 3px solid #fff;
+                border-top: none;
+                border-left: none;
+                display: block;
+            }
+        }
+    }
+}

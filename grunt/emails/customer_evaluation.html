@@ -1,0 +1,46 @@
+<h3>
+    {{ if customer_evaluation.completed_by }}
+        {{ customer_evaluation.completed_by }}
+    {{ else }}
+        Someone
+    {{ end }} 
+    has submitted a customer evaluation to TopTubes.
+</h3>
+
+<h3>Commercial</h3>
+<p>Response to enquiries: <b>{{ customer_evaluation.response_to_enquiries }}</b></p>
+<p>Submission of quotations: <b>{{ customer_evaluation.submission_of_quotations }}</b></p>
+<p>Prompt communication: <b>{{ customer_evaluation.prompt_communication }}</b></p>
+<p>Accurate order conversion: <b>{{ customer_evaluation.accurate_order_conversion }}</b></p>
+<p>Documentation accuracy: <b>{{ customer_evaluation.documentation_accuracy }}</b></p>
+
+<h3>Technical assistance</h3>
+<p>Response to application enquiries: <b>{{ customer_evaluation.response_to_application_enquiries }}</b></p>
+<p>Product process recommendations: <b>{{ customer_evaluation.product_process_recommendations }}</b></p>
+<p>Development assistance: <b>{{ customer_evaluation.development_assistance }}</b></p>
+<p>Client specification interpretation: <b>{{ customer_evaluation.client_specification_interpretation }}</b></p>
+<p>Process capabilities: <b>{{ customer_evaluation.process_capabilities }}</b></p>
+
+<h3>Quality</h3>
+<p>Product quality: <b>{{ customer_evaluation.product_quality }}</b></p>
+<p>Product performance: <b>{{ customer_evaluation.product_performance }}</b></p>
+<p>Quality documentation: <b>{{ customer_evaluation.quality_documentation }}</b></p>
+<p>Response to non conformance: <b>{{ customer_evaluation.response_to_non_conformance }}</b></p>
+<p>Technical assistance: <b>{{ customer_evaluation.technical_assistance }}</b></p>
+
+<h3>Delivery performance</h3>
+<p>Delivery date compliance: <b>{{ customer_evaluation.delivery_date_compliance }}</b></p>
+<p>Delivery condition: <b>{{ customer_evaluation.delivery_condition }}</b></p>
+<p>Delivery documentation: <b>{{ customer_evaluation.delivery_documentation }}</b></p>
+<p>Product packaging identification: <b>{{ customer_evaluation.product_packaging_identification }}</b></p>
+<p>Delivery accuracy: <b>{{ customer_evaluation.delivery_accuracy }}</b></p>
+
+<h3>Additional</h3>
+<p>Comments:</p>
+<pre>{{ customer_evaluation.comments }}</pre>
+
+<p>Completed by: <b>{{ customer_evaluation.completed_by }}</b></p>
+
+<p>Company: <b>{{ customer_evaluation.company }}</b></p>
+
+<p>Date: <b>{{ customer_evaluation.date }}</b></p>

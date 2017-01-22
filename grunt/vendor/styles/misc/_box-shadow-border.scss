@@ -1,0 +1,8 @@
+/**
+ * BOX SHADOW BORDER
+ * Border styling which does not alter the physical dimentions of the element.
+ */
+
+@mixin box-shadow-border($color:#000, $top:-1px, $right:1px, $bottom:1px, $left:-1px) {
+    box-shadow:inset  0px $top 0px 0px rgba($color, 1), inset   $right 0px 0px 0px rgba($color, 1), inset 0px $bottom 0px 0px rgba($color, 1), inset $left 0px 0px 0px rgba($color, 1);
+}

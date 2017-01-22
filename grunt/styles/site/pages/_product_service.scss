@@ -1,0 +1,118 @@
+/**
+ * PRODUCT-SERVICE-PAGE.SCSS
+ * --
+ * Css specific to the PRODUCT SERVICES PAGE.
+ */
+
+.product-service-page {
+	&__content {
+		@include media-tablet-min {
+			@include layout-3-9-reverse;
+		}
+
+		@include media-desktop-min {
+			@include layout-10-2-reverse;
+			margin-top:0;
+		}
+	}
+
+	&__timeline-wrap {
+		padding:10px;
+		background-color:$color-blue-pastel;
+
+		@include media-desktop-min {
+			padding:20px;
+		}
+	}
+
+	&__thumb-gallery {
+		@include media-tablet-max {
+			margin-bottom:20px;
+		}
+	}
+
+	&--cont-tube {
+		.service-nav-item--cont-tube {
+			@include homer;
+		}
+	}
+
+	&--galv-tube {
+		.service-nav-item--galv-tube {
+			@include homer;
+		}
+	}
+
+	&--alum-tube {
+		.service-nav-item--alum-tube {
+			@include homer;
+		}
+	}
+
+	&--mild-tube {
+		.service-nav-item--mild-tube {
+			@include homer;
+		}
+	}
+
+	.slotted-tube-gallery {
+		&__image {
+			width:100%;
+			height:auto;
+			
+			@include media-tablet-max {
+				@include homer;
+			}
+		}
+		.figure {			
+			@include media-tablet-min {
+				@include homer;			
+			}
+		}
+	}
+}
+
+.steel-slitting-link {
+	display:block;
+	background-color:$color-yellow-custard;
+	padding-right:25px;
+
+	&__heading {
+		border-bottom-width:2px;
+		border-bottom: dotted #000;
+		color:#fff;
+		font-size:36px;
+		line-height:36px;
+		margin-left:25px;
+		padding-bottom:11px;
+		padding-top:16px;
+		width:calc(100% - 25px);
+	}
+
+	&__fake-btn {
+		padding-left:0;
+		margin-top:5px;
+		margin-left:25px;
+	}
+
+	&__image {
+
+		display:block;
+	}
+}
+
+.timeline-list {
+}
+
+.timeline-list-item {
+	@include layout-7-5-reverse;	
+
+	&__img {
+
+		@include media-tablet-max {
+			display:block;
+			max-width:100%;
+			height:auto;
+		}
+	}
+}

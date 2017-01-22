@@ -1,0 +1,121 @@
+/**
+ * VIDEO CTA
+ * --
+ * video call to action - Special link for videos. Can be found in home hero.
+*/
+
+.video-cta {
+    @include linear-gradient(to top, #fab800, #fdd035);
+    border-radius:3px;
+    box-shadow: inset 0px -1px 2px 0px rgba(0,0,0,0.6), inset 0px 1px 2px 0px rgba(255,255,255,.6);
+    color:#000;
+    cursor:pointer;
+    display:block;
+    font-size:14px;
+    line-height:20px;
+    min-height:60px;
+    padding:8px;
+    padding-right:55px;
+    position:relative;
+
+    &--flat {
+        box-shadow:none !important;
+        background:$color-yellow-custard;        
+        @include transition(background-color ease-in 0.2s);
+
+        &:hover {
+
+            background-color:tint($color-yellow-custard, 20%);
+        }
+    }
+
+    @include media-tablet-min {
+        padding-right:80px;
+    }
+
+    &:after, &:before {
+        display:block;
+        content:'';
+        position:absolute;
+    }
+
+    &:after {
+        border-radius:50%;
+        border:2px solid #000;
+        content:'';
+        display:block;
+        height:38px;
+        right:10px;
+        top:50%;
+        margin-top:-20px;
+        width:38px;
+    }
+
+    &:before {
+        right:26px;
+        margin-right:-9px;
+        top:50%;
+        margin-top:-12px;
+        @include triangle(25px, #000, right);
+        border-left:18px solid #000;
+    }
+
+    &:active {
+        @include linear-gradient(to top, #e5a803, #fdd035);
+        box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.3), inset 0px 1px 0px 0px rgba(255,255,255,.4);
+    }
+}
+
+.video-cta-section {
+
+    &__gallery {
+        position:relative;
+    }
+
+    &__image {
+        @include animation(anim 16s infinite);
+        @include position(absolute, 0px null null 0px);
+        background-color:#fff;
+        height:100%;
+        opacity: 0;
+        white-space:nowrap;
+        width:100%;
+
+        &--1 {
+            background:red;
+            @include animation-delay(0s);
+        }
+
+        &--2 {
+            background:blue;
+            @include animation-delay(4s);
+        }
+
+        &--3 {  
+            background:purple;      
+            @include animation-delay(8s);
+        }
+
+        &--4 {
+            background:green;
+            @include animation-delay(12s);
+        }
+
+        @keyframes anim {
+            0% { opacity: 0; z-index: 100;}
+            10% { opacity: 1;}
+            20% { opacity: 1;}
+            30% { opacity: 0;}
+            100% { opacity: 0; z-index: 1;}
+        }
+    }
+
+    &__push-height {
+        padding-top:80.55555555555556%;
+
+    }
+
+    &__link {
+
+    }
+}

@@ -1,0 +1,67 @@
+/**
+ * CALL TO ACTION
+ * --
+ * Service nav is a list of the avaialbe services Toptubes offers.
+*/
+
+.cta {
+	display:block;
+	position:relative;
+	@include filter(contast(0%));
+	@include transition(filter 250ms ease-in-out, -webkit-filter 250ms ease-in-out);
+
+	&:hover {
+		@include filter(contrast(120%));
+	}
+
+	@include media-desktop-min {		
+		&:after {
+			content:'';
+			display:block;
+			@include position(absolute, null 0px 0px null);
+			@include triangle(50px, #fff, down-right);
+			z-index:2;
+		}
+	}
+}
+
+.cta-fivespeed {
+	&__content {		
+		background:url('/images/call-to-actions/laser-heads.jpg') center center no-repeat;
+		background-size:cover;
+	}
+
+	.push-height {
+		padding-top:127.7%;
+	}
+
+	&__link-wrap {
+		border-top:2px solid #fff;
+		overflow:hidden;
+	}
+
+	&__link {
+		display:block;
+		float:left;
+		@include media-desktop-max {
+			width:100%;
+		}
+	}
+
+
+	@include media-desktop-min {
+		&__link-wrap {
+			border-top:0;
+		}
+
+		&__link {
+			background-color:#fff !important;			
+		}
+
+		&__link-wrap {
+			@include position(absolute, null null 0px 0px);
+			width:100%;		
+			padding:20px;
+		}
+	}
+}

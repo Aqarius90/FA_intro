@@ -1,0 +1,252 @@
+/**
+ * CONTAINERS
+ * --
+ * This stylesheet contains the main containers and styles used across the site
+ * structure.
+ */
+
+/**
+ * Inner
+ * --
+ * A standard style used to set the maximum/minimum width of any outer container
+ * based on the current size of the user's window.
+ */
+ @mixin inner {
+    margin:0 auto;
+    max-width:$full-width;
+    min-width:$min-width;
+    padding:0 10px;
+    @include transition(max-width ease-in 0.5s, padding ease-in 0.5s);
+
+    @include media-mobile-min {
+        min-width:$mobile-min;
+    }
+
+    @include media-tablet-max {
+        max-width:$mobile-max;
+    }
+    
+    @include media-desktop-min {
+        padding:0 20px;
+    }
+ }
+
+.inner {
+    @include inner;
+}
+
+
+/**
+ * Page content
+ * --
+ * Styles for the main container that is wrapped around the page content. This
+ * does not include the header or footer.
+ */
+.page {
+    background-color:$color-bkg;
+    min-width:$min-width;
+}
+
+.body {
+    > * {
+        @include filter(blur(0px) saturate(100%));
+    }
+
+    &--pop-up-active {
+        > *:not(.pop-up) {
+            @include transition(filter 4s ease-out 0s, -webkit-filter 4s ease-out 0s);
+            @include filter(blur(5px) saturate(40%));
+        }
+
+        .pop-up {
+            background-color:rgba(#000, 0.5);
+        }        
+    }
+
+    &:not(.body--pop-up-active) {    
+
+        .pop-up {
+            @include homer;
+
+            &__content {
+                opacity:0;
+            }
+        }
+    }
+    @include media-desktop-max {
+        &:after {
+            content:'';
+            display:block;
+            @include position(absolute, 0px null null 0px);
+            background-color:rgba(#000, 0.0);
+            height:100%;
+            width:100%;
+            @include transition(background-color ease-in 0.2s);
+            z-index:0;
+        }
+
+        
+        &--nav-active {
+            > *:not(.header) {
+                @include transition(filter 4s ease-out 0s, -webkit-filter 4s ease-out 0s);
+                @include filter(blur(5px) saturate(40%));
+            }
+
+            &.body:after {
+                background-color:rgba(#000, 0.5);
+            }
+        }
+
+        &:not(.body--nav-active) {        
+            &:after {
+                @include homer;
+            }    
+        }
+    }
+}
+
+.content {
+    position:relative;
+
+    @include media-tablet-min {
+        margin-top:10px;
+    }
+
+    &__section {
+        @include media-tablet-max {
+            img {
+                clear:both !important;
+                width:100% !important;
+                height:auto !important;
+            }
+        }
+    }
+}
+
+.content-wrap {    
+    background-color:$color-bkg;
+    @include inner;
+    min-height:200px;
+    padding-top:10px;
+    padding-bottom:10px;
+
+    &:after {
+        content:'';
+        display:block;
+        @include position(absolute, null 0px 0px null);
+        z-index:2;        
+        @include triangle(10px,  $color-blue-baby-boy, down-right);
+    }
+
+    @include media-desktop-min {
+        padding:20px;
+        padding-bottom:60px;
+        position:relative;
+
+        &:after {
+            content:'';
+            display:block;
+            @include position(absolute, null 0px 0px null);
+            z-index:2;        
+            @include triangle(60px,  $color-blue-baby-boy, down-right);
+        }
+
+    }
+}
+
+.pop-up {
+    @include display(flex);
+    @include position(absolute, 0px null null 0px);
+    background-color:rgba(#000, 0.0);
+    height:100%;
+    width:100%;
+    z-index:9999;
+    @include display(flex);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    @include transition(background-color 0.5s ease-in);
+
+
+    @include media-desktop-min {
+        @include align-items(center);
+
+        &__content {
+            margin-top:0px;
+            padding:20px;
+        }
+    }
+
+    &__content {
+        min-width:300px;
+        min-height:100px;
+        opacity:1;
+        margin-top:40px;
+        padding:5px;
+        padding-top:40px;
+        background:#fff;
+        box-shadow: 7px 10px 23px 0px rgba(0,0,0,0.55);
+        position:relative;
+        @include transition(opacity 0.2s ease-in);
+        max-width:90%;
+
+    }
+
+    &__close {
+        @include position(absolute, 0px 0px null null);
+        background-color:$color-yellow-custard;
+        cursor:pointer;
+        font-size:16px;
+        font-weight:bold;
+        line-height:20px;
+        padding:5px 10px;
+
+        @include transition(background-color ease-in 0.2s);
+
+        &:hover {
+
+            background-color:tint($color-yellow-custard, 20%);
+        }
+    }
+
+    &__video {
+        max-width:100%;
+    }
+}
+
+/**
+ * Table wrap - Responsive tables
+ * --
+ * Add support for tables that are too wide for mobile/tablet usage by adding
+ * horizontal scroll bars.
+ */
+.table-wrap {
+    margin:20px 0;
+    overflow-x:auto;
+}
+
+
+/**
+ * Contain
+ * --
+ * Generic class used to prevent overflow of any container.
+ */
+.contain { overflow:hidden; }
+
+
+/**
+ * Content area
+ * --
+ * A standard style to format a block of content with padding top and bottom,
+ * also with different background colours.
+ */
+.content-area {
+    margin:20px auto;
+    &:last-child {
+        margin-bottom:0;        
+    }
+
+    &:first-child {
+        margin-top:0;
+    }
+
+}

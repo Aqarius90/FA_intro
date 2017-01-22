@@ -1,0 +1,116 @@
+/**
+ * CONTENT LIST
+ * --
+ * Content list which contains more than just a link. It has a heading, summary and image.
+*/
+
+.content-list {	
+	display:block;
+}
+
+.content-list-item {
+	display:block;
+	padding:20px 0px;
+	border-top:1px solid #000;
+
+	&--no-image { 
+		.content-list-item {
+			&__link {
+				padding-left:0;
+			}
+		}
+	}
+
+	&:first-child {
+		border-top:0px solid #000;
+	}
+
+	&__image {
+		background:center center no-repeat;
+		background-image:url('/images/red_tube_train.jpg');
+		background-size:cover;
+		height:80px;
+		width:105px;
+	    @include media-tablet-max {
+	    	float:right;
+	    	margin-bottom:5px;
+	    	margin-left:15px;
+	    }
+
+	    @include media-tablet-min {
+			margin-top:4px;
+			@include position(absolute, 0px null null 0px);
+		}
+	}
+
+	&--steel-slitting {
+		padding-top:0;
+		
+		.content-list-item__image {
+			background-image:url('/images/global/steel-reel-list-item.jpg');
+		}
+	}
+
+	&--welded-tube {
+		.content-list-item__image {
+			background-image:url('/images/global/welding-list-item.jpg');
+		}
+	}
+
+	&--tube-manipulation {
+		.content-list-item__image {
+			background-image:url('/images/global/manipulated-tube-small.jpg');
+		}
+	}
+
+	&--laser-tube-processing {
+		.content-list-item__image {
+			background-image:url('/images/global/ltp-small.jpg');
+		}
+	}
+
+	&--tube-slotting {
+		.content-list-item__image {
+			background-image:url('/images/global/slotted-steel.jpg');
+		}
+	}
+
+	&--fabrication {
+		.content-list-item__image {
+			background-image:url('/images/global/fabrication-small.jpg');
+		}
+	}
+
+	&__link {
+		display:block;
+		position:relative;
+		min-height:80px;
+		overflow:hidden;
+	   
+	    @include media-tablet-min {
+			padding-left:120px;
+		}
+
+		&:hover {
+			text-decoration:none;
+		}
+	}
+
+	&__heading {
+		@include type-h1($color:$color-blue-denim);
+		margin-bottom:5px;
+		font-weight:bold;
+
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+
+	&__summary {
+		color:$font-color-body;
+	}
+
+	&__image {
+
+	}
+}

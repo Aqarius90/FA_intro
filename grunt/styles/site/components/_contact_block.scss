@@ -1,0 +1,59 @@
+/**
+ * CONTACT BLOCK
+ * --
+ * A simple eye catching block that displays relevent contact information.
+*/
+
+.contact-block {
+	padding:10px;
+	padding-right:50px;
+	position:relative;
+	background-color:$color-blue-denim;
+	margin:20px auto;
+
+	@include media-desktop-min {	
+		padding-right:50px;	
+		&:after {
+			content:'';
+			display:block;
+			@include position(absolute, null 0px 0px null);
+			@include triangle(50px, #fff, down-right);
+			z-index:2;
+		}
+	}
+
+	&__heading {
+		color:#fff;
+		font-size:22px;
+		font-weight:bold;
+		line-height:26px;
+		margin-bottom:10px;
+	}
+
+	&__list-item {
+
+	}
+
+	&__link {
+		color:$color-blue-baby-boy;
+		font-size:18px;
+		line-height:22px;
+
+		&:hover {
+			text-decoration:none;
+		}
+	}
+
+	&--alt {
+		margin:0;
+		background:transparent;
+
+		.contact-block__heading {
+			color:$color-blue-denim;
+		}
+		
+		.contact-block__link {
+			color:$font-color-body;
+		}
+	}
+}

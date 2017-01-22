@@ -1,0 +1,484 @@
+/**
+ * FORMATTING
+ * --
+ * Contains all of the CSS used to format text within a 'formatted' container.
+ * It also contins any generic styles used to format text and any styles used to
+ * format DEPLOYCMS specific editable styles. If using a reset sheet, this will
+ * re-format any text back into a user-friendly format.
+ */
+
+
+/**
+ * Core element styles
+ * --
+ * General elements that need custom styles without the use of classes.
+ */
+body, html { 
+    min-height:100%;
+}
+body {
+    background-color:$color-blue-baby-boy;
+    color:$font-color-body;
+    font-family:$font-family-primary;
+    font-weight:400;
+    letter-spacing:0.01em;
+    max-width:100%;    
+    position:relative;
+    text-align:left;
+    @include type-standard();
+}
+
+.content {
+    min-height:300px;
+}
+
+abbr { border-bottom:1px dotted $font-color-body; }
+a abbr { border-bottom:none; }
+
+strong, b { font-weight:600; }
+
+
+a {
+    cursor:pointer;
+    color:$font-color-link;
+    text-decoration:none;
+}
+
+button {    
+    cursor:pointer;
+}
+
+
+/**
+ * Selectors
+--
+ */
+::selection {
+    background:tint($color-yellow-custard, 20%);
+    color:#000;
+}
+::-moz-selection {
+    background:tint($color-yellow-custard, 20%);
+    color:#000;
+} 
+
+
+/**
+ * Custom class styles
+ * --
+ * Generic regular use classes and styles that can be used throughout the
+ * website.
+ */
+
+/**
+ * Hide/show classes
+ */
+.hide { visibility:hidden; }
+@include media-tablet-max { .mob-hide { display:none !important; } }
+@include media-tablet-min { .tab-hide { display:none !important; } }
+.ninja { display:none !important; }
+.hide-text { @include hide-text; }
+.show { display:block !important; }
+.homer { @include homer(); }
+.block {
+    display:block;
+}
+@include media-tablet-max { .mob-max-homer { @include homer(); } }
+@include media-tablet-min { .tab-min-homer { @include homer(); } }
+@include media-desktop-min { .desk-min-homer { @include homer(); } }
+@include media-desktop-max { .desk-max-homer { @include homer(); } }
+
+/**
+ * Clear content
+ */
+.clear { clear:both; }
+.clear-left { clear:left; }
+.clear-right { clear:right; }
+.clearfix, .clear-fix, .sink { @include clearfix; }
+
+/**
+ * Consistant margin padding between elements
+ */
+.no-top { margin-top:0 !important; }
+.no-bottom { margin-bottom:0 !important; }
+.push-top, .push-top-20 { margin-top:20px !important; }
+.push-top-tab {
+    @include media-tablet-max {
+        margin-top:20px !important;
+    }
+}
+.push-top-30 { margin-top:30px !important; }
+.push-top-40 { margin-top:40px !important; }
+.push-bottom, .push-bottom-20 { margin-bottom:20px !important; }
+.push-bottom-30 { margin-bottom:30px !important; }
+.push-bottom-40 { margin-bottom:40px !important; }
+
+/**
+ * Prevent text from wrapping onto multiple lines
+ */
+.no-wrap { white-space:nowrap; }
+.ellipsis { @include ellipsis(); }
+
+/**
+ * Text alignment variations
+ */
+.align-left, .l { text-align:left !important; }
+.align-center, .c { text-align:center !important; }
+.align-right, .r { text-align:right !important; }
+@include media-tablet-max {
+    .mob-align-left, .mob-l { text-align:left !important; }
+    .mob-align-center, .mob-c { text-align:center !important; }
+    .mob-align-right, .mob-r { text-align:right !important; }
+}
+@include media-tablet-min {
+    .tab-align-left, .tab-l { text-align:left !important; }
+    .tab-align-center, .tab-c { text-align:center !important; }
+    .tab-align-right, .tab-r { text-align:right !important; }
+}
+
+/**
+ * Floats
+ */
+.pull-left {
+    float:left;
+}
+
+.clear {
+    clear:both;
+}
+
+
+/**
+ * Consistant font sizes
+ */
+.small-text { @include type-small(); }
+.standard-text { @include type-standard(); }
+.large-text { @include type-large(); }
+.larger-text { @include type-h1(); }
+
+/**
+ * Remove scrolling on an element
+ */
+.no-scroll { overflow:hidden; }
+
+/**
+ * Font weight/style/transform variations
+ */
+.light { font-weight:300 !important; }
+.norm { font-weight:400 !important; }
+.bold { font-weight:600 !important; }
+.italic { font-style:italic !important; }
+.capitalise, .capitalize { text-transform:capitalize !important; }
+.uppercase { text-transform:uppercase !important; }
+.lowercase { text-transform:lowercase !important; }
+
+.img {
+    &--full-width {
+        width:100%;
+        height:auto;
+    }
+}
+
+/**
+ * Font colours
+ */
+.color-body { color:$font-color-body !important; }
+.color-body-2 { color:$font-color-body-2 !important; }
+
+
+/**
+ * Hr styling
+ */
+.hr {
+    clear:both;
+    display:block;
+    height:1px;
+    border-top:1px solid $color-blue-denim;
+    width:100%;
+    margin-bottom:20px;
+    margin-top:20px;
+
+    @include media-tablet-min {
+        margin-bottom:40px;
+    }
+}
+
+.page-heading {
+    font-size:24px;
+    line-height:24px;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid #000;
+
+    @include media-desktop-min {
+        font-size:36px;
+        line-height:36px;
+        padding-bottom:24px;
+        margin-bottom:24px;
+    }
+}
+
+/**
+ * Text re-formatting
+ * --
+ * Styles used to re-add generic browser formatting HTML elements within a
+ * content area so that paragraphs, lists, and tables, etc, all look correctly
+ * if they are direct children of the container with this class. Formatted also
+ * trims the top margin and bottom margin from the first child and last child.
+ */
+.formatted {
+    @include clearfix;
+
+    > h1 a, > .h1 a, > h2 a, > .h2 a, > h3 a, > .h3 a,
+    > p > a, > address > a,
+    > ul a,
+    > ol a,
+    > table a {
+        color:$font-color-link;
+        text-decoration:underline;
+    }
+
+    > h1, > .h1 {
+        @include type-h1();
+        margin:25px 0 15px;
+    }
+
+    > h2, > .h2 {
+        @include type-h2();
+        margin:24px 0 14px;
+    }
+
+    > h3, > .h3 {
+        @include type-h3();
+        margin:20px 0 10px;
+    }
+
+    > p, > address { margin:0 0 15px; }
+
+    > ul {
+        list-style-type:disc;
+        margin:0 0 15px;
+        padding:0 0 0 18px;
+
+        &.plain-list {
+            padding:0;
+            list-style-type:none;
+        }
+
+        &.alt-list {
+            color:$color-blue-denim !important;
+        }
+
+        > li {
+            margin-bottom:5px;
+        }
+        > li ul, > li ol {
+            margin:0 0 15px;
+            padding:8px 0 0 18px;
+        }
+
+        > li ul { list-style-type:circle; }
+        > li ol { list-style:lower-alpha; }
+    }
+
+    > ol {
+        list-style-type:decimal;
+        margin:0 0 15px;
+        padding:0 0 0 19px;
+
+        > li ol, > li ul {
+            margin:0 0 15px;
+            padding:8px 0 0 19px;
+        }
+
+        > li ol { list-style:lower-alpha; }
+        > li ul { list-style-type:circle; }
+    }
+
+    > .btn {
+        &--full-width {
+            width:100%;
+        }
+    }
+
+    /**
+     * Image and Video - This include custom elements used during editing in the
+     * content editor.
+     */
+    > img, > a > img,
+    > .ce-element--type-image, > .ce-element--type-video {
+        clear:both;
+        display:block;
+        height:auto;
+        margin:20px auto;
+        max-width:100%;
+    }
+
+    > img.inline-block {
+        display:inline-block;
+    }
+    
+    > iframe {
+        clear:both;
+        display:block;
+        margin:20px auto;
+        max-width:100%;
+
+        @include media-tablet-max {
+            height:75vw !important;
+            max-height:480px;
+            width:100vw !important;
+        }
+    }
+    
+    > img, > a,
+    > .ce-element--type-image, > .ce-element--type-video,
+    > iframe {
+        @include media-tablet-min() {
+            &.align-right, &.r {
+                clear:right;
+                display:inline-block;
+                float:right;
+                margin:0 0 20px 20px;
+                
+                > img {
+                    margin:0;
+                }
+            }
+
+            &.align-left, &.l {
+                clear:left;
+                display:inline-block;
+                float:left;
+                margin:0 20px 20px 0;
+                
+                > img {
+                    margin:0;
+                }
+            }
+        }
+
+        @include media-tablet-max() {
+            &.align-right, &.r, &.align-left, &.l {
+                float:none;
+            }
+        }
+    }
+
+    > table {
+        margin:0px 0 20px;
+        width:100%;
+
+        thead {
+            height:40px;
+            background-color:$color-yellow-custard;
+
+            th {
+                line-height:40px;
+                color:#000;
+                height:100%;
+                font-weight:600;
+                padding:0 5px;
+                vertical-align:top;
+                white-space:nowrap;
+            }
+        }
+
+        tbody {
+            tr {
+                min-height:30px;
+
+                &:not(:last-child) {
+                    border-bottom:1px solid $color-border-5;
+                }
+            }
+
+            td {
+                padding:5px;
+                vertical-align:top;
+            }
+        }
+    }
+
+    > *:first-child { margin-top:0 !important; }
+    > *:last-child,
+    > ul > li:last-child ul,
+    > ol > li:last-child ol {
+        margin-bottom:0 !important;
+    }
+
+    > .btn { margin:20px 0; }
+
+    .hr {       
+        &:nth-of-type(1) {
+            margin-top:0px !important;
+        }
+    }
+
+}
+
+.figure {
+    &--gallery {
+        background-color:$color-blue-baby-boy;
+        padding:10px;
+        @include media-tablet-min {
+            padding:20px;
+        }
+    }
+
+    &--inpage {
+        @include media-tablet-max {
+            clear:both;
+            width:100%;
+            height:auto;
+        }
+
+        @include media-tablet-min {
+            float:left;
+            margin-bottom:10px;
+            margin-right:15px;
+            width:50%;
+        }
+    }
+
+    &--fill {
+        clear:both;
+        height:auto;
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    &--right {        
+        @include media-tablet-min {
+            float:right;
+            margin-right:0px;
+            margin-left:15px;
+            width:50%;
+        }
+    }
+
+    &__image {
+        width:100%;
+        height:auto;
+    }
+
+    &__caption {
+        @include type-small;
+        font-style:italic;
+    }
+    
+    &:not(:last-child) {
+        margin-bottom:20px;
+    }
+}
+
+/**
+ * Trim
+ * --
+ * Used to remove the top margin from the first child and the bottom margin from
+ * the last child. This is a useful alternative to using .formatted.
+*/
+.trim {
+    > :first-child { margin-top:0 !important; }
+    > :last-child { margin-bottom:0 !important; }
+}

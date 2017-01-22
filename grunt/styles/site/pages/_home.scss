@@ -1,0 +1,118 @@
+/**
+ * HOME.SCSS
+ * --
+ * Css specific to the home page.
+ */
+
+.home-page {
+	&__dividing-heading {	
+		color:$color-blue-denim;	
+		margin-bottom:20px;
+		font-family:$font-family-tertiary;
+		font-size:28px;
+		line-height:32px;
+		letter-spacing:-1px;	
+
+		@include media-desktop-min {
+			font-size:34px;
+			margin-bottom:15px;			
+			line-height:25px;	
+			letter-spacing:-1.5px;
+		}
+		@include media-tablet-min-desktop-max  {
+			@include column(6, 12);
+		}
+	}
+
+
+	&__dividing-heading-line {
+		display:block;
+		@include media-tablet-min {
+			display:inline;
+		}
+	}
+
+	&__market-sectors-nav {
+		@include media-desktop-min {
+			margin-top:0;
+		}
+	}
+
+    .content-wrap {
+	    @include media-desktop-min {
+	        padding:20px;
+	    }
+	}
+}
+
+.home-page-lower {
+	@include media-tablet-min-desktop-max  {
+		overflow:hidden;
+		position:relative;
+
+		&__main {			
+			.service-nav, .market-sectors-nav {
+				@include column(6, 12);
+				float:left;
+				clear:left;
+			}
+
+			.home-page-lower__bsi-link-wrap { 
+				float:left;
+				@include column(6, 12);
+				margin-top:0;
+			}
+
+			.newsletter-cta {				
+				float:left;
+				@include column(6, 12);
+				margin-top:0;
+			}
+
+			.bsi-link {
+				margin-top:0;
+			}
+		}
+
+		&__cta {
+			@include column(6, 12);
+			margin-right:0 !important;
+			position:absolute;
+			top:0;
+			right:0;
+		}
+	}
+
+	@include media-desktop-min {
+		overflow:hidden;
+		@include layout-7-5-reverse;	
+
+		&__blocks{	
+			overflow:hidden;
+
+			.service-nav, .home-page-lower__bsi-link-wrap, .market-sectors-nav, .newsletter-cta  {
+				width:48%;
+				float:left;
+			}
+
+			.service-nav, .home-page-lower__bsi-link-wrap {
+				float:left;
+				margin-right:4%;
+			}
+
+			.home-page-lower__bsi-link-wrap {
+				.bsi-link {
+					margin-bottom:0;
+				}
+			}
+
+			.market-sectors-nav {
+			}
+
+			.newsletter-cta {
+				margin:0;
+				margin-top:0px;
+			}	
+		}	
+	}
+}

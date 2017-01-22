@@ -1,0 +1,33 @@
+/**
+ * PDFS
+ * --
+ * Css required specifically for PDF's
+ */
+
+.pdf-page {
+    padding:20px;
+
+    &__charts {
+        @include layout-8-4;
+        margin:40px 0px;
+    }
+}
+
+.pdf-header {
+    margin-bottom:40px;
+}
+
+.pdf-chart {
+    &--line {
+
+    }
+
+    &--pie {
+        position:relative;
+        text-align:center;
+
+        .key-list {
+            display:inline-block;
+        }
+    }
+}

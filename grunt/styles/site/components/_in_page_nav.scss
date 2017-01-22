@@ -1,0 +1,113 @@
+/**
+ * IN PAGE NAV
+ * --
+ * In page nav usually sits to the side of content. For browsing sub pages.
+ */
+
+.in-page-nav {
+
+    &__heading-link {        
+        background-color:$color-yellow-custard;
+        color:$font-color-body;
+        display:block;
+        font-size:22px;
+        font-weight:bold;
+        line-height:22px;
+        padding:10px;
+        @include transition(background-color ease-in 0.2s);
+
+        &:hover {
+
+            background-color:tint($color-yellow-custard, 20%);
+        }
+    }
+
+    @include media-tablet-min {
+        &__heading-link {
+            padding:5px;        
+        }
+    }
+}
+
+.in-page-nav-video-cta {
+    position:relative;
+    
+    &__link {
+        background-color:$color-yellow-custard;
+        color:$font-color-body;
+        display:block;
+        font-size:14px;
+        line-height:18px;
+        font-weight:400;
+        padding:10px;
+        @include transition(background-color ease-in 0.2s);
+
+        &:hover {
+
+            background-color:tint($color-yellow-custard, 20%);
+
+            &:after {
+                margin-left:3px;
+            }
+        } 
+
+        &:after {
+            content: '►';
+            line-height:16px;
+            height:16px;
+            font-size:12px;
+            display:inline-block;  
+            @include transition(margin-left ease-in 0.1s);
+        }
+    }
+
+    @include media-desktop-min {        
+        &:before {
+            content:'';
+            display:block;
+            @include position(absolute, null 0px 0px null);
+            z-index:2;        
+            @include triangle(30px,  $color-white, down-right);
+        }
+    }
+}
+
+.in-page-nav-list {
+}
+
+.in-page-nav-list-item {
+    border-bottom:1px solid #666666;
+    display:block;
+    margin-bottom:7px;
+    padding-bottom:7px;
+    padding-left:10px;
+    @include transition(border-bottom ease-in 0.2s);
+
+    @include media-desktop-min {  
+        padding-left:5px;   
+    }
+
+    &:hover {
+        border-bottom:1px solid #000;
+    }
+
+    &:first-child { 
+        border-top:1px solid #666666;
+        padding-top:7px;
+    }
+
+    &__link {
+        color:$color-blue-denim;
+        display:block;
+        font-size:20px;
+        line-height:22px;
+        position:relative;
+        top:0;
+        @include transition(top ease-in 0.1s);
+
+        &:hover {
+            top:-2px;
+        }
+
+    }
+}

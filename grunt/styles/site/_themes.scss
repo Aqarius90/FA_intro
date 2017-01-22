@@ -1,0 +1,131 @@
+/**
+ * PDFS
+ * --
+ * Css required specifically for PDF's
+ */
+
+.site-theme {
+	/* Moving company name to left and removing "call review" logo */
+	@include media-desktop-min {
+	    .header {
+	    	&__partner {
+	    		left:20px !important;
+	    	}
+	    	&__logo {
+	    		display:none;
+	    	}
+	    }
+	}
+
+    &--home-instead {
+    	/* Main header */
+        .header {
+            background-color:$color-midnight-purple !important;
+        	.user-avatar__sign-out {
+        		color:$color-traffic-cone-orange;
+     	   }
+    	}
+
+        /* links */
+        a {	
+        	color:$color-traffic-cone-orange;
+        }
+
+        /* forms */
+        .field__input select {
+        	background:$color-midnight-purple;
+        }
+
+        .field--select .field__input:after {
+    		border-top-color:$color-traffic-cone-orange;
+    	}  
+
+    	/* buttons */
+    	.btn {  
+    		background-color:$color-muddy-purple;
+
+    		&:hover { background-color:tint($color-muddy-purple, 10%); }  	
+    			
+		    &--alt {
+		    	background-color:transparent;
+		        border:2px solid $color-muddy-purple;
+		        color:$color-muddy-purple !important;
+
+
+		        &:hover { background-color:$color-white; }
+		    }
+
+		    &--2 {
+		        border:2px solid $color-muddy-purple;
+		        color:$color-muddy-purple !important;
+
+		        &:hover { 
+		            background-color:rgba($color-muddy-purple, 0.2); 
+		            border:2px solid tint($color-muddy-purple, 10%);
+		            color: tint($color-muddy-purple, 10%) !important;
+		        }
+		    }
+    	}  
+
+    	/* Tabels */
+    	.formatted>table thead {
+    		background-color:$color-muddy-purple;
+    	}
+
+    	.formatted>table a {
+    		color:$color-traffic-cone-orange;
+    	}
+
+		/* Filter and Navigation */
+		@include media-tablet-min {
+			.filter-handle:not(.filter-handle--on) {
+				background-color:$color-midnight-purple;
+			}
+		}
+		@include media-desktop-min {
+
+			.filter-handle--on:after {
+				color:$color-traffic-cone-orange;
+			}
+
+	        .prime-nav__list {
+	            background-color:$color-midnight-purple !important;
+	        }
+		}
+
+		.filter-handle--on .filter-handle__icon .icon-path {
+			stroke:$color-traffic-cone-orange;
+		}
+
+		.filter-handle--on .filter-handle__icon .icon-group-container {
+			fill:$color-traffic-cone-orange;
+		}
+
+
+        .sub-nav__link {
+        	&:hover {
+	        	color:$color-traffic-cone-orange !important;
+	        }
+
+        	&:after {
+        		background-color:$color-traffic-cone-orange;
+        	}
+        }
+
+        .prime-nav__link {
+        	&:after {
+        		background-color:$color-traffic-cone-orange;
+        	}
+
+        	&:hover {
+	        	color:$color-traffic-cone-orange !important;
+	        }
+
+        	&.btn:hover {
+	        	color:$color-muddy-purple !important;
+	        }
+        }
+	    
+    }
+
+}

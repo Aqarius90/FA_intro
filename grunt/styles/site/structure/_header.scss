@@ -1,0 +1,279 @@
+/**
+ * HEADER
+ * --
+ * This stylesheet contains the css used to format the website's header. It is
+ * broken down into various responsive sizes as each size is so different.
+ */
+
+
+/**
+ * Skip-to-links
+ * --
+ * 3 links at the top of the page for acessibility use to quickly link to the
+ * different areas of content on the page. Hidden using absolute positioning, as
+ * display:none will prevent some screen readers from seeing it too.
+ */
+.skip-to-links {
+    @include homer();
+}
+
+/**
+ * Mobile styles
+ * --
+ * CSS used to only format the header when in mobile responsive mode.
+ */
+
+@include media-desktop-max {
+    /**
+     * Header
+     * --
+     * The header is the top bar of the page containing the logo, and primary
+     * navigation.
+     */
+    .header {
+        background-color:$color-blue-denim;
+        position:relative;
+        top:0;
+        left:0;
+        width:100%;
+        min-height:60px;
+        z-index:1;
+
+        &__upper { 
+            min-height:80px;
+            width:100%;
+            position:relative;
+        }
+
+        &__strapline {
+            @include homer;
+        }
+
+        &__logo {
+            background:url('/images/mob-logo.png') center center no-repeat;
+            background-size:contain;
+            display:block;            
+            height: 60px;
+            width: 273px;        
+            @include position(absolute, 10px null null 10px);
+        }
+    }
+
+    /**
+     * Handles
+     * --
+     * Prime nav handle and filter handle operate in a simliar way. When clicked/ touched, they
+     * open their corsponding menu.
+     */
+
+    .prime-nav-handle {
+        @include position(absolute, 0px 0px null null );
+        cursor:pointer;
+        height:80px;  
+        width:60px;
+        z-index:2;
+
+        &:after {
+            @include position(absolute, 10px 50% null null);
+            background:url('/images/menu-icon.png') center center no-repeat;
+            background-size:contain;
+            content:'';
+            display:block;
+            height:30px;
+            margin-right:-15px;    
+            width:30px;
+        }
+    }
+
+    /**
+     * Prime nav
+     * --
+     * The primary navigation of the website. Positioned off-screen but when a
+     * menu icon is clicked the navigation area should slide in from the left.
+     */
+
+    .prime-nav {
+        position:absolute;
+        top:80px;
+        right:0;
+        width:0px;   
+        background-color:transparent;   
+
+        .inner {
+            min-height:100%;
+        }
+
+        &__handle {
+            @include position(absolute, -80px 0px null null);
+        }
+        
+        &:not(.prime-nav--open) {
+            .prime-nav__list {
+                @include homer;
+            }
+        }
+
+        &--open {
+            background-color:$color-bkg-3;
+            z-index:1000;
+            width:270px;
+
+            .prime-nav__handle {
+                background-color:$color-bkg-3;
+            }
+        }
+
+        &__list {
+            min-height:100%; 
+            display:block;
+            padding:20px;
+            width:100%;
+        }
+
+        &__list-item {
+            @include clearfix;
+            color:$color-white;
+            display:block;
+            margin-bottom:10px;
+            z-index:1;
+        }
+
+        &__link {
+            border-bottom:1px solid $color-white;
+            color:$color-white !important;
+            cursor:pointer;
+            display:block;
+            font-family:$font-family-secondary;
+            font-size:17px;
+            line-height:40px;
+            @include transition(color .2s ease-in, border-bottom .2s ease-in);
+
+            &:hover {
+                color:$color-blue-denim !important;
+                border-bottom:1px solid $color-blue-denim;
+            }
+        }
+    }
+}
+
+/**
+ * Header styles for only desktop
+ * --
+ * CSS used to only format the header between tablet portrait and desktop sizes.
+ */
+@include media-desktop-min {
+    /**
+     * Header
+     * --
+     * The header is the top bar of the page containing the logo, and primary
+     * navigation.
+     */
+    .header {
+        background-color:$color-blue-denim;
+        width:100%;
+        margin-bottom:10px;
+
+        &__upper {       
+            height:146px;
+            position:relative;
+            @include inner;
+        }
+
+        &__strapline {
+            color:#bbc9d3;
+            font-family:$font-family-tertiary;
+            font-size:50.5px;            
+            height:52px;
+            letter-spacing:-1.5px;
+            line-height:52px;
+            @include position(absolute, null 0px 16px null);
+        }
+
+        &__logo {
+            background:url('/images/toptubes--desktop.png') center center no-repeat;
+            background-size:contain;
+            display:block;
+            height:112px;
+            margin-top:-56px;
+            width:120px;
+            @include position(absolute, 50% null null 20px);
+        }
+    }
+
+    .site-logo {
+    }
+
+    /**
+     * Handles
+     * --
+     * Prime nav handle and filter handle operate in a simliar way. When clicked/ touched, they
+     * open their corsponding menu.
+     */
+
+    .handle {
+        cursor:pointer;
+        &:after {
+            content:'';
+            display:block;
+            @include position(absolute, 50% 50% null null);
+        }
+    }
+
+    .prime-nav-handle {
+        @include homer;
+    }
+
+    /**
+     * Prime nav
+     * --
+     * The primary navigation of the website. Positioned off-screen but when a
+     * menu icon is clicked the navigation area should slide in from the left.
+     */
+
+    .prime-nav {
+        background-color:$color-blue-gloom;
+
+
+        &__handle {
+        }
+
+        &__list {         
+            height:33px;
+            overflow: hidden;
+            padding:4px 0;
+        }
+
+        &__inner {
+            @include inner;
+        }
+
+        &__list-item {
+            display:block;
+            float:left;
+            height:26px;
+            text-align:center;
+            padding:0 11px;
+            border-right:1px solid $color-white;
+
+            &:last-child {
+                border-right:0;
+            }
+
+            &:first-child {
+                padding-left:0;
+            }
+
+        }
+
+        &__link {
+            font-family:$font-family-secondary;
+            color:$color-white;
+            font-size:15px;
+            line-height:26px;
+
+            &:hover {
+                border-bottom:1px solid #fff;
+            }
+        }
+    }
+}
