@@ -45,6 +45,12 @@ module.exports = (grunt) ->
                 files:
                     '<%= pkg.www %>/styles/site.css': 'styles/site/site.scss'
 
+        nunjucks_render:
+            templates:
+                files:
+                    # Consumer emails
+                    'home-rendered.html' : 'content/home.html'
+
         uglify:
             options:
                 mangle: true
@@ -63,6 +69,9 @@ module.exports = (grunt) ->
 
             
         watch:
+            frontend:
+                files: ['styles/site/**/*.scss', '**/scripts/**/*.coffee','content/**/**.html'],
+                tasks: ['styles', 'scripts', 'templates']
             scripts:
                 files: ['**/scripts/**/*.coffee',],
                 tasks: ['scripts']
@@ -96,10 +105,16 @@ module.exports = (grunt) ->
         ])
 
     # Build everything
+    grunt.registerTask('templates', [
+        'nunjucks_render:templates',
+        ])
+
+    # Build everything
     grunt.registerTask('all', [
         'coffee:editor',
         'coffee:site',
         'coffee:spec',
+        'nunjucks_render:templates',
         'uglify:site',
         'sass:site'
         ])
@@ -112,5 +127,6 @@ module.exports = (grunt) ->
         ])
 
     # Watchers
+    grunt.registerTask('watch-frontend', ['watch:frontend'])
     grunt.registerTask('watch-scripts', ['watch:scripts'])
     grunt.registerTask('watch-styles', ['watch:styles'])
