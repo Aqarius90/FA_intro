@@ -20,3 +20,18 @@ window.addEventListener 'load', () ->
             permalink.parentNode.removeChild(permalink);
 
     addPermalinks()
+
+
+  #main nav functions
+  
+    document.querySelector('.hide-toggle').addEventListener 'click', () ->
+        console.log('clicked')
+        $target = '#' + $(this).data('target')
+        document.querySelector('.tohide').not(target).hide()
+        document.querySelector(target).show()
+        document.querySelector('html, body').animate { scrollTop: 0 }, 'slow'
+        return
+
+        document.querySelector('#Intro').show()
+        document.querySelector('html, body').animate { scrollTop: 0 }, 'slow'
+        return

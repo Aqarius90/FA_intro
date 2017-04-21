@@ -49,7 +49,8 @@ module.exports = (grunt) ->
             templates:
                 files:
                     # Consumer emails
-                    'home-rendered.html' : 'content/home.html'
+                    '../index.html' : 'content/index.html'
+                    '../blank.html' : 'content/blank.html'
 
         uglify:
             options:
@@ -70,7 +71,7 @@ module.exports = (grunt) ->
             
         watch:
             frontend:
-                files: ['styles/site/**/*.scss', '**/scripts/**/*.coffee','content/**/**.html'],
+                files: ['styles/site/**/*.scss', '**/scripts/**/*.coffee','content/**/**.html', 'base.html'],
                 tasks: ['styles', 'scripts', 'templates']
             scripts:
                 files: ['**/scripts/**/*.coffee',],

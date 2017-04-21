@@ -31,14 +31,6 @@
      * navigation.
      */
     .header {
-        background-color:$color-blue-denim;
-        position:relative;
-        top:0;
-        left:0;
-        width:100%;
-        min-height:60px;
-        z-index:1;
-
         &__upper { 
             min-height:80px;
             width:100%;
@@ -66,7 +58,7 @@
      * open their corsponding menu.
      */
 
-    .prime-nav-handle {
+    .nav-handle {
         @include position(absolute, 0px 0px null null );
         cursor:pointer;
         height:80px;  
@@ -92,23 +84,17 @@
      * menu icon is clicked the navigation area should slide in from the left.
      */
 
-    .prime-nav {
-        position:absolute;
-        top:80px;
-        right:0;
-        width:0px;   
-        background-color:transparent;   
-
-        .inner {
-            min-height:100%;
+    .nav {
+        &__inner {
+            @include inner();
         }
 
         &__handle {
             @include position(absolute, -80px 0px null null);
         }
         
-        &:not(.prime-nav--open) {
-            .prime-nav__list {
+        &:not(.nav--open) {
+            .nav__list {
                 @include homer;
             }
         }
@@ -118,7 +104,7 @@
             z-index:1000;
             width:270px;
 
-            .prime-nav__handle {
+            .nav__handle {
                 background-color:$color-bkg-3;
             }
         }
@@ -130,7 +116,7 @@
             width:100%;
         }
 
-        &__list-item {
+        &__item {
             @include clearfix;
             color:$color-white;
             display:block;
@@ -169,7 +155,7 @@
      * navigation.
      */
     .header {
-        background-color:$color-blue-denim;
+        background-color:$color-ruby-red;
         width:100%;
         margin-bottom:10px;
 
@@ -219,7 +205,7 @@
         }
     }
 
-    .prime-nav-handle {
+    .nav-handle {
         @include homer;
     }
 
@@ -230,30 +216,29 @@
      * menu icon is clicked the navigation area should slide in from the left.
      */
 
-    .prime-nav {
-        background-color:$color-blue-gloom;
+    .nav {
+        background-color:#000;
 
 
         &__handle {
         }
 
         &__list {         
-            height:33px;
-            overflow: hidden;
-            padding:4px 0;
+            height:50px;
+            @include display(flex);
+            @include justify-content(space-between);
         }
 
         &__inner {
             @include inner;
         }
 
-        &__list-item {
-            display:block;
-            float:left;
-            height:26px;
-            text-align:center;
-            padding:0 11px;
-            border-right:1px solid $color-white;
+        &__item {
+            text-align: center;
+            display: block;
+            @include flex-grow(1);
+            @include flex-direction(column);
+            @include display(flex);
 
             &:last-child {
                 border-right:0;
@@ -266,13 +251,21 @@
         }
 
         &__link {
-            font-family:$font-family-secondary;
-            color:$color-white;
-            font-size:15px;
-            line-height:26px;
+            font-family:$font-family-tertiary;
+            color: #fff;
+            @include flex-grow(1);
+            @include display(flex);
+            @include justify-content(center);
+            @include align-items(center);
+            @include transition(color ease-in 0.2s);
+
+            span {
+
+            }
+
 
             &:hover {
-                border-bottom:1px solid #fff;
+                color:$color-ruby-red;
             }
         }
     }
