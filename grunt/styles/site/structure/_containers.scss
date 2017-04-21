@@ -11,11 +11,11 @@
  * A standard style used to set the maximum/minimum width of any outer container
  * based on the current size of the user's window.
  */
- @mixin inner {
+ @mixin inner($padding: 20px) {
     margin:0 auto;
     max-width:$full-width;
     min-width:$min-width;
-    padding:0 10px;
+    padding:0 ($padding / 2);
     @include transition(max-width ease-in 0.5s, padding ease-in 0.5s);
 
     @include media-mobile-min {
@@ -27,7 +27,7 @@
     }
     
     @include media-desktop-min {
-        padding:0 20px;
+        padding:0 $padding;
     }
  }
 
@@ -101,6 +101,51 @@
             &:after {
                 @include homer;
             }    
+        }
+    }
+}
+
+.frame {
+    background: url('../images/sunbeam-background.svg') center center no-repeat;
+    background-size: cover;
+    @include display(flex);
+
+    &__inner {
+        flex: 1 1 auto ;
+        background-color: #eee;
+        @include display(flex);
+        @include inner;
+        padding: 10px !important;
+        @include flex-direction(column);
+    }
+
+    .header {
+        padding: 10px;
+        background-color: #000;
+        padding-bottom: 0px;
+        flex: 1 1 auto;
+
+        &__inner {
+            background-color: #000;
+
+        }
+
+        &__nav-wrap {
+            background-color: #eee;
+            padding: 10px;
+        }
+    }
+
+    .main {
+        padding: 10px;
+        background-color: #000;
+        padding-top: 0;
+        display: flex;
+        flex: 1 1 auto;
+
+        &__inner {
+            padding: 10px;
+            background-color: #eee;
         }
     }
 }

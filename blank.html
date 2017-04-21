@@ -25,76 +25,81 @@
     <div class="frame">
         <div class="frame__inner">
             <header class="header">
-                <img src="FA.png" class="[ site-logo ]  [ header__site-logo ]">
-
-                <nav class="nav">
-                    <div class="nav__inner">
-                        <div class="nav__handle" data-open-frame-class="frame--nav-open">
-                            <div class="nav__handle-box">
-                                <div class="nav__handle-dash">
+                <div class="header__inner">
+                    <img src="FA.png" class="[ site-logo ]  [ header__site-logo ]">
+                    <div class="header__nav-wrap">
+                        <nav class="nav">
+                            <div class="nav__inner">
+                                <div class="nav__handle" data-open-frame-class="frame--nav-open">
+                                    <div class="nav__handle-box">
+                                        <div class="nav__handle-dash">
+                                        </div>
+                                    </div>
                                 </div>
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Cheatsheet">
+                                            <span>Cheatsheet</span>
+                                        </a>
+                                    </li>        
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Intro">
+                                            <span>Introduction</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Basics">
+                                            <span>The Basics</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Joining">
+                                            <span>Showing up</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Etiquette">
+                                            <span>Etiquette</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Platoon">
+                                            <span>FA Platoon</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Teamspeak">
+                                            <span>Teamspeak</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Leadership">
+                                            <span>Leadership</span>
+                                        </a>
+                                    </li>                    
+
+                                    <li class="nav__item">
+                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="mods">
+                                            <span>Optional mods</span>
+                                        </a>
+                                    </li>                    
+                                </ul>
                             </div>
-                        </div>
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Cheatsheet">
-                                    <span>Cheatsheet</span>
-                                </a>
-                            </li>        
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Intro">
-                                    <span>Introduction</span>
-                                </a>
-                            </li>
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Basics">
-                                    <span>The Basics</span>
-                                </a>
-                            </li>
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Joining">
-                                    <span>Showing up</span>
-                                </a>
-                            </li>
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Etiquette">
-                                    <span>Etiquette</span>
-                                </a>
-                            </li>
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Platoon">
-                                    <span>FA Platoon</span>
-                                </a>
-                            </li>
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Teamspeak">
-                                    <span>Teamspeak</span>
-                                </a>
-                            </li>
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Leadership">
-                                    <span>Leadership</span>
-                                </a>
-                            </li>                    
-
-                            <li class="nav__item">
-                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="mods">
-                                    <span>Optional mods</span>
-                                </a>
-                            </li>                    
-                        </ul>
+                        </nav>
                     </div>
-                </nav>
+                </div>
             </header>
 
-            <main></main>
+            <main class="main">
+                <main class="main__inner"></main>
+            </main>
         </div>
     </div>
     <!-- /.container -->
@@ -103,6 +108,7 @@
     <script src="www/scripts/site.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/js.js"></script>
 

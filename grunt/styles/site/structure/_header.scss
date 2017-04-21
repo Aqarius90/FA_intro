@@ -86,7 +86,7 @@
 
     .nav {
         &__inner {
-            @include inner();
+            @include inner($padding: 0);
         }
 
         &__handle {
@@ -157,7 +157,6 @@
     .header {
         background-color:$color-ruby-red;
         width:100%;
-        margin-bottom:10px;
 
         &__upper {       
             height:146px;
@@ -187,6 +186,7 @@
     }
 
     .site-logo {
+        display: block;
     }
 
     /**
@@ -219,7 +219,6 @@
     .nav {
         background-color:#000;
 
-
         &__handle {
         }
 
@@ -230,7 +229,7 @@
         }
 
         &__inner {
-            @include inner;
+            @include inner($padding: 0);
         }
 
         &__item {
