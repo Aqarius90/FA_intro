@@ -18,93 +18,107 @@
           src: url('russian.ttf');
         }
     </style>
+
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="www/styles/content-tools.css"
+        >
+        <script src="www/scripts/content-tools.js"></script>
+        <script src="www/scripts/local-editor.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="favicon.ico">
 </head>
 
 <body class="body">
     <div class="frame">
-        <div class="frame__inner">
+        <div class="frame__inner  frame__inner--header">
             <header class="header">
                 <div class="header__inner">
                     <img src="FA.png" class="[ site-logo ]  [ header__site-logo ]">
-                    <div class="header__nav-wrap">
-                        <nav class="nav">
-                            <div class="nav__inner">
-                                <div class="nav__handle" data-open-frame-class="frame--nav-open">
-                                    <div class="nav__handle-box">
-                                        <div class="nav__handle-dash">
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="nav__list">
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Cheatsheet">
-                                            <span>Cheatsheet</span>
-                                        </a>
-                                    </li>        
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Intro">
-                                            <span>Introduction</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Basics">
-                                            <span>The Basics</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Joining">
-                                            <span>Showing up</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Etiquette">
-                                            <span>Etiquette</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Platoon">
-                                            <span>FA Platoon</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Teamspeak">
-                                            <span>Teamspeak</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Leadership">
-                                            <span>Leadership</span>
-                                        </a>
-                                    </li>                    
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="mods">
-                                            <span>Optional mods</span>
-                                        </a>
-                                    </li>                    
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+                    <h1 class="header__text">FolkArps</h1>
                 </div>
             </header>
+        </div>
+
+        <div class="frame__inner  frame__inner--horizontal">
+            <div class="nav-wrap">
+                <nav class="nav">
+                    <div class="nav__inner">
+                        <div class="nav__handle" data-open-frame-class="frame--nav-open">
+                            <div class="nav__handle-box">
+                                <div class="nav__handle-dash">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Cheatsheet">
+                                    <span>Cheatsheet</span>
+                                </a>
+                            </li>        
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Intro">
+                                    <span>Introduction</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Basics">
+                                    <span>The Basics</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Joining">
+                                    <span>Showing up</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Etiquette">
+                                    <span>Etiquette</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Platoon">
+                                    <span>FA Platoon</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Teamspeak">
+                                    <span>Teamspeak</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Leadership">
+                                    <span>Leadership</span>
+                                </a>
+                            </li>                    
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="mods">
+                                    <span>Optional mods</span>
+                                </a>
+                            </li>                    
+                        </ul>
+                    </div>
+                </nav>
+            </div>
 
             <main class="main">
-                <main class="main__inner"><div>
+                <div class="main__inner"><div>
             <h2><b>Folk ARPS bulletin board</b></h2>
             <p>Your ultimate all-in-one guide to dying gloriously with your fellow comrades!</p>
         </div>
 
-        <div class="tohide" id="Intro">
-            <ul>
+        <div class="tohide" id="Intro" >
+            <div class="formatted" data-editable
+                    data-name="page__content">
                 <h3 class="text-center">Welcome</h3>
                 <p>The Arma series aren't just amazing games, they're platforms for a huge variety of experiences: ArmA 2™ gave us realism, WWII and DayZ, to name just a few (even before you open up the editor and make your own). Now, ArmA 3™ is taking us to the future. We believe all the best experiences begin with a great community. Our regular sessions feature tactical gameplay with consistent in-game organisation, multi-layered comms and a mix of coop and adversarial missions created by members of our community. However, we're not MilSim: there are no ranks or mandatory training - just friendly people.</p>
                 <h4>Everyone is welcome</h4>
@@ -128,11 +142,11 @@
                         </div>
                     </div>
                 </div><!-- /container -->                                        
-            </ul>
+            </div>
         </div>
 
         <div class="tohide" id="Basics">
-            <ul>
+            <div class="formatted">
                 <div class="text-center">
                     <h4><b>***DECLASSIFIED***</b></h4>
                     <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
@@ -157,11 +171,11 @@
                 <a class="btn btn-block btnhide" data-target="Joining"    >
                     <span><s>Joining</s> Showing up</span>
                 </a>
-            </ul>
+            </div>
         </div>
 
         <div class="tohide" id="Joining">
-            <ul>
+            <div class="formatted">
                 <div class="text-center">
                     <h4><b>***DECLASSIFIED***</b></h4>
                     <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
@@ -185,11 +199,11 @@
                 <a class="btn btn-block btnhide" data-target="Etiquette"   >
                     <span>Etiquette</span>
                 </a>
-            </ul>
+            </div>
         </div>
 
         <div class="tohide" id="Etiquette">
-            <ul>
+            <div class="formatted">
                 <div class="text-center">
                     <h4><b>***DECLASSIFIED***</b></h4>
                     <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
@@ -222,11 +236,11 @@
                 <a class="btn btn-block btnhide" data-target="Platoon"   >
                     <span>FA Platoon</span>
                 </a>
-            </ul>
+            </div>
         </div>
 
         <div class="tohide" id="Platoon">
-            <ul>
+            <div>
                 <div class="text-center">
                     <h4><b>***DECLASSIFIED***</b></h4>
                     <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
@@ -271,11 +285,11 @@
                 <a class="btn btn-block btnhide" data-target="Teamspeak" >
                     <span>Teamspeak</span>
                 </a>
-            </ul>
+            </div>
         </div>
 
         <div class="tohide" id="Teamspeak">
-            <ul>
+            <div class="formatted">
                 <div class="text-center">
                     <h4><b>***DECLASSIFIED***</b></h4>
                     <p style=" border-bottom: 2px double #222">Transcript approved for training purposes</p>
@@ -319,7 +333,7 @@
                 <a class="btn btn-block btnhide" data-target="Leadership">
                     <span>Leadership</span>
                 </a>
-            </ul>
+            </div>
         </div>
 
         <div class="tohide" id="Leadership">
@@ -505,7 +519,7 @@
             </div>                                        
         </ul>
         <ul id="FAMM" class="tohide">
-        </ul></main>
+        </ul></div>
             </main>
         </div>
     </div>

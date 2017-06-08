@@ -18,90 +18,103 @@
           src: url('russian.ttf');
         }
     </style>
+
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="www/styles/content-tools.css"
+        >
+        <script src="www/scripts/content-tools.js"></script>
+        <script src="www/scripts/local-editor.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="favicon.ico">
 </head>
 
 <body class="body">
     <div class="frame">
-        <div class="frame__inner">
+        <div class="frame__inner  frame__inner--header">
             <header class="header">
                 <div class="header__inner">
                     <img src="FA.png" class="[ site-logo ]  [ header__site-logo ]">
-                    <div class="header__nav-wrap">
-                        <nav class="nav">
-                            <div class="nav__inner">
-                                <div class="nav__handle" data-open-frame-class="frame--nav-open">
-                                    <div class="nav__handle-box">
-                                        <div class="nav__handle-dash">
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="nav__list">
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Cheatsheet">
-                                            <span>Cheatsheet</span>
-                                        </a>
-                                    </li>        
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Intro">
-                                            <span>Introduction</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Basics">
-                                            <span>The Basics</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Joining">
-                                            <span>Showing up</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Etiquette">
-                                            <span>Etiquette</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Platoon">
-                                            <span>FA Platoon</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Teamspeak">
-                                            <span>Teamspeak</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="Leadership">
-                                            <span>Leadership</span>
-                                        </a>
-                                    </li>                    
-
-                                    <li class="nav__item">
-                                        <a class="[ hide-toggle ]  [ nav__link ]" data-target="mods">
-                                            <span>Optional mods</span>
-                                        </a>
-                                    </li>                    
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+                    <h1 class="header__text">FolkArps</h1>
                 </div>
             </header>
+        </div>
+
+        <div class="frame__inner  frame__inner--horizontal">
+            <div class="nav-wrap">
+                <nav class="nav">
+                    <div class="nav__inner">
+                        <div class="nav__handle" data-open-frame-class="frame--nav-open">
+                            <div class="nav__handle-box">
+                                <div class="nav__handle-dash">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Cheatsheet">
+                                    <span>Cheatsheet</span>
+                                </a>
+                            </li>        
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Intro">
+                                    <span>Introduction</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Basics">
+                                    <span>The Basics</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Joining">
+                                    <span>Showing up</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Etiquette">
+                                    <span>Etiquette</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Platoon">
+                                    <span>FA Platoon</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Teamspeak">
+                                    <span>Teamspeak</span>
+                                </a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="Leadership">
+                                    <span>Leadership</span>
+                                </a>
+                            </li>                    
+
+                            <li class="nav__item">
+                                <a class="[ hide-toggle ]  [ nav__link ]" data-target="mods">
+                                    <span>Optional mods</span>
+                                </a>
+                            </li>                    
+                        </ul>
+                    </div>
+                </nav>
+            </div>
 
             <main class="main">
-                <main class="main__inner">
+                <div class="main__inner">
                     {%- block main -%}
                     {%- endblock -%}
-                </main>
+                </div>
             </main>
         </div>
     </div>

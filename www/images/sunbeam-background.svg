@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg style="enable-background:new 0 0 595.2 158;" x="0px" y="0px" viewBox="249 1 220 157" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="enable-background:new 0 0 595.2 158;" x="0px" y="0px" viewBox="249 -34 221 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
 	.st0{display:none;}
 	.st1{display:inline;}
@@ -60,23 +60,23 @@
       </g>
     </g>
   </g>
-  <rect x="248.511" y="0.725" width="221.36" height="157.26" style="fill: rgb(97, 23, 23);"/>
-  <g id="New_sunbeam_graphic" transform="matrix(0.65991, 0, 0, 1, 160.355774, 0)">
-    <polygon class="st6" points="134.124 59.328 297.6 158 132.141 23.147" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 151.786 -0.662 L 297.6 158 L 183.035 -0.371 L 151.786 -0.662 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 448.395 0.996 L 296.961 158 L 469.953 24.447 L 469.126 1.635 L 448.395 0.996 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 297.6 158 L 290.567 -1.787 L 266.767 -0.518 L 297.6 158 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 322.358 -1.017 L 297.6 158 L 350.351 -1.287 L 322.358 -1.017 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 209.785 -0.019 L 297.6 158 L 232.843 -2.348 C 232.843 2.111 209.785 0.112 209.785 -0.019 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 383.475 -0.12 L 297.6 158 L 404.375 -0.69 L 383.475 -0.12 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
-    <polygon class="st6" points="468.799 63.361 297.6 158 469.509 103.258" transform="" style="fill: rgb(255, 82, 82);"/>
-    <path d="M 297.6 158 L 471.51 158 L 471.51 130.431 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+  <rect x="248.511" y="-35.327" width="221.36" height="221.956" style="fill: rgb(97, 23, 23);"/>
+  <g id="New_sunbeam_graphic" transform="matrix(0.65991, 0, 0, 1.406941, 160.355774, -34.665073)">
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
-    <path d="M 133.92 77.721 Z" style="stroke: black; fill: rgb(255, 82, 82);"/>
-    <path d="M 126.248 66.852 Z" style="stroke: black; fill: rgb(255, 82, 82);"/>
-    <path d="M 135.199 77.721 Z" style="stroke: black; fill: rgb(255, 82, 82);"/>
-    <path d="M 133.92 157.004 Z" style="stroke: black; fill: rgb(255, 82, 82);"/>
-    <polygon class="st6" points="255.249 157.36 91.722 90.215 256.598 133.449" transform="matrix(-1 0 0 -1 389.24 248.214)" style="fill: rgb(255, 82, 82);"/>
-    <polygon class="st6" points="4.969 119.961 168.738 124.857 169.866 147.77" transform="matrix(-1 0 0 -1 303.298 277.742)" style="fill: rgb(255, 82, 82);"/>
+    <path style="stroke: black; fill: rgb(255, 82, 82);"/>
+    <path style="stroke: black; fill: rgb(255, 82, 82);"/>
+    <path style="stroke: black; fill: rgb(255, 82, 82);"/>
+    <path style="stroke: black; fill: rgb(255, 82, 82);"/>
+    <path d="M 134.052 90.854 L 302.957 157.999 L 132.658 114.765 L 134.052 90.854 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 302.305 157.679 L 471.46 152.783 L 472.625 129.87 L 302.305 157.679 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 472.048 90.752 L 303.143 157.897 L 473.441 114.663 L 472.048 90.752 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 471.911 59.226 L 303.058 157.898 L 473.959 23.045 L 471.911 59.226 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 453.668 -0.764 L 303.058 157.898 L 421.391 -0.47300000000000003 L 453.668 -0.764 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 303.058 157.898 L 281.904 -1.1360000000000001 L 324.278 -1.299 L 303.058 157.898 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 225.799 -2.961 L 303.042 158 L 251.033 -7.553 C 251.033 -3.094 225.799 -2.83 225.799 -2.961 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 380.301 -3.063 L 303.058 157.898 L 355.067 -7.655 C 355.067 -3.196 380.301 -2.932 380.301 -3.063 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 152.432 -0.6619999999999999 L 303.042 158 L 184.709 -0.371 L 152.432 -0.6619999999999999 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 134.189 59.328 L 303.042 158 L 132.141 23.147 L 134.189 59.328 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
+    <path d="M 303.795 157.781 L 134.64 152.885 L 133.474 129.972 L 303.795 157.781 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
   </g>
 </svg>

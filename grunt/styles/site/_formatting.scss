@@ -13,19 +13,24 @@
  * --
  * General elements that need custom styles without the use of classes.
  */
+html {
+    @include display(flex);
+    @include flex-direction(row);
+}
 body, html { 
     min-height:100%;
 }
+
 body {
     background-color:$color-blue-baby-boy;
     color:$font-color-body;
     font-family:$font-family-primary;
     font-weight:400;
-    height: 100%;
     letter-spacing:0.01em;
     max-width:100%;    
     position:relative;
     text-align:left;
+    flex: 1 1 auto;
     @include type-standard();
 }
 

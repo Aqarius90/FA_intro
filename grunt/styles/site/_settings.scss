@@ -17,8 +17,8 @@ $tablet-max:767px;
 $tablet-min:768px;
 $desktop-max:979px;
 $desktop-min:980px;
-$widescreen-min:1280px;
-$full-width:1400px;
+$widescreen-min:1024px;
+$full-width:1024px;
 $min-width:300px;
 
 /**
@@ -134,7 +134,7 @@ $color-yellow-custard:#ffc000;     /* Buttons */
 /**
  * Fonts
  */
-$font-family-primary:Arial, Helvetica, Arial, Roboto, sans-serif;
+$font-family-primary: 'Ubuntu', sans-serif;
 $font-family-secondary:Verdana, Arial, Helvetica, Roboto, sans-serif;
 $font-family-tertiary:"russian", sans-serif;
 $font-color-body:#000;
@@ -187,7 +187,7 @@ $color-grey-darker:rgba(#000, 0.4);
 /**
  * Headings - H1
  */
-@mixin type-h1($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 20px, $font-weight: 400, $line-height: 24px) {
+@mixin type-h1($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 24px, $font-weight: 400, $line-height: 28px) {
     color:$color;
     font-family:$font-family;
     font-size:$font-size;
@@ -203,7 +203,7 @@ $color-grey-darker:rgba(#000, 0.4);
 /**
  * Headings - H2
  */
-@mixin type-h2($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 18px, $font-weight: 400, $line-height: 24px) {
+@mixin type-h2($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 20px, $font-weight: 400, $line-height: 26px) {
     color:$color;
     font-family:$font-family;
     font-size:$font-size;
@@ -219,7 +219,7 @@ $color-grey-darker:rgba(#000, 0.4);
 /**
  * Headings - H3
  */
-@mixin type-h3($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 15px, $font-weight: 400, $line-height: 20px) {
+@mixin type-h3($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 15px, $font-weight: 400, $line-height: 18px) {
     color:$color;
     font-family:$font-family;
     font-size:$font-size;
@@ -227,21 +227,21 @@ $color-grey-darker:rgba(#000, 0.4);
     line-height:$line-height;
 
     @include media-tablet-min {
-        font-size:($font-size + 1px);
-        line-height:($line-height + 2px);
+        font-size:($font-size + 2px);
+        line-height:($line-height + 4px);
     }
 }
 
 /**
  * Standard text
  */
-@mixin type-standard($font-size: 14px, $line-height: 16px) {
+@mixin type-standard($font-size: 15px, $line-height: 18px) {
     font-size:$font-size;
     line-height:$line-height;
 
     @include media-tablet-min {
-        font-size:($font-size + 1px);
-        line-height:($line-height + 2px);
+        font-size:($font-size + 2px);
+        line-height:($line-height + 4px);
     }
 }
 

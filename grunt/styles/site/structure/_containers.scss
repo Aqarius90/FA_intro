@@ -48,6 +48,10 @@
 }
 
 .body {
+    @include display(flex);
+    background: url('../images/sunbeam-background.svg') center center no-repeat;
+    background-size: cover;
+
     > * {
         @include filter(blur(0px) saturate(100%));
     }
@@ -106,24 +110,35 @@
 }
 
 .frame {
-    background: url('../images/sunbeam-background.svg') center center no-repeat;
-    background-size: cover;
     @include display(flex);
+    @include flex-direction(column);
+    width: 100%;
+    
 
     &__inner {
-        flex: 1 1 auto ;
-        background-color: #eee;
-        @include display(flex);
-        @include inner;
+        @include inner;        
+        background-color: #ffe3bf;
         padding: 10px !important;
-        @include flex-direction(column);
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        &--horizontal {
+            @include display(flex);
+            @include flex-direction(row);
+            flex: 1 1 auto;
+        }
+
+        &--header {
+            max-height: 120px;
+        }
     }
 
     .header {
         padding: 10px;
         background-color: #000;
         padding-bottom: 0px;
-        flex: 1 1 auto;
+        
 
         &__inner {
             background-color: #000;
@@ -131,21 +146,28 @@
         }
 
         &__nav-wrap {
-            background-color: #eee;
+
+            background-color: #000;
             padding: 10px;
         }
+    }
+
+    .nav-wrap {
+        background-color: #000;
+        width: 220px;
     }
 
     .main {
         padding: 10px;
         background-color: #000;
-        padding-top: 0;
-        display: flex;
-        flex: 1 1 auto;
+        @include display(flex);
+        @include flex-basis(calc(100% - 220px));
+        min-height: 100%;
 
         &__inner {
             padding: 10px;
-            background-color: #eee;
+            background-color: #ffe3bf;
+            width: 100%;            
         }
     }
 }
@@ -269,13 +291,6 @@
     overflow-x:auto;
 }
 
-
-/**
- * Contain
- * --
- * Generic class used to prevent overflow of any container.
- */
-.contain { overflow:hidden; }
 
 
 /**

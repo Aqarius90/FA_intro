@@ -85,6 +85,7 @@
      */
 
     .nav {
+        display: block;
         &__inner {
             @include inner($padding: 0);
         }
@@ -183,6 +184,21 @@
             width:120px;
             @include position(absolute, 50% null null 20px);
         }
+
+        &__inner {
+            position: relative;
+        }
+
+        &__text {
+            color: #fff;
+            font-size: 50px;
+            line-height: 100px;
+            font-family: 'Russian', Arial;
+            display: block;
+            @include position(absolute, 0px null null 0px);
+            width: 100%;
+            text-align: center;
+        }
     }
 
     .site-logo {
@@ -223,13 +239,11 @@
         }
 
         &__list {         
-            height:50px;
-            @include display(flex);
-            @include justify-content(space-between);
+            display: block;
+            padding-top: 10px;
         }
 
         &__inner {
-            @include inner($padding: 0);
         }
 
         &__item {
@@ -238,6 +252,7 @@
             @include flex-grow(1);
             @include flex-direction(column);
             @include display(flex);
+            height: 50px;
 
             &:last-child {
                 border-right:0;
