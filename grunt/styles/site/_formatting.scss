@@ -60,14 +60,17 @@ button {
 --
  */
 ::selection {
-    background:tint($color-yellow-custard, 20%);
+    background:tint(#fd8181, 20%);
     color:#000;
 }
 ::-moz-selection {
-    background:tint($color-yellow-custard, 20%);
+    background:tint(#fd8181, 20%);
     color:#000;
 } 
 
+.russian {
+    font-family: $font-family-tertiary !important;
+}
 
 /**
  * Custom class styles
@@ -246,18 +249,26 @@ button {
 
     > h1, > .h1 {
         @include type-h1();
+        font-weight: bold;
         margin:25px 0 15px;
     }
 
     > h2, > .h2 {
-        @include type-h2();
-        margin:24px 0 14px;
+        @include type-h1();
+        font-weight: bold;
+        margin:25px 0 15px;
     }
 
     > h3, > .h3 {
+        @include type-h2();
+        margin:20px 0 10px;
+    }
+
+    > h4, > .h4 {
         @include type-h3();
         margin:20px 0 10px;
     }
+
 
     > p, > address { margin:0 0 15px; }
 

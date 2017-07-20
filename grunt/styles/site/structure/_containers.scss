@@ -43,13 +43,20 @@
  * does not include the header or footer.
  */
 .page {
-    background-color:$color-bkg;
-    min-width:$min-width;
+    &:not(.page--on) {
+        @include homer;
+    }
+}
+
+.section {
+    &:not(.section--on) {
+        @include homer;
+    }
 }
 
 .body {
     @include display(flex);
-    background: url('../images/sunbeam-background.svg') center center no-repeat;
+    background: url('../images/sunbeam-background.svg') top center no-repeat;
     background-size: cover;
 
     > * {
@@ -111,12 +118,21 @@
 
 .frame {
     @include display(flex);
-    @include flex-direction(column);
     width: 100%;
+    background-color: transparent;
     
 
     &__inner {
-        @include inner;        
+        @include inner($padding: 0px);     
+        box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
+        flex: 1 1 auto;
+        @include display(flex);
+        @include flex-direction(column);   
+    }
+
+    &__content {
+        @include display(flex);
+        @include flex-direction(column);   
         background-color: #ffe3bf;
         padding: 10px !important;
         width: 100%;
@@ -127,45 +143,26 @@
             @include display(flex);
             @include flex-direction(row);
             flex: 1 1 auto;
+            padding-top: 0 !important;
         }
 
         &--header {
-            max-height: 120px;
-        }
-    }
-
-    .header {
-        padding: 10px;
-        background-color: #000;
-        padding-bottom: 0px;
-        
-
-        &__inner {
-            background-color: #000;
-
-        }
-
-        &__nav-wrap {
-
-            background-color: #000;
-            padding: 10px;
         }
     }
 
     .nav-wrap {
         background-color: #000;
-        width: 220px;
     }
 
     .main {
         padding: 10px;
         background-color: #000;
         @include display(flex);
-        @include flex-basis(calc(100% - 220px));
         min-height: 100%;
+        width: 100%;
 
         &__inner {
-            padding: 10px;
+            padding: 20px;
             background-color: #ffe3bf;
             width: 100%;            
         }
@@ -187,6 +184,91 @@
                 height:auto !important;
             }
         }
+    }
+}
+
+
+
+.sub-nav {
+    &__handle {
+    }
+
+    &__heading {
+        font-family: $font-family-tertiary;
+        height: 60px;
+        text-align: left;
+        line-height: 60px;
+    }
+
+    &__list {         
+        display: block;
+        padding: 10px;
+        padding-top: 0px;
+        list-style-type: circle;
+    }
+
+    &__inner {
+    }
+
+    &__item {
+        display: block;
+        @include flex-grow(1);
+        @include flex-direction(column);
+        @include display(flex);
+
+        &:not(:first-child) {
+            margin-top: 5px;
+        }
+
+        &:last-child {
+            border-right:0;
+        }
+
+        &:first-child {
+            padding-left:0;
+        }
+
+    }
+
+    &__link {
+        display: block;        
+        padding: 10px;
+        color: #000;
+        padding-left: 20px;
+        position: relative;
+        margin-left: 10px;
+        @include transition(color ease-in 0.2s);
+
+        &:before {
+            content: '';
+            display: block;
+            height: 30px;
+            margin-top: -15px;
+            width: 10px;
+            background-color: #000;
+            @include position(absolute, 50% null null 0px);
+            @include transition(background-color ease-in 0.2s);
+        }
+
+
+        &.on, &:hover {
+            &:before {
+                background-color: $color-ruby-red;
+            }
+            color:$color-ruby-red;
+        }
+    }
+
+}
+
+.section-toggle {
+    &--on {            
+        color:$color-ruby-red;
+
+        &:before {
+            background-color: $color-ruby-red;
+        }
+        
     }
 }
 

@@ -50,7 +50,10 @@ module.exports = (grunt) ->
                 files:
                     # Consumer emails
                     '../index.html' : 'content/index.html'
+                    '../cheat-sheet.html' : 'content/cheat-sheet.html'
+                    '../introduction.html' : 'content/introduction.html'
                     '../blank.html' : 'content/blank.html'
+                    '../misc.html' : 'content/misc.html'
 
         uglify:
             options:

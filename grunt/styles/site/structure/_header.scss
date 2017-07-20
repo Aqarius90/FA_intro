@@ -156,37 +156,36 @@
      * navigation.
      */
     .header {
-        background-color:$color-ruby-red;
         width:100%;
 
-        &__upper {       
-            height:146px;
-            position:relative;
-            @include inner;
+        &__logo-area {
+            display: inline-block;
+            padding-left: 140px;
+            position: relative;
         }
 
-        &__strapline {
-            color:#bbc9d3;
-            font-family:$font-family-tertiary;
-            font-size:50.5px;            
-            height:52px;
-            letter-spacing:-1.5px;
-            line-height:52px;
-            @include position(absolute, null 0px 16px null);
-        }
-
-        &__logo {
-            background:url('/images/ --desktop.png') center center no-repeat;
-            background-size:contain;
-            display:block;
-            height:112px;
-            margin-top:-56px;
-            width:120px;
-            @include position(absolute, 50% null null 20px);
+        &__site-logo {
+            @include position(absolute, 50% null null 0px);
+            display: block;    
+            margin-top: -36px;        
         }
 
         &__inner {
             position: relative;
+
+            &--lower {
+                margin-top: 10px;
+            }
+
+            &--upper {
+                background-color: #000;
+                @include align-items(center);
+                @include display(flex);
+                @include inner;
+                @include justify-content(center);
+                height:100px;
+                position:relative;
+            }
         }
 
         &__text {
@@ -194,10 +193,10 @@
             font-size: 50px;
             line-height: 100px;
             font-family: 'Russian', Arial;
-            display: block;
-            @include position(absolute, 0px null null 0px);
-            width: 100%;
+            display: inline-block;
             text-align: center;
+            width: auto;
+            padding-top: 6px;
         }
     }
 
@@ -234,13 +233,18 @@
 
     .nav {
         background-color:#000;
-
         &__handle {
+        }
+        &--vertical {
+            .nav__list {
+                display: block;
+            }
         }
 
         &__list {         
             display: block;
-            padding-top: 10px;
+            @include display(flex);
+            @include justify-content(space-between);
         }
 
         &__inner {
@@ -278,9 +282,22 @@
             }
 
 
-            &:hover {
+            &.on, &:hover {
                 color:$color-ruby-red;
             }
         }
+    }
+}
+
+
+.nav-toggle {
+    &--on {
+        color:$color-ruby-red;
+    }    
+}
+
+.body {
+    &.introduction {
+
     }
 }

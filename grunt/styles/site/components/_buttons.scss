@@ -20,9 +20,9 @@
  * --
  * Styling for a single button.
  */
-@mixin btn($background-color:$color-yellow-custard, $display:block) {
+@mixin btn($background-color:#000, $display:block) {
 	background-color:$background-color;
-	color:$font-color-body;
+	color:#fff;
 	cursor:pointer;
 	display:$display;
 	position:relative;
@@ -33,134 +33,21 @@
 		background-color:tint($background-color, 20%);
 	}
 
-	@include media-desktop-max {		
-		font-size:16px;
-		line-height:20px;
-		padding:10px;
-		padding-right:40px;
-		text-align:left;		
-		position:relative;
+	font-size:20px;
+	line-height:30px;
+	padding:10px 20px;
+	padding-right:40px;
+	text-align:left;		
+	position:relative;
 
+	&:hover {
 		&:before {
-			content: '►';
-			display:block;
-			font-size:20px;
-			line-height:30px;
-			height:30px;
-			@include position(absolute, 5px 15px null null);
-			@include transition(right ease-in 0.1s);
+			right:10px;
 		}
-
-		&:hover {
-			&:before {
-				right:10px;
-			}
-		}
-	}
-
-	@include media-desktop-min {
-		font-size:12px;
-		line-height:18px;
-		text-align:left;	
-		padding:2px 5px;
-		padding-right:25px;
-
-		&--larger {
-			font-size:14px;
-		}
-
-		&:before {
-			content: '►';
-			line-height:16px;
-			height:16px;
-			font-size:12px;
-			display:block;	
-			@include position(absolute, 2px 10px null null);
-			@include transition(right ease-in 0.1s);
-		}
-
-		&:hover {
-			&:before {
-				right:7px;
-			}
-		}
-	}
-
+	}		
 	
-	&--large {
-		font-size:20px;
-		line-height:30px;
-		padding:10px 20px;
-		padding-right:40px;
-		text-align:left;		
-		position:relative;
-
-		&:before {
-			content: '►';
-			display:block;
-			font-size:20px;
-			line-height:30px;
-			height:30px;
-			@include position(absolute, 5px 15px null null);
-			@include transition(right ease-in 0.1s);
-		}
-
-		&:hover {
-			&:before {
-				right:10px;
-			}
-		}		
-	}	
-
-
-	
-	&--medium {
-		font-size:16px;
-		line-height:25px;
-		padding:10px 20px;
-		padding-right:40px;
-		text-align:left;		
-		position:relative;
-
-		&:before {
-			content: '►';
-			display:block;
-			font-size:16px;
-			line-height:25px;
-			height:30px;
-			@include position(absolute, 5px 15px null null);
-			@include transition(right ease-in 0.1s);
-		}
-
-		&:hover {
-			&:before {
-				right:10px;
-			}
-		}		
-	}	
-
-	&--pdf {
-		&:before {
-			content:'';
-			width:21px;
-			background:url('/images/global/pdf.png') center center no-repeat;
-			background-size:contain;
-		
-		}
-	}
 }
 
-.btn-inline {
-	@include media-tablet-max {
-		display:block !important;
-	}
-	@include btn($display:inline-block);
-}
-
-.btn--alt {
-	@include btn($background-color:$color-white);
-}
-
-.btn--alt-2 {
-	@include btn($background-color:$color-grey-plastic);
+.btn {
+	@include btn();
 }

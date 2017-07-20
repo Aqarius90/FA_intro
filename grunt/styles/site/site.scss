@@ -50,36 +50,4 @@
  * Single purpose stylesheets used for individual components/element blocks on
  * the page that are flexible enough to be re-used across multiple pages.
  */
-@import "components/alert";
-@import "components/bsi-link";
 @import "components/buttons";
-@import "components/call_to_action";
-@import "components/contact_block";
-@import "components/content_list";
-@import "components/form";
-@import "components/hero";
-@import "components/gallery";
-@import "components/in_page_nav";
-@import "components/market_sectors_nav";
-@import "components/news";
-@import "components/newsletter_cta";
-@import "components/service_nav";
-@import "components/thumb_gallery";
-@import "components/video_cta";
-
-
-/**
- * Pages
- * --
- * Stylesheets that are specific to a single page or group of pages.
- */
-@import "pages/home";
-@import "pages/product_service";
-
-
-/**
- * Themes
- * --
- * Stylesheets that are specific to company colour schemes.
- */
-@import "themes";

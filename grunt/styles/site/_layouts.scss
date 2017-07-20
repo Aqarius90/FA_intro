@@ -369,6 +369,78 @@ $col-spacing:20px;
 }
 
 
+
+/**
+ * Main section with aside
+ */
+@mixin layout-8-3($collapse:collapse, $margin:$col-spacing) {
+    @if $margin != 'null' {
+        margin:$margin 0;
+    }
+    @include clearfix();
+
+    @if $collapse == collapse {
+        @include media-tablet-max {
+            > :nth-child(2) {
+                margin-top:20px;
+            }
+        }
+
+        @include media-tablet-min {
+            > :nth-child(1) {
+                @include column(8, 12);
+            }
+            > :nth-child(2) {
+                @include column(3, 12, rtl);
+            }
+        }
+    } @else {
+        > :nth-child(1) {
+            @include column(8, 12);
+        }
+        > :nth-child(2) {
+            @include column(3, 12, rtl);
+        }
+    }
+}
+
+/**
+ * Main section with aside but in reverse order so that the 1st item in the HTML
+ * structure is the aside.
+ */
+@mixin layout-8-3-reverse($collapse:collapse, $margin:$col-spacing) {
+    @if $margin != 'null' {
+        margin:$margin 0;
+    }
+    @include clearfix();
+
+    @if $collapse == collapse {
+        @include media-tablet-max {
+            > :nth-child(2) {
+                margin-top:20px;
+            }
+        }
+
+        @include media-tablet-min {
+            > :nth-child(1) {
+                @include column(3, 12, rtl);
+            }
+            > :nth-child(2) {
+                @include column(8, 12);
+            }
+        }
+    } @else {
+        > :nth-child(1) {
+            @include column(3, 12, rtl);
+        }
+        > :nth-child(2) {
+            @include column(8, 12);
+        }
+    }
+}
+
+
+
 /**
  * Main section with aside but in reverse order so that the 1st item in the HTML
  * structure is the aside.
@@ -596,18 +668,18 @@ $col-spacing:20px;
 
         @include media-tablet-min {
             > :nth-child(1) {
-                @include column(10, 12, rtl);
+                @include column(2, 12, rtl);
             }
             > :nth-child(2) {
-                @include column(2, 12);
+                @include column(10, 12);
             }
         }
     } @else {
         > :nth-child(1) {
-            @include column(10, 12, rtl);
+            @include column(2, 12, rtl);
         }
         > :nth-child(2) {
-            @include column(2, 12);
+            @include column(10, 12);
         }
     }
 }
@@ -743,6 +815,28 @@ $col-spacing:20px;
 .layout-8-4-reverse {
     @include layout-8-4-reverse;
 }
+
+
+/**
+ * Layout-8-3
+ * --
+ * Content with aside split
+ */
+.layout-8-3 {
+    @include layout-8-3;
+}
+
+
+
+/**
+ * Layout-8-3-reverse
+ * --
+ * Content with aside split
+ */
+.layout-8-3-reverse {
+    @include layout-8-3-reverse;
+}
+
 
 
 /**
