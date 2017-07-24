@@ -21,4 +21,9 @@ $(document).ready(function() {  //main nav functions
         $(section).addClass('section--on');
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
+
+    $('.tab-item').click(function(){
+        $(".tab-item--active").removeClass("tab-item--active"); 
+        $(this).addClass('tab-item--active');     
+    });
 });

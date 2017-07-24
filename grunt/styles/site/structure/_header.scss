@@ -159,15 +159,16 @@
         width:100%;
 
         &__logo-area {
-            display: inline-block;
-            padding-left: 140px;
-            position: relative;
         }
 
         &__site-logo {
-            @include position(absolute, 50% null null 0px);
+            @include position(absolute, 50% null null 50%);
             display: block;    
-            margin-top: -36px;        
+            height: 70px;
+            width: 204px;
+            margin-top: -35px;        
+            margin-left: -102px;
+            image-rendering: -webkit-optimize-contrast;
         }
 
         &__inner {
@@ -179,24 +180,9 @@
 
             &--upper {
                 background-color: #000;
-                @include align-items(center);
-                @include display(flex);
-                @include inner;
-                @include justify-content(center);
                 height:100px;
                 position:relative;
             }
-        }
-
-        &__text {
-            color: #fff;
-            font-size: 50px;
-            line-height: 100px;
-            font-family: 'Russian', Arial;
-            display: inline-block;
-            text-align: center;
-            width: auto;
-            padding-top: 6px;
         }
     }
 

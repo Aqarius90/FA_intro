@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg style="enable-background:new 0 0 595.2 158;" x="0px" y="0px" viewBox="249 104 220 312" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="enable-background:new 0 0 595.2 158;" x="0px" y="0px" viewBox="251 104 218 312" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
 	.st0{display:none;}
 	.st1{display:inline;}
@@ -15,15 +15,15 @@
     <g class="st1">
       <defs>
         <rect id="SVGID_1_" y="-683.9" width="595.2" height="841.9"/>
-        <radialGradient id="gradient-1" gradientUnits="userSpaceOnUse" cx="360.405" cy="402.902" r="166.645" gradientTransform="matrix(0.565014, -0.005116, 0.021069, 2.32728, 148.28218, -532.920348)">
+        <radialGradient id="gradient-1" gradientUnits="userSpaceOnUse" cx="360.405" cy="402.902" r="166.645" gradientTransform="matrix(0.565014, -0.005116, 0.021069, 2.32728, 148.210965, -535.19808)">
           <stop offset="0"/>
           <stop offset="1" style="stop-color: rgba(0, 0, 0, 0);"/>
         </radialGradient>
-        <radialGradient id="gradient-2" gradientUnits="userSpaceOnUse" cx="365.527" cy="407.409" r="166.645" gradientTransform="matrix(0.995508, -0.005116, 0.011957, 2.327345, -5.362654, -532.946628)">
+        <radialGradient id="gradient-2" gradientUnits="userSpaceOnUse" cx="365.527" cy="407.409" r="166.645" gradientTransform="matrix(0.995508, -0.005116, 0.011957, 2.327345, -5.433778, -535.224223)">
           <stop offset="0"/>
           <stop offset="1" style="stop-color: rgba(0, 0, 0, 0);"/>
         </radialGradient>
-        <radialGradient id="gradient-3" gradientUnits="userSpaceOnUse" cx="356.189" cy="372.39" r="166.645" gradientTransform="matrix(0.654734, 0.006862, -0.019692, 1.878693, 127.80283, -370.139908)">
+        <radialGradient id="gradient-3" gradientUnits="userSpaceOnUse" cx="356.189" cy="372.39" r="166.645" gradientTransform="matrix(0.654734, 0.006862, -0.019692, 1.878693, 127.7316, -372.417511)">
           <stop offset="0"/>
           <stop offset="1" style="stop-color: rgba(0, 0, 0, 0);"/>
         </radialGradient>
@@ -72,8 +72,8 @@
       </g>
     </g>
   </g>
-  <rect x="248.511" y="-35.327" width="221.36" height="451.547" style="fill: rgb(97, 23, 23);"/>
-  <g id="New_sunbeam_graphic" transform="matrix(0.65991, 0, 0, 1.406941, 160.355774, -34.665073)">
+  <rect x="248.44" y="-37.605" width="221.36" height="451.547" style="fill: rgb(97, 23, 23);"/>
+  <g id="New_sunbeam_graphic" transform="matrix(0.65991, 0, 0, 1.406941, 160.284515, -36.942787)">
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
@@ -88,7 +88,7 @@
     <path d="M 119.841 -3.327 L 304.672 320.037 L 158.095 -5.597 L 119.841 -3.327 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
     <path d="M 95.398 134.252 L 302.228 320.419 L 129.303 133.682 L 95.398 134.252 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
   </g>
-  <g id="g-1" transform="matrix(-0.65991, 0, 0, 1.406941, 559.886597, -34.665073)">
+  <g id="g-1" transform="matrix(-0.65991, 0, 0, 1.406941, 559.815369, -36.942787)">
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
     <path style="stroke: black; fill: rgb(255, 82, 82);"/>
@@ -103,7 +103,7 @@
     <path d="M 119.841 -3.327 L 304.672 320.037 L 158.095 -5.597 L 119.841 -3.327 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
     <path d="M 95.398 134.252 L 302.228 320.419 L 129.303 133.682 L 95.398 134.252 Z" class="st6" style="fill: rgb(255, 82, 82);"/>
   </g>
-  <rect x="181.803" y="-53.692" width="333.291" height="470.792" style="fill: url(#gradient-1);"/>
-  <rect x="181.803" y="-53.692" width="333.291" height="470.792" style="fill: url(#gradient-2);"/>
-  <rect x="181.803" y="-53.692" width="333.291" height="470.792" style="fill: url(#gradient-3);"/>
+  <rect x="181.732" y="-55.97" width="333.291" height="470.792" style="fill: url(#gradient-1);"/>
+  <rect x="181.732" y="-55.97" width="333.291" height="470.792" style="fill: url(#gradient-2);"/>
+  <rect x="181.732" y="-55.97" width="333.291" height="470.792" style="fill: url(#gradient-3);"/>
 </svg>
