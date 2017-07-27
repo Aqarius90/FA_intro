@@ -309,3 +309,24 @@ $color-grey-darker:rgba(#000, 0.4);
 .boxed {
     @include boxed;
 }
+
+
+/**
+ * Menu burger icon sizes
+ * --
+ * You can set the size and style of the burger menu icon for mobile. It is
+ * broken down into different components to help achieve the animation effect.
+ *
+ * The styles used for the animation were originally written by a guy called Jon
+ * Suh. We have retained the class names but converted it all to use BEM and
+ * cut down on some of the unused styles/attributes. We have used the elastic
+ * animation style documented on his website. All of the documentation and
+ * available animations can be found on his website below:
+ *
+ * https://jonsuh.com/hamburgers/
+ */
+$burger-dash-width:   22px !default;
+$burger-dash-height:  3px  !default;
+$burger-dash-radius:  4px  !default;
+$burger-dash-spacing: 6px  !default;
+$burger-box-height:   $burger-dash-height * 3 + $burger-dash-spacing * 2 !default;

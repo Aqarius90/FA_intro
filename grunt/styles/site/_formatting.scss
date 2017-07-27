@@ -48,6 +48,17 @@ a {
     cursor:pointer;
     color:$font-color-link;
     text-decoration:none;
+
+    &.formatted {
+        cursor:default;
+        color: $font-color-body !important;
+        h1, h2, h3, h4 {
+            cursor:pointer;
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+    }
 }
 
 button {    

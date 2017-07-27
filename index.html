@@ -22,7 +22,7 @@
     <link rel="SHORTCUT ICON" href="favicon.ico">
 </head>
 
-<body class="body  ">
+<body class="body ">
     <div class="frame">
         <div class="frame__inner">
             <div class="frame__content  frame__content--header">
@@ -30,39 +30,39 @@
                     <div class="header__inner header__inner--upper">
                         <div class="header__logo-area">
                             <h1 class="homer">FolkArps</h1>
-                            <img src="www/images/logo.png" class="[ site-logo ]  [ header__site-logo ]" alt="FolkARPS logo">
+                            <img src="www/images/logo.png"  data-target="Home" class="[ nav-toggle  ] site-logo ]  [ header__site-logo ]" alt="FolkARPS logo">
+                        </div>
+
+                        <div class="[ header__nav-handle ]  [ nav-handle ]  [ mob-nav-toggle ]">
+                            <div class="nav-handle__box">
+                                <div class="nav-handle__dash">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="header__inner header__inner--lower">
                         <nav class="nav">
-                            <div class="nav__handle" data-open-frame-class="frame--nav-open">
-                                <div class="nav__handle-box">
-                                    <div class="nav__handle-dash">
-                                    </div>
-                                </div>
-                            </div>
-
                             <ul class="nav__list">
                                 <li class="nav__item">
-                                    <a class="[ nav-toggle  nav-toggle--on ]  [ nav__link ]" href="#Home" data-target="Home">
+                                    <a href="#Home" class="[ nav-toggle  nav-toggle--on ] [ mob-nav-close ] [ nav__link ]" data-target="Home">
                                         <span>Home</span>
                                     </a>
                                 </li>
                                 <li class="nav__item">
-                                    <a class="[ nav-toggle ]  [ nav__link ]" href="#About" data-target="About">
+                                    <a href="#About" class="[ nav-toggle ] [ mob-nav-close ] [ nav__link ]" data-target="About">
                                         <span>About</span>
                                     </a>
                                 </li>
 
                                 <li class="nav__item">
-                                    <a class="[ nav-toggle ]  [ nav__link ]" href="#Classified" data-target="Classified">
+                                    <a href="#Classified" class="[ nav-toggle ] [ mob-nav-close ] [ nav__link ]" data-target="Classified">
                                         <span>Classified</span>
                                     </a>
                                 </li>                   
 
                                 <li class="nav__item">
-                                    <a class="[ nav-toggle ]  [ nav__link ]" href="#Misc" data-target="Misc">
+                                    <a href="#Misc" class="[ nav-toggle ] [ mob-nav-close ] [ nav__link ]" data-target="Misc">
                                         <span>Misc</span>
                                     </a>
                                 </li>                    
@@ -72,7 +72,7 @@
                 </header>
             </div>
 
-            <div class="frame__content  frame__content--horizontal">
+            <div class="frame__content  frame__content--body  frame__content--horizontal">
                 <main class="main">
                     <div class="main__inner"><div class="[ formatted c ]  [ page  page--on ]" data-page="Home" id="Home">
         <h2>Welcome</h2>
@@ -88,85 +88,109 @@
         </p>
         <div>
 
-            <ul class="tabs">
-                <li class="[ tabs__item  tabs__item--1  tabs__item ]  [ tab-item  tab-item--active ]" data-tab="1">
+            <ul class="tabs  tabs--video">
+                <li class="[ tabs__item  tabs__item--1  tabs__item--2015  tabs__item ]  [ tab-item  tab-item--active ]" data-tab="1">
                     <iframe id="15" src="https://www.youtube.com/embed/_Y8o98biQRc"></iframe>
                 </li>
 
-                <li class="[ tabs__item tabs__item--2 ]  [ tab-item ]" data-tab="2">
+                <li class="[ tabs__item tabs__item--2  tabs__item--2014 ]  [ tab-item ]" data-tab="2">
                     <iframe id="14" src="https://www.youtube.com/embed/S82r-bW9TM8"></iframe>
                 </li>
 
-                <li class="[ tabs__item tabs__item--3 ]  [ tab-item ]" data-tab="3">
+                <li class="[ tabs__item tabs__item--3  tabs__item--2013 ]  [ tab-item ]" data-tab="3">
                     <iframe id="13" src="https://www.youtube.com/embed/O41JXE-aoeo"></iframe>
                 </li>
 
-                <li class="[ tabs__item tabs__item--4 ]  [ tab-item ]" data-tab="4">
+                <li class="[ tabs__item tabs__item--4   tabs__item--2012 ]  [ tab-item ]" data-tab="4">
                     <iframe id="12" src="https://www.youtube.com/embed/M8CG2QUjFsQ"></iframe>
                 </li>
             </ul>
         </div>
 
-        <div class="push-top">
-            <div class="panel-heading">PARTY DISPATCHES</div>
-            <div class="panel-body">
-                <ul>
-                    <li><a href="http://www.folkarps.com/YIR.html"><b>2017-01-12: Call for entries - YIR 2016 contest:</b></a></li>
-                    <li><a href="http://www.folkarps.com/Patches.html"><b>2016-12-24: 2016 Patch orders open</b></a></li>
-                </ul>                                                        
+        <div class="[ push-top ] ">
+            <div class="formatted">
+                <h4 class="h2">Party Dispatches</h4>
             </div>
+            <ul class="dispatches">
+                <li class="dispatches__item">
+                    <a target="_blank" href="http://www.folkarps.com/forum/viewtopic.php?f=45&t=2372" class="[ formatted ]">                        
+                        <h3 class="no-bottom">Folk ARPS raffle</h3>
+                        <em class="small-text">2017-05-22</em>
+                        <p>
+                            Come one come all to the Folk ARPS raffle, where you can keep the servers running, 
+                            and even get something in return!
+                        </p>
+                    </a>
+                </li>
+
+                <li class="dispatches__item">
+                    <a class="[ pop-up-toggle ]  [ formatted ]" data-pop-target="YIR">                        
+                        <h3 class="no-bottom">Call for entries - YIR 2016 contest</h3>
+                        <em class="small-text">2017-01-12</em>
+                        <p>The propagand machien needs fueling! Do your part today!</p>
+                    </a>
+                </li>
+
+                <li class="dispatches__item">
+                    <a class="[ pop-up-toggle ] [ formatted ]" data-pop-target="Patches">
+                        <h3 class="no-bottom">2016 Patch orders open</h3>
+                        <em class="small-text">2016-12-24</em>
+                        <p>Inspire confidence and improve moral to all those around you with one simple trick!</p>
+                    </a>
+                </li>
+            </ul> 
         </div>     
     </div>
 
-    <div class="[ layout-8-3-reverse ]  [ no-top ]  [ page ]" data-page="About" id="About">
+    <div class="[ layout-8-3-reverse ]  [ no-top ]  [ no-bottom ]  [ page ]" data-page="About" id="About">
         <div class="sub-nav  sub-nav--vertical">
-            <h4 class="homer">Quick links</h4>
+            <h4 class="homer">Progress</h4>
         
             <ul class="sub-nav__list">    
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle  section-toggle--on ]  [ sub-nav__link ]" data-target="About">
+                    <a class="[ section-toggle  section-toggle--on ]  [ sub-nav__link ]" data-target="About" title="About">
                         <span>About</span>
                     </a>
                 </li>
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Basics">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Basics" title="Basics">
                         <span>The Basics</span>
                     </a>
                 </li>
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Joining">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Joining" title="Joining">
                         <span>Showing up</span>
                     </a>
                 </li>
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Etiquette">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Etiquette" title="Etiquette">
                         <span>Etiquette</span>
                     </a>
                 </li>
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Platoon">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Platoon" title="Platoon">
                         <span>FA Platoon</span>
                     </a>
                 </li>
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Teamspeak">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Teamspeak" title="Teamspeak">
                         <span>Teamspeak</span>
                     </a>
                 </li>
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Leadership">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Leadership" title="Leadership">
                         <span>Leadership</span>
                     </a>
                 </li>  
 
                 <li class="sub-nav__item">
-                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Deployment">
+                    <a class="[ section-toggle ]  [ sub-nav__link ]" data-target="Deployment" title="Deployment">
                         <span>Deployment</span>
                     </a>
                 </li>                            
@@ -481,13 +505,121 @@
             <li><a href="https://dl.dropbox.com/u/98987499/whisper_plugin.rar">Mike's TS3 whisper plugin</a> - Improves TS3 CC by putting it on one ear and adding (optional) mic clicks</li>            
         </ul>
         <p><b>Automated Folk ARPS mod repository</b></p>
-        <p>Folk ARPS does maintain a repository for <a href="http://www.folkarps.com/forum/viewtopic.php?f=45&t=1703&p=11663#p11663">Swifty</a>, a highly recommended and very lightweight tool to keep mods up to date and in synchronization with our server.</p>
-       
+        <p>Folk ARPS does maintain a repository for <a href="http://www.folkarps.com/forum/viewtopic.php?f=45&t=1703&p=11663#p11663">Swifty</a>, a highly recommended and very lightweight tool to keep mods up to date and in synchronization with our server.</p>       
     </div></div>
                 </main>
             </div>
         </div>
+    </div>    
+
+    <div  class="[ pop-up ]  [ pop-up-toggle ]">
+        <div id="pop-up-content" class="pop-up__content">
+            <div class="[ pop-up__close ]  [ pop-up-toggle ]">Close</div>
+
+            <div class="pop-up-content"  data-pop-content="Patches">
+                <div class="pop-up__header">                       
+                    <h2><b>Folk ARPS bulletin board</b></h2>                    
+                </div>
+
+                <ul class="tabs">
+                    <li class="[ tabs__item tabs__item--1  tabs__item--2016 ]  [ tab-item  tab-item--active ]" id="2016">
+                        <div class="formatted">           
+                            <p><b>Hey, comrade Commissar, I've been meaning to talk to you! I've noticed a batch of those "biohazard" crates came in yesterday. I don't suppose the Party preparing a morale-patch related surprise for the winter holidays?</b></p>
+                            <p>Of course not, comrade. "The winter holidays" are nothing but a consumerist ploy to drag people's attention away from the glory that is our Agrarian Utopia. Suggesting anything else would be counterrevolutionary talk!</p>
+                            <p><b>Uh... of course, comrade Commissar. That's what I meant to say.</b></p>
+                            <p>Exactly. On an entirely unrelated note: The Party has been hard at work preparing a special, end-of-the-calendar-year surprise! As you have so cleverly guessed, we are rolling out the new and improved version of the last year's new and improved morale patch.</p>
+                            <img class="img-responsive center-block" src="PNG/patches/2016-patch.png">
+                            <p><b>An improved improved morale patch?</b></p>
+                            <p>Exactly! The old velcro backing has been retained, but the shield shape has been streamlined for better aerodynamics.</p>
+                            <p><b>That sounds excellent! But wait, I've noticed the crates were noticeably heavier than last year's. how are the patches streamlined if they're also heavier?</b></p>
+                            <p>No, that's just the lead lining. The patches retain roughly the same size. The behind-the-scenes workings, however, have been significantly upgraded. I hear the production process uses only a quarter of agar base it used earlier.</p>
+                            <p><b>What's agar?</b></p>
+                            <p>It's a gelatinous...the point is, we've made the whole process much more efficient. It uses less man-hours, less resources, and the patch itself has a much, much longer expected <font style="font-size:30%;">half-</font>life.</p>
+                            <p><b>That's excellent news, comrade Commissar! I'll be sure to grab one as soon as they're available! ...Uh, how do I grab one? Is the procedure the same as last year?</b></p>
+                            <p>Sadly, budgetary constraints have forced us to extend our self-equipment program into the next year. I am, however, proud to say that <font style="font-size:30%;">some of</font> the savings achieved through greater efficiency will be passed on to all comrades. You will soon be able to don your brand new morale patch, for a fraction of the cost of the last one. Not to mention the new emblem pattern will help comrades blend in during ops on Tanoa.</p>
+                            <p><b>I wouldn't be so sure about that. Since we got the last batch of patches, one guy in my unit turned green.</b></p>
+                            <p>Hahaha, comrade, I'm sure you are referring to "going green". It means someone-</p>
+                            <p><b>No, I mean, since August, he's been steadily turning ever so slightly green. Literally.</b></p>
+                            <p>...Comrade, would you be so kind as to notify your unit that first thing tomorrow morning they are to attend a mandatory lecture on proper uniform maintenance and personal hygiene.</p>                        
+                            <p>Actual info: We've ordered a new batch of morale patches, with a brand new Tanoa theme! We expect them to be arriving sometime around 2016-01-15. The size is 10x7,5, and they come with a velcro back. Each patch can be had in exchange for 5 units of whatever your preferred currency is (as long as it's USD, EUR or GBP), shipping included, and, as usual, all profits (if somehow there is any) go towards the <s>Dacha whiskey budget</s> maintennance of the K-IV Widowmaker.All funds can be sent to the standard, server-fund@folkarps.com paypal account, along with a message to Prime Minister Netkev, who, as always, has our full support.</p>
+                            <img class="img-responsive center-block" src="PNG/patches/2016sample.jpg">
+                            <form action="http://www.folkarps.com">
+                                <input class="btn btn-block" type="submit" value="Back to main" />
+                            </form>      
+                        </div>                                          
+                    </li>
+
+                    <li class="[ tabs__item tabs__item--2  tabs__item--2015 ]  [ tab-item ]" id="2015">
+                        <div class="formatted">      
+                            <p><b>Comrade Commissar, what are those strange crates that have been showing up all over the base?</b></p>
+                            <p>The leaky ones, the glowing ones, or the ones with the biohazard stickers?</p>
+                            <p><b>Uh...well, let's start with those last ones.</b></p>
+                            <p>Ah, you mean the ones for the patches? Well, we were going to make an official announcement a bit later, but since you're asking: The Party R&D committee is preparing for the launch of the all new and improved Folk ARPS Morale Patch! The production is going great, <font style="font-size:30%;">with like 20% less heavy metal poisoning,</font> and we expect the full roll out to begin shortly. The science bureau has been hard at work to outdo it's last year's patch-related achievements, and I dare say they did a hell of a job at it<font style="font-size:30%;">, may they rest in peace</font>!</p>
+                            <img class="img-responsive center-block" src="PNG/patches/testimonials-suntze.jpg">
+                            <p><b>Improved morale patch? Does it really improve morale?</b></p>
+                            <p>I assure you, comrade, morale improvement is definitely one of the <font style="font-size:30%;">possible side</font>effects! Not only that, but the size has been practically doubled, but the head of the science department assures me that the new shield shape will significantly boost the provided protection.</p>
+                            <p><b>Protection? Are the patches bulletproof?</b></p>
+                            <p>Uh...sure, why not. Anyway, they also added velcro backing, to make it even easier to attach to your jacket and/or backpack!</p>
+                            <p><b>That's fantastic! How do I get one?</b></p>
+                            <p>You will be fully informed of the distribution process as soon as the engineering department irons out a few kinks. They assure me they can get them to below 300 rads by Wednesday, so keep your ears peeled! You might just want to sign up for one in advance!</p>
+                            <p><b>I definitely will! I've seen some comrades wearing the last year's patch, and they were all glowing with pride! I will be sure to get one of my own this time!</b></p>
+                            <p>Uh, yes, absolutely, pride. Glowing with pride.Right.</p>                        
+                            <p>OK, jokes aside, just like last year, we are ordering a batch of custom made patches, made after a design lovingly crafted by comrade Tigershark. Unlike the old design, the patches are larger, at 8cm width and 9.5cm height. The patches will be available to anyone interested, at 7GBP/10USD/10EUR, international postage included. All money earned (if, by some freak accident, there is any) will go towards next year's upkeep of our K19-III Widowmaker game server. So you get to have a patch, and contribute to paying <s>Tiger's lawyer fees</s> for FA's continuing existence.Do your share, and look cool doing it!</p>
+                        </div>                                     
+                    </li>
+
+                    <li class="[ tabs__item tabs__item--3  tabs__item--2014 ]  [ tab-item ]" id="2014">
+                        <div class="formatted">        
+                            <p><b>Comrades of the Politburo, what's this rumour I hear about a secret Party project to create patches?</b></p>
+                            <p>Trading in rumours, comrade? A dangerous business that can get you arrested! However, in this case the rumour is true. Behold, prototypes from the secret facility created by comrade Tigershark <font style="font-size:70%;">(no, not that facility, a new one)</font>:</p>
+                            <img class="img-responsive center-block" src="PNG/patches/2014.jpg">
+                            <p><b>How do I get hold of one?</b></p>
+                            <p>Once we've ironed-out (hurr) some issues with the first batch <font style="font-size:70%;">(radiation, unacceptable worker mortality rates ... nothing too serious)</font>, we shall initiate a programme of distributing patches to comrade-supporters of our server, K19-III. More details will follow at a later date, but you'll have to excuse me <font style="font-size:85%;">for now </font><font style="font-size:70%;">because I have</font><font style="font-size:55%;"> a headache </font><font style="font-size:40%;">and nausea</font>...</p>
+                            <p><b>Comrade? Comrade, are you there?</b></p>                        
+                            <p>Unfortunately, 2014 edition patches are now out of stock.</p>
+                            <form action="http://www.folkarps.com">
+                                <input class="btn btn-block" type="submit" value="Back to main" />
+                            </form> 
+                        </div>                                               
+                    </li>
+                </ul>
+            </div>
+            <div class="pop-up-content" data-pop-content="YIR">
+                <div class="pop-up__header">                       
+                    <h2><b>Folk ARPS bulletin board</b></h2>                    
+                </div>
+
+                <div class="formatted">
+                    <h4 class="russian larger-text">DECLASSIFIED</h4>
+                    <p>Cleared for publication</p>
+                
+                    <h3><b>Folk ARPS Year-in-review 2016 contest</b></h3>
+                    <p>COMRADES! ONCE AGAIN THE PARTY PRESENTS YOU WITH AN OPPORTUNITY!</p>
+                    <ul>
+                        <li>Are you a participant in 2016 combat operations?</li>
+                        <li>Do you have video footage from said operations?</li>
+                        <li>Are you skilled in video editing and eager to prove it?</li>                        
+                    </ul>
+
+                    <p>
+                        <em>Then the Party has a job for <b>you!</b></em></p>
+                        <p>
+                            Trawl through your archive for videos celebrating the tenacity, 
+                            courage, and bravery of your fellow compatriots! Arrange a short video 
+                            presentation, and submit it to your nearest comrade Commisar. The best 
+                            submission will have a chance to be featured on the Party web service, 
+                            and show the glory of the Party for all to see!
+                        </p>
+                        <p><b>DO YOUR PART TODAY!</b></p>
+                    <p>
+                        The video archive caught on fire again, didn't it?<br>
+                        <b>Shut up.</b>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- /.container -->
     <!-- Bootstrap Core JavaScript -->
     <script src="js/jquery.js"></script>
@@ -495,7 +627,7 @@
     <script src="js/js.js"></script>
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="www/scripts/site.js"></script>
+   <!--  <script src="www/scripts/site.js"></script> -->
 
 
 </body>

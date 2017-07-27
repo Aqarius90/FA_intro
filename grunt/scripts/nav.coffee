@@ -2,14 +2,6 @@
 # --
 # Allows for open/ close of navigation in mobile.
 
-# Menu nav icon animation
-# --
-# Show the dropdown menu on click
-document.querySelector('.prime-nav-handle').addEventListener 'click', () ->
-    document.querySelector('.prime-nav').classList.toggle('prime-nav--open')
-    document.querySelector('.body').classList.toggle('body--nav-active')
-
-
 # Site pop up
 # --
 # Once clicked, display pop-up over all else on page.*/
