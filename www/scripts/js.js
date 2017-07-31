@@ -1,8 +1,8 @@
 
 
 $(document).ready(function() {  //main nav functions
-    $('.nav-toggle').click(function(){
-        event.preventDefault();
+    $('.nav-toggle').click(function(ev){
+        ev.preventDefault();
         $(".nav-toggle--on").removeClass("nav-toggle--on");
         $(this).addClass('nav-toggle--on');
         var target = $(this).data("target");
