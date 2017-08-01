@@ -16,6 +16,7 @@
     max-width:$full-width;
     min-width:$min-width;
     padding:0 ($padding / 2);
+    -webkit-transform: translateZ(0);
     @include transition(max-width ease-in 0.5s, padding ease-in 0.5s);
 
     @include media-mobile-min {
@@ -50,6 +51,7 @@
  * does not include the header or footer.
  */
 .page {
+    -webkit-transform: translateZ(0);
     @include transition(opacity ease-in 0.2s);
     opacity: 0;
 
@@ -63,6 +65,7 @@
 }
 
 .section {
+    -webkit-transform: translateZ(0);
     @include transition(opacity ease-in 0.2s);
     opacity: 0;
 
@@ -87,6 +90,7 @@
 
     &--pop-up-active {
         > *:not(.pop-up) {
+            -webkit-transform: translateZ(0);
             @include transition(filter 4s ease-out 0s, -webkit-filter 4s ease-out 0s);
             @include filter(blur(5px) saturate(40%));
         }
@@ -170,7 +174,9 @@
         &__content {
             @include display(flex);
             @include flex-direction(column);   
+            -webkit-transform: translateZ(0);
             @include transition(margin-left ease-in 0.2s);
+            -webkit-transform: translateZ(0);
             background-color: #ffe3bf;
             height: auto;
             margin-left: 0;
@@ -352,6 +358,7 @@
         color: #000;
         padding-left: 20px;
         position: relative;
+        -webkit-transform: translateZ(0);
         @include transition(color ease-in 0.2s);
 
         @include media-tablet-min {
@@ -373,6 +380,7 @@
                 width: 6px;
                 border-radius: 50%;
                 @include position(absolute, 50% null null 50%);
+                -webkit-transform: translateZ(0);
                 @include transition(background-color ease-in 0.2s);
             }
         }
@@ -386,6 +394,7 @@
                 width: 10px;
                 background-color: #000;
                 @include position(absolute, 50% null null 0px);
+                -webkit-transform: translateZ(0);
                 @include transition(background-color ease-in 0.2s);
             }
         }
@@ -449,6 +458,7 @@
 }
 .pop-up {
     @include position(absolute, 0px null null 0px);
+    -webkit-transform: translateZ(0);
     @include transition(background-color 0.5s ease-in);
     background-color:rgba(#000, 0.0);
     height:100%;
@@ -466,6 +476,7 @@
     }
 
     &__content {
+        -webkit-transform: translateZ(0);
         @include transition(opacity 0.2s ease-in);
         background:#ffe3bf;
         border: 10px solid #000;
@@ -508,6 +519,7 @@
         line-height:20px;
         padding:5px 10px;
 
+        -webkit-transform: translateZ(0);
         @include transition(color ease-in 0.2s);
 
         &:hover {
