@@ -17,9 +17,7 @@ html {
     @include display(flex);
     @include flex-direction(row);
 }
-body, html { 
-    min-height:100%;
-}
+
 
 body {
     background-color:$color-blue-baby-boy;

@@ -150,9 +150,11 @@
 
 @include media-desktop-max {
     .frame {
-        @include display(flex);
         width: 100%;
         background-color: transparent;
+        &__side {
+            flex: 1 1 auto;
+        }
         
 
         &__inner {
@@ -207,17 +209,24 @@
 
 @include media-desktop-min {
     .frame {
-        @include display(flex);
-        width: 100%;
         background-color: transparent;
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+
+        &__side {
+            flex: 1 1 auto;
+        }
         
 
         &__inner {
+            @include display(flex);
+            @include flex-direction(column);   
             @include inner($padding: 0px);     
             box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
             flex: 1 1 auto;
-            @include display(flex);
-            @include flex-direction(column);   
+            min-height: 100%;
+            height: auto;
         }
 
         &__content {
@@ -225,9 +234,10 @@
             @include flex-direction(column);   
             background-color: #ffe3bf;
             padding: 10px !important;
-            width: 100%;
             position: relative;
+            width: 100%;
             z-index: 1;
+            height: auto;
 
             &--horizontal {
                 @include display(flex);
@@ -250,11 +260,14 @@
             @include display(flex);
             min-height: 100%;
             width: 100%;
+            height: auto;
 
             &__inner {
                 padding: 20px;
                 background-color: #ffe3bf;
                 width: 100%;            
+                min-height: 100%;
+                height: auto;
             }
         }
     }
