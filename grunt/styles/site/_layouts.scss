@@ -40,11 +40,13 @@ $col-spacing:20px;
  */
 @mixin column($col:1, $span:12, $direction:ltr, $gutter:$col-spacing) {
     @if ($direction == ltr) {
+        float: left;
 
         &:not(:last-child) {
             margin-right:$gutter;
         }
     } @else if ($direction == rtl) {
+        float: right;
 
         &:not(:last-child) {
             margin-left:$gutter;

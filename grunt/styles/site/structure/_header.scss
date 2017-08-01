@@ -23,7 +23,7 @@
  * CSS used to only format the header when in mobile responsive mode.
  */
 
-@include media-desktop-max {
+@include media-mobile-max() {
     /**
      * Header
      * --
@@ -37,8 +37,389 @@
                 background-color: #000;
                 min-height: 78px;
                 @include position(absolute, 0px null null 0px);
-                width: 100%;
                 margin-bottom: 10px;
+                width: 100%;
+
+            }
+            &--lower {
+            }
+        }
+
+        &__site-logo {
+            @include position(absolute, 50% null null 10px);
+            display: block;
+            height: 60px;
+            margin-top: -30px;
+            width: auto;
+            image-rendering: pixelated;
+            cursor: pointer;
+        }
+
+        &__nav-handle {
+            cursor: pointer;
+            height: 78px;
+            padding: 0;
+            transition: background-color 0.2s ease-in-out;
+            width: 78px;
+            z-index: 3;
+            @include position(fixed, 0px 0px null null );
+
+            &:hover {
+                .prime-nav__handle-dash {
+                    &, &:before, &:after {
+                        width: $burger-dash-width * 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Handles
+     * --
+     * Prime nav handle and filter handle operate in a simliar way. When clicked/ touched, they
+     * open their corsponding menu.
+     */
+
+    .nav-handle {
+        @include position(absolute, 0px 0px null null );
+        cursor:pointer;
+        height:80px;  
+        width:60px;
+        z-index:2;
+
+        &:after {
+            @include position(absolute, 10px 50% null null);
+            background:url('/images/menu-icon.png') center center no-repeat;
+            background-size:contain;
+            content:'';
+            display:block;
+            height:30px;
+            margin-right:-15px;    
+            width:30px;
+        }
+
+
+        &__box {
+            height: $burger-box-height;
+            margin: (-$burger-box-height / 2) 0 0 (-$burger-dash-width / 2);
+            width: $burger-dash-width;
+            @include position(absolute, 50% null null 50%);     
+           
+        }
+
+        &__dash {
+            top: 0;
+            @include transition(
+                width  0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+            );
+
+            &, &:before, &:after {
+                background-color: #fff;
+                border-radius: $burger-dash-radius;
+                height: $burger-dash-height;
+                position: absolute;
+                width: $burger-dash-width;
+                @include transition(background-color ease-in 0.2s);
+            }
+
+
+            &:before, &:after {
+                content: "";
+                display: block;
+            }
+
+            &:before {
+                top: $burger-dash-height + $burger-dash-spacing;               
+                @include transition(
+                    opacity 0.4s ease,
+                    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                    width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+                );
+            }
+
+            &:after {
+                top: ($burger-dash-height * 2) + ($burger-dash-spacing * 2);
+
+                @include transition(
+                    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                    width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+                );
+            }
+        }
+    }
+
+    /**
+     * Prime nav
+     * --
+     * The primary navigation of the website. Positioned off-screen but when a
+     * menu icon is clicked the navigation area should slide in from the left.
+     */
+
+    .nav {
+        display: block;
+        &__inner {
+            @include inner($padding: 0);
+        } 
+        position: absolute;
+        right: -270px;
+        width: 270px;    
+        min-height: 100%;
+        background-color: #000;
+        @include transition(right ease-in 0.2s);
+
+        &__list {
+            min-height:100%; 
+            display:block;
+            width:100%;
+        }
+
+
+        &__item {
+            text-align: left;
+            display: block;
+            @include flex-grow(1);
+            @include flex-direction(column);
+            @include display(flex);
+            height: 50px;
+
+            &:last-child {
+                border-right:0;
+            }
+
+            &:first-child {
+                padding-left:0;
+            }
+
+        }
+
+        &__link {
+            font-family:$font-family-tertiary;
+            color: #fff;
+            cursor: pointer;
+            @include flex-grow(1);
+            @include display(flex);
+            @include align-items(center);
+            @include transition(color ease-in 0.2s);
+            padding-left: 10px;
+            font-size: 16px;
+
+            &.on, &:hover {
+                color:$color-ruby-red;
+            }
+        }
+    }    
+}
+@include media-mobile-min-tablet-max {
+    /**
+     * Header
+     * --
+     * The header is the top bar of the page containing the logo, and primary
+     * navigation.
+     */
+    .header {
+
+        &__inner {
+            &--upper {
+                background-color: #000;
+                min-height: 78px;
+                @include position(absolute, 0px null null 50%);
+                margin-bottom: 10px;
+                @include inner;
+                margin-left: -250px;
+
+
+            }
+            &--lower {
+            }
+        }
+
+        &__site-logo {
+            @include position(absolute, 50% null null 10px);
+            display: block;
+            height: 60px;
+            margin-top: -30px;
+            width: auto;
+            image-rendering: pixelated;
+            cursor: pointer;
+        }
+
+        &__nav-handle {
+            cursor: pointer;
+            height: 78px;
+            padding: 0;
+            transition: background-color 0.2s ease-in-out;
+            width: 78px;
+            z-index: 3;
+            @include position(fixed, 0px 0px null null );
+
+            &:hover {
+                .prime-nav__handle-dash {
+                    &, &:before, &:after {
+                        width: $burger-dash-width * 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Handles
+     * --
+     * Prime nav handle and filter handle operate in a simliar way. When clicked/ touched, they
+     * open their corsponding menu.
+     */
+
+    .nav-handle {
+        @include position(absolute, 0px 0px null null );
+        cursor:pointer;
+        height:80px;  
+        width:60px;
+        z-index:2;
+
+        &:after {
+            @include position(absolute, 10px 50% null null);
+            background:url('/images/menu-icon.png') center center no-repeat;
+            background-size:contain;
+            content:'';
+            display:block;
+            height:30px;
+            margin-right:-15px;    
+            width:30px;
+        }
+
+
+        &__box {
+            height: $burger-box-height;
+            margin: (-$burger-box-height / 2) 0 0 (-$burger-dash-width / 2);
+            width: $burger-dash-width;
+            @include position(absolute, 50% null null 50%);     
+           
+        }
+
+        &__dash {
+            top: 0;
+            @include transition(
+                width  0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+            );
+
+            &, &:before, &:after {
+                background-color: #fff;
+                border-radius: $burger-dash-radius;
+                height: $burger-dash-height;
+                position: absolute;
+                width: $burger-dash-width;
+                @include transition(background-color ease-in 0.2s);
+            }
+
+
+            &:before, &:after {
+                content: "";
+                display: block;
+            }
+
+            &:before {
+                top: $burger-dash-height + $burger-dash-spacing;               
+                @include transition(
+                    opacity 0.4s ease,
+                    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                    width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+                );
+            }
+
+            &:after {
+                top: ($burger-dash-height * 2) + ($burger-dash-spacing * 2);
+
+                @include transition(
+                    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                    width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+                );
+            }
+        }
+    }
+
+    /**
+     * Prime nav
+     * --
+     * The primary navigation of the website. Positioned off-screen but when a
+     * menu icon is clicked the navigation area should slide in from the left.
+     */
+
+    .nav {
+        display: block;
+        &__inner {
+            @include inner($padding: 0);
+        } 
+        position: absolute;
+        right: -270px;
+        width: 270px;    
+        min-height: 100%;
+        background-color: #000;
+        @include transition(right ease-in 0.2s);
+
+        &__list {
+            min-height:100%; 
+            display:block;
+            width:100%;
+        }
+
+
+        &__item {
+            text-align: left;
+            display: block;
+            @include flex-grow(1);
+            @include flex-direction(column);
+            @include display(flex);
+            height: 50px;
+
+            &:last-child {
+                border-right:0;
+            }
+
+            &:first-child {
+                padding-left:0;
+            }
+
+        }
+
+        &__link {
+            font-family:$font-family-tertiary;
+            color: #fff;
+            cursor: pointer;
+            @include flex-grow(1);
+            @include display(flex);
+            @include align-items(center);
+            @include transition(color ease-in 0.2s);
+            padding-left: 10px;
+            font-size: 16px;
+
+            &.on, &:hover {
+                color:$color-ruby-red;
+            }
+        }
+    }
+}
+
+@include media-tablet-min-desktop-max {
+    /**
+     * Header
+     * --
+     * The header is the top bar of the page containing the logo, and primary
+     * navigation.
+     */
+    .header {
+
+        &__inner {
+            &--upper {
+                background-color: #000;
+                min-height: 78px;
+                @include position(absolute, 0px null null 0px);
+                margin-bottom: 10px;
+                width: 100%;
+
+
             }
             &--lower {
             }
