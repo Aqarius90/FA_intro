@@ -167,9 +167,9 @@
         }
 
         &__content {
+            -webkit-transform: translateZ(0);
             @include display(flex);
             @include flex-direction(column);   
-            -webkit-transform: translateZ(0);
             @include transition(margin-top ease-in 0.2s);
             background-color: #ffe3bf;
             height: auto;

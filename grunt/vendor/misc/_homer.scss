@@ -7,10 +7,5 @@
  * Minimum of 1px height/width required or ignored by screen reader.
  */
 @mixin homer {
-    height:1px !important;
-    overflow:hidden !important;
-    width:1px !important;
-    position: absolute !important;
-    top:auto;
-    left:-10000px !important;
+    display: none;
 }
