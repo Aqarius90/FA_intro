@@ -1,8 +1,4 @@
 .sass-cache
-grunt/emails/html/
-grunt/scripts/spec.js
-grunt/styles/email/email.css
-grunt/styles/pdf/pdf.css
 grunt/tmp/
 grunt/node_modules
 

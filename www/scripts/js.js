@@ -23,7 +23,6 @@ $(document).ready(function() {  //main nav functions
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
-
     $('.pop-up-toggle').click(function(){
         $(".pop-up-content--on").removeClass("pop-up-content--on");        
         var target = $(this).data("pop-target");
@@ -36,7 +35,6 @@ $(document).ready(function() {  //main nav functions
         $(".tab-item--active").removeClass("tab-item--active"); 
         $(this).addClass('tab-item--active');     
     });
-
 
     $('.mob-nav-toggle').click(function(){   
         $('.body').toggleClass('body--open');     
@@ -63,6 +61,5 @@ $(document).ready(function() {  //main nav functions
     document.querySelector('.pop-up__content').addEventListener('click', function(ev) {
       return ev.stopPropagation();
     });
-
 });
 

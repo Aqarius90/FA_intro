@@ -131,6 +131,11 @@
         .formatted {
             @include homer;
         }
+
+        iframe {
+            display:none;
+        }
+        
         &:hover {
             &:before {
                 background-color: #383838;
