@@ -345,6 +345,23 @@ button {
         height: auto;
     }
 
+    figure {
+        background-color: #fff;
+        padding: 10px;
+
+        &.center {
+            margin: 0 auto;
+            margin-bottom: 15px;
+            text-align: center;
+
+        }
+    }
+
+
+    figure:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
     > img.inline-block {
         display:inline-block;
     }

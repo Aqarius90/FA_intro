@@ -248,7 +248,7 @@ $color-grey-darker:rgba(#000, 0.4);
 /**
  * Small text
  */
-@mixin type-small($font-size: 12px, $line-height: 14px) {
+@mixin type-small($font-size: 13px, $line-height: 15px) {
     font-size:$font-size;
     line-height:$line-height;
 
