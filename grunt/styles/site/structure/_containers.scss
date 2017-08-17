@@ -80,9 +80,24 @@
 
 .body {
     @include display(flex);
-    background: url('../images/sunbeam-background.svg') top center no-repeat;
-    background-size: cover;
     overflow-x: hidden;
+    &:after {
+        background: url('../images/sunbeam-background.svg') top center no-repeat;
+        background-size: cover;
+        content: '';
+        display: block;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
+    }
+
+    .frame {
+        position: relative;
+        z-index: 2;
+    }
 
     > * {
         @include filter(blur(0px) saturate(100%));
