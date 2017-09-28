@@ -324,15 +324,24 @@
         display: block;
         padding: 0px;
         padding-top: 0px;
-        list-style-type: circle;
-        @include media-tablet-max { 
-            margin-top: 10px;
-            @include display(flex);
-            @include justify-content(space-between);
-        }
+        background-color: #000;
+        height: 38px;
+        overflow: hidden;
 
         @include media-tablet-min {
-            padding: 10px;
+            height: 42px;
+        }
+
+        &:hover {
+            height: auto;
+            .sub-nav__item {
+                &:first-child {
+                    display: none;
+                }
+            }
+            .sub-nav__link {
+                display: block !important;
+            }
         }
     }
 
@@ -345,11 +354,7 @@
         @include flex-direction(column);
         @include display(flex);
 
-        @include media-tablet-min { 
-            &:not(:first-child) {
-                margin-top: 5px;
-            }
-        }
+        @include media-tablet-min {         }
 
         &:last-child {
             border-right:0;
@@ -357,14 +362,18 @@
 
         &:first-child {
             padding-left:0;
+
+            .sub-nav__link {
+                display: block;
+            }
         }
 
     }
 
     &__link {
-        display: block;        
+        display: none;        
         padding: 10px;
-        color: #000;
+        color: #fff;
         padding-left: 20px;
         position: relative;
         -webkit-transform: translateZ(0);
@@ -372,26 +381,6 @@
 
         @include media-tablet-min {
             margin-left: 10px;
-        }
-        @include media-tablet-max { 
-            span {
-                @include homer;
-            }
-        }
-        @include media-tablet-max { 
-            &:before {
-                background-color: #000;
-                content: '';
-                display: block;
-                height: 6px;
-                margin-top: -3px;
-                margin-left: -3px;
-                width: 6px;
-                border-radius: 50%;
-                @include position(absolute, 50% null null 50%);
-                -webkit-transform: translateZ(0);
-                @include transition(background-color ease-in 0.2s);
-            }
         }
 
         @include media-tablet-min {
@@ -407,26 +396,17 @@
                 @include transition(background-color ease-in 0.2s);
             }
         }
-
-
-        &.on, &:hover {
-            &:before {
-                background-color: $color-ruby-red;
-            }
-            color:$color-ruby-red;
-        }
     }
 
 }
 
 .section-toggle {
-    &--on {            
+    &:hover  {
         color:$color-ruby-red;
-
+        
         &:before {
             background-color: $color-ruby-red;
         }
-        
     }
 }
 

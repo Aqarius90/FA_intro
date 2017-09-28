@@ -13,7 +13,11 @@ $(document).ready(function() {  //main nav functions
         var section = $("[data-section='" + target + "']");              
         $('.section--on').removeClass('section--on');
         $(section).addClass('section--on');         
+        //Section specific HACK :(
         $('.introduction-title').addClass('homer');
+        $('.sub-nav').addClass('homer');
+        $('.introduction-content').addClass('no-top');
+
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
@@ -25,7 +29,10 @@ $(document).ready(function() {  //main nav functions
         var section = $("[data-section='" + target + "']");        
         $('.section--on').removeClass('section--on');
         $(section).addClass('section--on');
+        //Section specific HACK :(
         $('.introduction-title').removeClass('homer');
+        $('.sub-nav').removeClass('homer');
+        $('.introduction-content').removeClass('no-top');
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
