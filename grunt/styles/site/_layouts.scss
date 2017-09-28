@@ -439,6 +439,41 @@ $col-spacing:20px;
     }
 }
 
+/**
+ * Main section with aside but in reverse order so that the 1st item in the HTML
+ * structure is the aside.
+ */
+@mixin layout-9-3-reverse($collapse:collapse, $margin:$col-spacing) {
+    @if $margin != 'null' {
+        margin:$margin 0;
+    }
+    @include clearfix();
+
+    @if $collapse == collapse {
+        @include media-tablet-max {
+            > :nth-child(2) {
+                margin-top:20px;
+            }
+        }
+
+        @include media-tablet-min {
+            > :nth-child(1) {
+                @include column(3, 12, rtl);
+            }
+            > :nth-child(2) {
+                @include column(9, 12);
+            }
+        }
+    } @else {
+        > :nth-child(1) {
+            @include column(3, 12, rtl);
+        }
+        > :nth-child(2) {
+            @include column(9, 12);
+        }
+    }
+}
+
 
 
 /**
@@ -837,6 +872,15 @@ $col-spacing:20px;
     @include layout-8-3-reverse;
 }
 
+
+/**
+ * Layout-9-3-reverse
+ * --
+ * Content with aside split
+ */
+.layout-9-3-reverse {
+    @include layout-9-3-reverse;
+}
 
 
 /**
