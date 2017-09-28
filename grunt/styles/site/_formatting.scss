@@ -82,9 +82,10 @@ button {
 }
 
 .classified {
-    font-family: $font-family-tertiary !important;
+    font-family: $font-family-secondary !important;
 
     &--title {
+        color: #e00000;
         font-size: 40px;
         line-height: 50px;
         
