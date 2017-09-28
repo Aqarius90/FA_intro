@@ -13,6 +13,7 @@ $(document).ready(function() {  //main nav functions
     });
 
     $('.section-toggle').click(function(){
+        console.log("section toggle");
         $(".section-toggle--on").removeClass("section-toggle--on");        
         var target = $(this).data("target");
         var toggleTarget = $("[data-target='" + target + "']");
@@ -20,8 +21,11 @@ $(document).ready(function() {  //main nav functions
         var section = $("[data-section='" + target + "']");        
         $('.section--on').removeClass('section--on');
         $(section).addClass('section--on');
+        $(".page").addClass('target');     
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
+
+
 
 
     $('.pop-up-toggle').click(function(){

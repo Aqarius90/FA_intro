@@ -9,6 +9,11 @@ $(document).ready(function() {  //main nav functions
         var page = $("[data-page='" + target + "']");
         $('.page--on').removeClass('page--on');
         $(page).addClass('page--on');
+
+        var section = $("[data-section='" + target + "']");              
+        $('.section--on').removeClass('section--on');
+        $(section).addClass('section--on');         
+        $('.introduction-title').addClass('homer');
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
@@ -20,6 +25,7 @@ $(document).ready(function() {  //main nav functions
         var section = $("[data-section='" + target + "']");        
         $('.section--on').removeClass('section--on');
         $(section).addClass('section--on');
+        $('.introduction-title').removeClass('homer');
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
