@@ -81,6 +81,20 @@ button {
     font-family: $font-family-tertiary !important;
 }
 
+.classified {
+    font-family: $font-family-tertiary !important;
+
+    &--title {
+        font-size: 40px;
+        line-height: 50px;
+        
+        @include media-tablet-min {
+            font-size: 60px;
+            line-height: 70px;
+        }
+    }
+}
+
 /**
  * Custom class styles
  * --
@@ -191,9 +205,11 @@ button {
 .lowercase { text-transform:lowercase !important; }
 
 .img {
+    max-width: 100%;
+    height: auto;
+
     &--full-width {
         width:100%;
-        height:auto;
     }
 }
 
