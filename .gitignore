@@ -1,0 +1,4 @@
+.sass-cache
+grunt/tmp/
+grunt/node_modules
+

@@ -1,0 +1,81 @@
+/**
+ * FOOTER
+ * --
+ * This stylesheet contains the css used for the website's footer.
+ */
+
+
+.footer {
+	font-size:14px;
+	line-height:20px;
+	margin-top:10px;
+	text-align:center;
+	padding-bottom:30px;
+	overflow:hidden;
+
+	@include media-desktop-min {
+		font-size:12px;
+		line-height:14px;
+	}
+
+	&__copyright {
+		color:#666;
+
+		@include media-tablet-min {
+			display:inline-block;
+		}
+	}
+
+	@include media-tablet-min-desktop-max {
+		&__copyright {
+			float:right;
+		}
+
+		.footer-nav {
+			float:left;
+		}
+	}
+}
+
+.footer-nav {
+	display:inline-block;
+	text-align:center;
+
+
+	&__privacy, &__terms, &__subscribe {
+		color:#666;
+
+		&:hover {
+			text-decoration:underline;
+		}
+	}
+
+	&__subscribe {
+		display:inline-block;
+		font-weight:bold;
+		margin-top:10px;
+		width:100%;
+	}
+
+	&__terms {
+		margin-right:20px;
+	}
+
+	@include media-tablet-max {
+		margin-bottom:20px;
+	}
+
+	@include media-tablet-min {
+		margin-right:20px;
+		text-align:left;
+
+		&__privacy {
+			margin-right:20px;
+		}
+		
+		&__subscribe {
+			margin-top:0;
+			width:auto;
+		}
+	}
+}

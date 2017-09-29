@@ -1,0 +1,54 @@
+/**
+ * SITE
+ * --
+ * Contains all CSS used to format the website. Styles are broken up into
+ * multiple, more manageable files and imported into this stylesheet using SASS.
+ */
+
+
+@charset "UTF-8";
+
+
+/**
+ * Vendor
+ * --
+ * Useful SASS libraries and mixins that can be imported and used locally
+ * written by external resources.
+ */
+@import "../../vendor/bourbon/bourbon";
+@import "../../vendor/neat/neat";
+@import "../../vendor/misc/misc";
+
+
+/**
+ * Site
+ * --
+ * General stylesheets and styles that are used across the entire website to
+ * format all/most pages.
+ */
+@import "reset";
+@import "settings";
+@import "layouts";
+@import "formatting";
+@import "pdfs";
+
+
+/**
+ * Structure
+ * --
+ * General stylesheets that are used across the entire website to format
+ * all/most pages.
+ */
+@import "structure/containers";
+@import "structure/header";
+@import "structure/footer";
+
+
+/**
+ * Components
+ * --
+ * Single purpose stylesheets used for individual components/element blocks on
+ * the page that are flexible enough to be re-used across multiple pages.
+ */
+@import "components/buttons";
+@import "components/tabs";

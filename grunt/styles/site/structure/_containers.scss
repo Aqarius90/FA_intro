@@ -1,0 +1,560 @@
+/**
+ * CONTAINERS
+ * --
+ * This stylesheet contains the main containers and styles used across the site
+ * structure.
+ */
+
+/**
+ * Inner
+ * --
+ * A standard style used to set the maximum/minimum width of any outer container
+ * based on the current size of the user's window.
+ */
+ @mixin inner($padding: 20px) {
+    margin:0 auto;
+    max-width:$full-width;
+    min-width:$min-width;
+    padding:0 ($padding / 2);
+    -webkit-transform: translateZ(0);
+    @include transition(max-width ease-in 0.5s, padding ease-in 0.5s);
+
+    @include media-mobile-min {
+        min-width:$mobile-min;
+    }
+
+    @include media-tablet-max {
+        max-width:$mobile-max;
+    }
+    
+    @include media-desktop-min {
+        padding:0 $padding;
+    }
+ }
+
+.inner {
+    @include inner;
+}
+
+.flex {
+    @include display(flex);
+
+    &--vertical {
+        @include flex-direction(column);
+    }
+}
+
+/**
+ * Page content
+ * --
+ * Styles for the main container that is wrapped around the page content. This
+ * does not include the header or footer.
+ */
+.page {
+    -webkit-transform: translateZ(0);
+    @include transition(opacity ease-in 0.2s);
+    opacity: 0;
+
+    &:not(.page--on) {
+        @include homer;
+    }
+
+    &--on {
+        opacity: 1;
+    }
+}
+
+.section {
+    -webkit-transform: translateZ(0);
+    @include transition(opacity ease-in 0.2s);
+    opacity: 0;
+
+    &:not(.section--on) {
+        @include homer;
+    }
+
+    &--on {
+        opacity: 1;
+    }
+}
+
+.body {
+    @include display(flex);
+    overflow-x: hidden;
+    &:after {
+        background: url('../images/sunbeam-background.svg') top center no-repeat;
+        background-size: cover;
+        content: '';
+        display: block;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+
+    }
+
+    .frame {
+        position: relative;
+        z-index: 2;
+    }
+
+    > * {
+        @include filter(blur(0px) saturate(100%));
+    }
+
+    &--pop-up-active {
+        > *:not(.pop-up) {
+            -webkit-transform: translateZ(0);
+            @include transition(filter 4s ease-out 0s, -webkit-filter 4s ease-out 0s);
+            @include filter(blur(5px) saturate(40%));
+        }
+
+        .pop-up {
+            background-color:rgba(#000, 0.5);
+        }        
+    }
+
+    &:not(.body--pop-up-active) {    
+
+        .pop-up {
+            @include homer;
+
+            &__content {
+                opacity:0;
+            }
+        }
+    }
+    @include media-desktop-max {
+        &--open {
+            .frame__content--body {
+                margin-top: 250px;
+            }
+
+            .nav-handle__dash {
+                transform:
+                    translate3d(
+                        0,
+                        ($burger-dash-spacing + $burger-dash-height),
+                        0
+                    )
+                    rotate(135deg);
+                transition-delay: 0.1s;
+
+                &:before {
+                    opacity: 0;
+                    transition-delay: 0s;
+                }
+
+                &:after {
+                    transform:
+                        translate3d(
+                            0,
+                            ($burger-dash-spacing + $burger-dash-height) * -2,
+                            0
+                        )
+                        rotate(-270deg);
+                    transition-delay: 0.1s;
+                }
+            }
+
+        }
+    }
+}
+
+@include media-desktop-max {
+    .frame {
+        background-color: transparent;
+        height: auto;
+        min-height: 100%;
+        width: 100%;
+        
+
+        &__inner {
+            @include display(flex);
+            @include flex-direction(column);   
+            @include inner($padding: 0px);     
+            box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
+            flex: 1 1 auto;
+            height: auto;
+            margin-top: 78px;
+            min-height: 100%;
+        }
+
+        &__content {
+            -webkit-transform: translateZ(0);
+            @include display(flex);
+            @include flex-direction(column);   
+            @include transition(margin-top ease-in 0.2s);
+            background-color: #ffe3bf;
+            height: auto;
+            margin-left: 0;
+            width: 100%;
+            z-index: 1;
+
+            &--horizontal {
+                @include display(flex);
+                @include flex-direction(row);
+                flex: 1 1 auto;
+                padding-top: 0 !important;
+                position: relative;
+            }
+
+            &--header {
+            }
+        }
+
+        .nav-wrap {
+            background-color: #000;
+        }
+
+        .main {
+            @include display(flex);
+            background-color: #000;
+            height: auto;
+            min-height: 100%;
+            padding: 10px;
+            padding-top: 0px;
+            width: 100%;
+
+            &__inner {
+                background-color: #ffe3bf;
+                height: auto;         
+                min-height: 100%;
+                padding: 10px;
+                width: 100%;              
+            }
+        }
+    }
+}
+
+@include media-desktop-min {
+    .frame {
+        background-color: transparent;
+        height: auto;
+        min-height: 100%;
+        width: 100%;
+        
+
+        &__inner {
+            @include display(flex);
+            @include flex-direction(column);   
+            @include inner($padding: 0px);     
+            box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
+            flex: 1 1 auto;
+            height: auto;
+            min-height: 100%;
+        }
+
+        &__content {
+            @include display(flex);
+            @include flex-direction(column);   
+            background-color: #ffe3bf;
+            height: auto;
+            padding: 10px !important;
+            position: relative;
+            width: 100%;
+            z-index: 1;
+
+            &--horizontal {
+                @include display(flex);
+                @include flex-direction(row);
+                flex: 1 1 auto;
+                padding-top: 0 !important;
+            }
+
+            &--header {
+            }
+        }
+
+        .nav-wrap {
+            background-color: #000;
+        }
+
+        .main {
+            @include display(flex);
+            background-color: #000;
+            height: auto;
+            min-height: 100%;
+            padding: 10px;
+            width: 100%;
+
+            &__inner {
+                background-color: #ffe3bf;
+                height: auto;
+                min-height: 100%;
+                padding: 20px;
+                width: 100%;            
+            }
+        }
+    }
+}
+.content {
+    position:relative;
+
+    @include media-tablet-min {
+        margin-top:10px;
+    }
+
+    &__section {
+        @include media-tablet-max {
+            img {
+                clear:both !important;
+                width:100% !important;
+                height:auto !important;
+            }
+        }
+    }
+}
+
+
+
+.sub-nav {
+    &__handle {
+    }
+
+    &__heading {
+        font-family: $font-family-tertiary;
+        height: 60px;
+        text-align: left;
+        line-height: 60px;
+    }
+
+    &__list {        
+        display: block;
+        padding: 0px;
+        padding-top: 0px;
+        background-color: #000;
+        height: 38px;
+        overflow: hidden;
+
+        @include media-tablet-min {
+            height: 42px;
+        }
+
+        &:hover {
+            height: auto;
+            .sub-nav__item {
+                &:first-child {
+                    display: none;
+                }
+            }
+            .sub-nav__link {
+                display: block !important;
+            }
+        }
+    }
+
+    &__inner {
+    }
+
+    &__item {
+        display: block;
+        @include flex-grow(1);
+        @include flex-direction(column);
+        @include display(flex);
+
+        @include media-tablet-min {         }
+
+        &:last-child {
+            border-right:0;
+        }
+
+        &:first-child {
+            padding-left:0;
+
+            .sub-nav__link {
+                display: block;
+            }
+        }
+
+    }
+
+    &__link {
+        display: none;        
+        padding: 10px;
+        color: #fff;
+        padding-left: 20px;
+        position: relative;
+        -webkit-transform: translateZ(0);
+        @include transition(color ease-in 0.2s);
+
+        @include media-tablet-min {
+            margin-left: 10px;
+        }
+
+        @include media-tablet-min {
+            &:before {
+                content: '';
+                display: block;
+                height: 30px;
+                margin-top: -15px;
+                width: 10px;
+                background-color: #000;
+                @include position(absolute, 50% null null 0px);
+                -webkit-transform: translateZ(0);
+                @include transition(background-color ease-in 0.2s);
+            }
+        }
+    }
+
+}
+
+.section-toggle {
+    &:hover  {
+        color:$color-ruby-red;
+        
+        &:before {
+            background-color: $color-ruby-red;
+        }
+    }
+}
+
+.content-wrap {    
+    background-color:$color-bkg;
+    @include inner;
+    min-height:200px;
+    padding-top:10px;
+    padding-bottom:10px;
+
+    &:after {
+        content:'';
+        display:block;
+        @include position(absolute, null 0px 0px null);
+        z-index:2;        
+        @include triangle(10px,  $color-blue-baby-boy, down-right);
+    }
+
+    @include media-desktop-min {
+        padding:20px;
+        padding-bottom:60px;
+        position:relative;
+
+        &:after {
+            content:'';
+            display:block;
+            @include position(absolute, null 0px 0px null);
+            z-index:2;        
+            @include triangle(60px,  $color-blue-baby-boy, down-right);
+        }
+
+    }
+}
+.pop-up-content {
+    &:not(.pop-up-content--on) {
+        @include homer;
+    }
+}
+.pop-up {
+    @include position(absolute, 0px null null 0px);
+    -webkit-transform: translateZ(0);
+    @include transition(background-color 0.5s ease-in);
+    background-color:rgba(#000, 0.0);
+    height:100%;
+    width:100%;
+    z-index:9999;
+
+
+    @include media-desktop-min {
+        @include align-items(center);
+
+        &__content {
+            margin-top:0px;
+            padding:20px;
+        }
+    }
+
+    &__content {
+        -webkit-transform: translateZ(0);
+        @include transition(opacity 0.2s ease-in);
+        background:#ffe3bf;
+        border: 10px solid #000;
+        box-shadow: 7px 10px 23px 0px rgba(0,0,0,0.55);
+        left: 5%;
+        margin-top:40px;
+        max-height: 100%;
+        height: 90%;
+        min-height: 500px;
+        min-width:300px;
+        opacity:1;
+        overflow:auto;
+        padding-top:40px;
+        padding:10px;
+        position:absolute;
+        top: 5%;
+        width: 90%;
+
+        @include media-desktop-min {
+            left: 5%;
+            width: 90%;            
+        }
+
+    }
+
+    &__header {
+        @include type-h1($color: #fff);
+        background-color: #000;
+        padding: 10px; 
+        margin-bottom: 20px;
+    }
+
+    &__close {
+        @include position(absolute, 10px 10px null null);
+        background-color:#000;
+        color: #fff;
+        cursor:pointer;
+        font-size:16px;
+        font-weight:bold;
+        line-height:20px;
+        padding:5px 10px;
+
+        -webkit-transform: translateZ(0);
+        @include transition(color ease-in 0.2s);
+
+        &:hover {
+            color:$color-ruby-red;        
+        }
+    }
+
+    &__video {
+        max-width:100%;
+    }
+}
+
+.dispatches {
+    margin-top: 20px;
+    &__item:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+/**
+ * Table wrap - Responsive tables
+ * --
+ * Add support for tables that are too wide for mobile/tablet usage by adding
+ * horizontal scroll bars.
+ */
+.table-wrap {
+    margin:20px 0;
+    overflow-x:auto;
+}
+
+
+
+/**
+ * Content area
+ * --
+ * A standard style to format a block of content with padding top and bottom,
+ * also with different background colours.
+ */
+.content-area {
+    margin:20px auto;
+    &:last-child {
+        margin-bottom:0;        
+    }
+
+    &:first-child {
+        margin-top:0;
+    }
+
+}

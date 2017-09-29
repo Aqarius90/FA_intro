@@ -1,0 +1,53 @@
+/**
+ * BUTTONS
+ * --
+ * Contains CSS for button containers and individual buttons across the website.
+*/
+
+
+.btns, .formatted > .btns {
+    > .btn, > * {
+    /**
+     * Buttons are by default left hand side orientated, but this behaviour can
+     * be overwritten so that they float right or are made centralised.
+     */
+     border:none !important
+    }
+}
+
+/**
+ * Button
+ * --
+ * Styling for a single button.
+ */
+@mixin btn($background-color:#000, $display:block) {
+	background-color:$background-color;
+	color:#fff;
+	cursor:pointer;
+	display:$display;
+	position:relative;
+	@include transition(background-color ease-in 0.2s);
+
+	&:hover {
+
+		background-color:tint($background-color, 20%);
+	}
+
+	font-size:20px;
+	line-height:30px;
+	padding:10px 20px;
+	padding-right:40px;
+	text-align:left;		
+	position:relative;
+
+	&:hover {
+		&:before {
+			right:10px;
+		}
+	}		
+	
+}
+
+.btn {
+	@include btn();
+}

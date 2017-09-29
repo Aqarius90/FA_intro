@@ -1,0 +1,332 @@
+/**
+ * SETTINGS
+ * --
+ * Contains all of the commmonly used variables that are used across the CSS
+ * files. For example, regularly used colours and sizes should be held here.
+ * This helps make these values more manageable as the website progresses and
+ * changes.
+ */
+
+
+/**
+ * Responsive breakpoints
+ */
+$mobile-max:499px;
+$mobile-min:500px;
+$tablet-max:767px;
+$tablet-min:768px;
+$desktop-max:979px;
+$desktop-min:980px;
+$widescreen-min:1024px;
+$full-width:1024px;
+$min-width:300px;
+
+/**
+ * Media querey mixins
+ * --
+ * Below are a list of media queries that can be @included in any class.
+ * The @content allows for styling to be placed.
+ */
+
+@mixin media-mobile-alt-min {
+    @media (min-width:400px) {
+        @content;
+    }
+}
+
+@mixin media-mobile-alt-max {
+    @media (max-width:399px) {
+        @content;
+    }
+}
+
+@mixin media-mobile-min {
+    @media (min-width:#{$mobile-min}) {
+        @content;
+    }
+}
+
+@mixin media-mobile-max {
+    @media (max-width: #{$mobile-max}) {
+        @content;
+    }
+}
+
+@mixin media-tablet-min {
+    @media (min-width: #{$tablet-min}) {
+        @content;
+    }
+}
+
+@mixin media-tablet-max {
+    @media (max-width: #{$tablet-max}) {
+        @content;
+    }
+}
+
+@mixin media-desktop-min {
+    @media (min-width: #{$desktop-min}) {
+        @content;
+    }
+}
+
+@mixin media-desktop-max {
+    @media (max-width: #{$desktop-max}) {
+        @content;
+    }
+}
+
+@mixin media-widescreen-min {
+    @media (min-width: #{$widescreen-min}) {
+        @content;
+    }
+}
+
+@mixin media-mobile-min-tablet-max {
+    @media (min-width: #{$mobile-min}) and (max-width:#{$tablet-max}) {
+        @content;
+    }
+}
+
+@mixin media-tablet-min-desktop-max {
+    @media (min-width: #{$tablet-min}) and (max-width:#{$desktop-max}) {
+        @content;
+    }
+}
+
+@mixin media-mobile-min-desktop-max {
+    @media (min-width: #{$mobile-min}) and (max-width:#{$desktop-max}) {
+        @content;
+    }
+}
+
+/**
+ * Pallet - Color
+ */
+$color-garden-green:#629428;
+$color-gloom-gray:#8c9b9c;
+$color-golden-yellow:#ffb855;
+$color-gray-chateau:#a6acae;
+$color-hot-pink:#f13ebd;
+$color-hot-purple:#9013fe;
+$color-iron:#e6e7e8;
+$color-jungle-green:#22b180;
+$color-milk-chocolate-brown:#8b572a;
+$color-mint-green:#e7f2da;
+$color-oslo-gray:#828b8e;
+$color-outer-space:#303f43 !default;
+$color-pastel-pink:#fae6e6;
+$color-pastel-yellow:#fff3dd;
+$color-ruby-red:#a9061a;
+$color-white:#fff;
+$color-midnight-purple:#370e3e;
+$color-muddy-purple:#5E2750;
+$color-traffic-cone-orange:#e56612;
+
+$color-blue-baby-boy:#ecf0f3;       /* background */      
+$color-blue-denim:#63869b;          /* Header */  
+$color-blue-gloom:#a1b6c3;          /* Nav */  
+$color-blue-pastel:#e2e7eb;         /* Hero */      
+$color-grey-plastic:#c1cfd7;        /* Serivces list */      
+$color-yellow-custard:#ffc000;     /* Buttons */          
+
+
+/**
+ * Fonts
+ */
+$font-family-primary: 'Ubuntu', sans-serif;
+$font-family-secondary: 'classified', sans-serif;
+$font-family-tertiary:"russian", sans-serif;
+$font-color-body:#000;
+$font-color-body-2:$color-white;
+$font-color-body-3:$font-color-body;
+$font-color-heading:$font-color-body;
+$font-color-placeholder:rgba($font-color-body, .5);
+
+/**
+ * Links
+ */
+$font-color-link:#a70707;         
+
+
+/**
+ * Content based variables
+ */
+
+
+/**
+ * Backgrounds
+ */
+$color-bkg:$color-white;                                                    
+$color-bkg-2:$color-blue-baby-boy;
+$color-bkg-3:$color-blue-gloom;
+
+/**
+ * Borders
+ */
+$color-border:$color-white;                                                    
+$color-border-2:$color-oslo-gray;
+$color-border-3:$color-outer-space;
+$color-border-4:$color-blue-denim;
+$color-border-5:$color-iron;
+
+/**
+ * Errors
+ */
+$color-error:#c04848;                                           
+$color-error-bkg:#fcedee;                                       
+$color-success:$color-jungle-green;                             
+$color-success-bkg:tint($color-success, 20%);                    
+$color-warning:#bd7a23;                                         
+$color-warning-bkg:#f9ecdb;                                     
+
+$color-grey:rgba(#000, 0.1);                                    
+$color-grey-dark:rgba(#000, 0.25);                              
+$color-grey-darker:rgba(#000, 0.4);        
+
+/**
+ * Headings - H1
+ */
+@mixin type-h1($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 28px, $font-weight: 400, $line-height: 36px) {
+    color:$color;
+    font-family:$font-family;
+    font-size:$font-size;
+    font-weight:$font-weight;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        font-size:($font-size + 4px);
+        line-height:($line-height + 4px);
+    }
+}
+
+/**
+ * Headings - H2
+ */
+@mixin type-h2($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 20px, $font-weight: 400, $line-height: 26px) {
+    color:$color;
+    font-family:$font-family;
+    font-size:$font-size;
+    font-weight:$font-weight;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        font-size:($font-size + 2px);
+        line-height:($line-height + 2px);
+    }
+}
+
+/**
+ * Headings - H3
+ */
+@mixin type-h3($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 17px, $font-weight: 400, $line-height: 22px) {
+    color:$color;
+    font-family:$font-family;
+    font-size:$font-size;
+    font-weight:$font-weight;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        font-size:($font-size + 2px);
+        line-height:($line-height + 4px);
+    }
+}
+
+/**
+ * Standard text
+ */
+@mixin type-standard($font-size: 15px, $line-height: 18px) {
+    font-size:$font-size;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        font-size:($font-size + 2px);
+        line-height:($line-height + 4px);
+    }
+}
+
+/**
+ * Small text
+ */
+@mixin type-small($font-size: 13px, $line-height: 15px) {
+    font-size:$font-size;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        line-height:($line-height + 2px);
+    }
+}
+
+/**
+ * large-text
+ */
+@mixin type-large($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 14px, $font-weight: 400, $line-height: 18px) {
+    color:$color;
+    font-family:$font-family;
+    font-size:$font-size;
+    font-weight:$font-weight;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        font-size:($font-size + 2px);
+        line-height:($line-height + 2px);
+    }
+}
+
+/**
+ * larger-text
+ */
+@mixin type-larger($color: $font-color-heading, $font-family: $font-family-primary, $font-size: 26px, $font-weight: 400, $line-height: 36px) {
+    color:$color;
+    font-family:$font-family;
+    font-size:$font-size;
+    font-weight:$font-weight;
+    line-height:$line-height;
+
+    @include media-tablet-min {
+        font-size:($font-size + 6px);
+        line-height:($line-height + 6px);
+    }
+}
+
+
+/**
+ * boxed - Allows for better readability in mobile by boxing off areas of text.
+ */
+
+@mixin boxed {    
+    @include media-tablet-max {
+        &:first-child {
+            margin-top:0;
+        }
+
+        margin-top:20px;
+        padding:5px;
+        border:1px solid #000;
+    }
+}
+
+.boxed {
+    @include boxed;
+}
+
+
+/**
+ * Menu burger icon sizes
+ * --
+ * You can set the size and style of the burger menu icon for mobile. It is
+ * broken down into different components to help achieve the animation effect.
+ *
+ * The styles used for the animation were originally written by a guy called Jon
+ * Suh. We have retained the class names but converted it all to use BEM and
+ * cut down on some of the unused styles/attributes. We have used the elastic
+ * animation style documented on his website. All of the documentation and
+ * available animations can be found on his website below:
+ *
+ * https://jonsuh.com/hamburgers/
+ */
+$burger-dash-width:   22px !default;
+$burger-dash-height:  3px  !default;
+$burger-dash-radius:  4px  !default;
+$burger-dash-spacing: 6px  !default;
+$burger-box-height:   $burger-dash-height * 3 + $burger-dash-spacing * 2 !default;

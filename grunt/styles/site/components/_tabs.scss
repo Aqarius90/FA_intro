@@ -1,0 +1,145 @@
+/**
+ * TABS
+ * --
+ * Contains CSS for tab containers and individual tabs across the website.
+*/
+
+.tabs {
+    display: block;
+    width: 100%;    
+    position: relative;
+    padding-top: 30px;
+    height: calc(auto + 30px);
+
+    &--video {
+        &:after {
+            content: '';
+            display: block;
+            padding-top: 62.25%;
+            position: relative;
+        }
+
+        .tabs__item {
+            background-color: #000;
+            height: calc(100% - 30px);
+        }
+    }
+
+
+    &__item {
+        position: absolute;
+        width: 100%;        
+        z-index: 1;
+        background-color: #ffe3bf;
+        padding: 20px;
+        box-shadow: inset 0 0  0 5px rgba(#000, 1);
+
+        iframe {
+            display: block;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            position: absolute;
+            top: 2px;
+            left: 2px;
+        }
+
+        &:before {
+            @include transition(background-color ease-in 0.2s);
+            background-color: #000;
+            box-shadow: inset 0 -3px 3px 0px rgba(#000, 0.5);
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-family: $font-family-primary;
+            font-size: 14px;
+            height:30px;
+            left: 0px;
+            line-height: 30px;
+            position: absolute;
+            text-align: center;
+            top: -30px;
+            width: 60px;
+        }
+
+
+        &--2 {
+            &:before {
+                left: 70px;
+            }
+        }
+
+        &--3 {
+            &:before {
+                left: 140px;
+            }
+        }
+
+        &--4 {
+            &:before {
+                left: 210px;
+            }
+        }
+        /* Years of release */
+        &--2016 {
+            &:before {
+                content: '2016';
+            }
+        }
+
+        &--2015 {
+            &:before {
+                content: '2015';
+            }
+        }
+
+        &--2014 {
+            &:before {
+                content: '2014';
+            }
+        }
+
+        &--2013 {
+            &:before {
+                content: '2013';
+            }
+        }
+
+        &--2012 {
+            &:before {
+                content: '2012';
+            }
+        }
+    }
+}
+
+.tab-item {
+    z-index: 1;    
+
+    &:before {
+        background-color: #636363;
+    }
+
+    &--active {
+        z-index: 2;
+
+        &:before {
+            background-color: #000;
+        }
+    }
+
+    &:not(.tab-item--active) {
+        .formatted {
+            @include homer;
+        }
+
+        iframe {
+            display:none;
+        }
+        
+        &:hover {
+            &:before {
+                background-color: #383838;
+            }
+        }
+    }
+}
