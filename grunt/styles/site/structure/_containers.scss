@@ -177,7 +177,7 @@
             box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.75);
             flex: 1 1 auto;
             height: auto;
-            margin-top: 78px;
+            margin-top: 70px;
             min-height: 100%;
         }
 
@@ -353,8 +353,6 @@
         @include flex-grow(1);
         @include flex-direction(column);
         @include display(flex);
-
-        @include media-tablet-min {         }
 
         &:last-child {
             border-right:0;

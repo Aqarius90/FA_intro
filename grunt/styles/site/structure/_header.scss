@@ -45,7 +45,7 @@
 
         &__nav-handle {
             cursor: pointer;
-            height: 78px;
+            height: 70px;
             padding: 0;
             transition: background-color 0.2s ease-in-out;
             width: 78px;
@@ -72,7 +72,7 @@
     .nav-handle {
         @include position(absolute, 0px 0px null null );
         cursor:pointer;
-        height:80px;  
+        height:70px;  
         width:60px;
         z-index:2;
 
