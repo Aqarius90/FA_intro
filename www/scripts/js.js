@@ -82,7 +82,7 @@ $(document).ready(function() {  //main nav functions
 
     function autoLoad(){
         console.log("init");
-        var target = window.location.search.split("#")[1];
+        var target = window.location.search.split("=")[1];
         console.log(target);
         console.log(target[1]);
         if(target[1].length >1){
