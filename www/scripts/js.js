@@ -82,16 +82,15 @@ $(document).ready(function() {  //main nav functions
 
     function autoLoad(){
         console.log("init");
-        var target = window.location.search.split("=")[1];
+        var target = window.location.search.split("?")[1];
         console.log(target);
-        console.log(target[1]);
-        if(target[1].length >1){
+        if(target.length >1){
                 $(".nav-toggle--on").removeClass("nav-toggle--on");
-                var page = $("[data-page='" + target[1] + "']");
+                var page = $("[data-page='" + target+ "']");
                 $('.page--on').removeClass('page--on');
                 $(page).addClass('page--on');
 
-                var section = $("[data-section='" + target[1] + "']");
+                var section = $("[data-section='" + target+ "']");
                 $('.section--on').removeClass('section--on');
                 $(section).addClass('section--on');
                 //Section specific HACK :(
