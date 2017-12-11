@@ -83,6 +83,7 @@ $(document).ready(function() {  //main nav functions
     function autoLoad(){
         console.log("init");
         var target = window.location.search.split("#");
+        console.log(target);
         console.log(target[1]);
         if(target[1].length >1){
                 $(".nav-toggle--on").removeClass("nav-toggle--on");
