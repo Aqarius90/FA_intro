@@ -48,7 +48,7 @@
             height: 70px;
             padding: 0;
             transition: background-color 0.2s ease-in-out;
-            width: 78px;
+            width: 70px;
             z-index: 3;
             @include position(fixed, 0px 0px null null );
 
@@ -208,10 +208,10 @@
     @include media-mobile-max() {
         &__inner {
             &--upper {
-                @include position(absolute, -78px null null 0px);
+                @include position(absolute, -70px null null 0px);
                 background-color: #000;
                 margin-bottom: 10px;
-                min-height: 78px;
+                min-height: 70px;
                 width: 100%;
 
             }
@@ -223,8 +223,8 @@
         &__inner {
             &--upper {
                 background-color: #000;
-                min-height: 78px;
-                @include position(absolute, -78px null null 50%);
+                min-height: 70px;
+                @include position(absolute, -70px null null 50%);
                 margin-bottom: 10px;
                 @include inner;
                 margin-left: -250px;
@@ -238,8 +238,8 @@
         &__inner {
             &--upper {
                 background-color: #000;
-                min-height: 78px;
-                @include position(absolute, -78px null null 0px);
+                min-height: 70px;
+                @include position(absolute, -70px null null 0px);
                 margin-bottom: 10px;
                 width: 100%;
 
@@ -270,7 +270,7 @@
         &__site-logo {
             @include position(absolute, 50% null null 50%);
             display: block;    
-            height: 78px;
+            height: 70px;
             image-rendering: pixelated;
             margin-left: -102px;
             margin-top: -39px;        
